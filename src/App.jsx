@@ -10,15 +10,16 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="font-sans text-gray-800">
-      <Header />
-      <Hero />
-      <Mission />
-      <Events />   {/* Carrusel */}
-      <News />     {/* Noticias desde JSON local */}
-      <About />
-      <Process />
-      <Footer />
-    </div>
+      true
+    // <div className="font-sans text-gray-800">
+    //    <Header />
+    //   <Hero />
+    //   <Mission />
+    //   <Events />   {/* Carrusel */}
+    //   <News />     {/* Noticias desde JSON local */}
+    //   <About />
+    //   <Process />
+    //   <Footer /> 
+    // </div>
   );
 }
