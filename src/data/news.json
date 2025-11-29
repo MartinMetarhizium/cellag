@@ -1,0 +1,26 @@
+[
+  {
+    "id": "novos-convidados",
+    "title": "Novos convidados",
+    "excerpt": "A Cell Ag Brazil tem novos convidados para um bate-papo sobre agricultura celular!",
+    "date": "2025-05-09",
+    "image": "/news/novos-convidados.jpg",
+    "link": "#"
+  },
+  {
+    "id": "rodas-de-conversa",
+    "title": "Rodas de conversa CellAg Brazil",
+    "excerpt": "Série de encontros para debater avanços científicos e de mercado.",
+    "date": "2025-03-13",
+    "image": "/news/rodas-de-conversa.jpg",
+    "link": "#"
+  },
+  {
+    "id": "convocacao-ago",
+    "title": "Convocação Assembleia Geral Ordinária",
+    "excerpt": "Associados são convocados para a assembleia geral ordinária.",
+    "date": "2025-02-17",
+    "image": "/news/ago.jpg",
+    "link": "#"
+  }
+]
