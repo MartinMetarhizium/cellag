@@ -1,25 +1,21 @@
-// src/App.jsx
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Mission from "./components/Mission";
-import Events from "./components/Events";
-import News from "./components/News";
-import About from "./components/About";
-import Process from "./components/Process";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Team from "./pages/Team";
+import Events from "./pages/Events";
+import News from "./pages/News";
+import Associate from "./pages/Associate";
 
 export default function App() {
   return (
-      
-    <div className="font-sans text-gray-800">
-       <Header />
-      <Hero />
-      <Mission />
-      <Events />   {/* Carrusel */}
-      <News />     {/* Noticias desde JSON local */}
-      <About />
-      <Process />
-      <Footer /> 
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="team" element={<Team />} />
+        <Route path="events" element={<Events />} />
+        <Route path="news" element={<News />} />
+        <Route path="associate" element={<Associate />} />
+      </Route>
+    </Routes>
   );
 }

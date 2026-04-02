@@ -1,0 +1,32 @@
+[
+{
+"id": 1,
+"title": "Jornada sobre proteínas alternativas",
+"category": "Seminario",
+"date": "2026-04-15",
+"time": "18:00",
+"location": "Buenos Aires",
+"link": "#",
+"image": "/events/event1.jpg"
+},
+{
+"id": 2,
+"title": "Encuentro de innovación en agricultura celular",
+"category": "Encuentro",
+"date": "2026-05-08",
+"time": "10:00",
+"location": "Rosario",
+"link": "#",
+"image": "/events/event2.jpg"
+},
+{
+"id": 3,
+"title": "Mesa de trabajo ciencia e industria",
+"category": "Mesa de trabajo",
+"date": "2026-02-20",
+"time": "16:00",
+"location": "Online",
+"link": "#",
+"image": "/events/event3.jpg"
+}
+]

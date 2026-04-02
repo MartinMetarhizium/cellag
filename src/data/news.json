@@ -1,26 +1,18 @@
 [
   {
-    "id": "novos-convidados",
-    "title": "Novos convidados",
-    "excerpt": "A Cell Ag Brazil tem novos convidados para um bate-papo sobre agricultura celular!",
-    "date": "2025-05-09",
-    "image": "/news/novos-convidados.jpg",
+    "id": "n1",
+    "title": "Cell Ag Argentina impulsa nuevas articulaciones institucionales",
+    "excerpt": "La organización continúa fortaleciendo vínculos entre ciencia, industria y política pública.",
+    "date": "2026-03-28",
+    "image": "/news/news1.jpg",
     "link": "#"
   },
   {
-    "id": "rodas-de-conversa",
-    "title": "Rodas de conversa CellAg Brazil",
-    "excerpt": "Série de encontros para debater avanços científicos e de mercado.",
-    "date": "2025-03-13",
-    "image": "/news/rodas-de-conversa.jpg",
-    "link": "#"
-  },
-  {
-    "id": "convocacao-ago",
-    "title": "Convocação Assembleia Geral Ordinária",
-    "excerpt": "Associados são convocados para a assembleia geral ordinária.",
-    "date": "2025-02-17",
-    "image": "/news/ago.jpg",
+    "id": "n2",
+    "title": "Nueva jornada sobre innovación alimentaria",
+    "excerpt": "Especialistas del ecosistema debatieron oportunidades para proteínas alternativas.",
+    "date": "2026-03-10",
+    "image": "/news/news2.jpg",
     "link": "#"
   }
 ]

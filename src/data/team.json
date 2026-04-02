@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Federico Horn",
+    "role": "Presidente",
+    "group": "Gestión",
+    "image": "/team/federico-horn.jpeg"
+  },
+  {
+    "name": "Gerbasio Barraco Marmol",
+    "role": "Secretario",
+    "group": "Gestión",
+    "image": "/team/barraco.jpeg"
+  },
+  {
+    "name": "Verónica Weisman",
+    "role": "Vocal titular",
+    "group": "Gestión",
+    "image": "/team/veronica-weisman.jpeg"
+  },
+  {
+    "name": "Carolina Bluguermann",
+    "role": "Socia de honor",
+    "group": "Socios de honor",
+    "image": "/team/carolina-bluguermann.jpeg"
+  },
+  {
+    "name": "Laura Matos",
+    "role": "Socia de honor",
+    "group": "Socios de honor",
+    "image": "/team/laura-matos.jpeg"
+  },
+  {
+    "name": "Mariana Sanchez",
+    "role": "Socia de honor",
+    "group": "Socios de honor",
+    "image": "/team/mariana-sanchez.jpeg"
+  },
+  {
+    "name": "Lorena Pinho",
+    "role": "Equipo",
+    "group": "Equipo",
+    "image": "/team/lorena-pinho.jpeg"
+  }
+]

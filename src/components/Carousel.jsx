@@ -1,4 +1,3 @@
-// src/components/Carousel.jsx
 import { useEffect, useRef, useState } from "react";
 
 export default function Carousel({
@@ -22,7 +21,7 @@ export default function Carousel({
   if (!slides.length) return null;
 
   return (
-    <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-full overflow-hidden rounded-2xl shadow-lg">
       <div className={`w-full ${aspect} bg-gray-100 relative`}>
         {slides.map((s, i) => (
           <a
@@ -44,7 +43,6 @@ export default function Carousel({
         ))}
       </div>
 
-      {/* Botones */}
       <button
         onClick={prev}
         className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-3 py-2 hover:bg-white"
@@ -58,15 +56,12 @@ export default function Carousel({
         ›
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`h-2 w-2 rounded-full ${
-              i === index ? "bg-white" : "bg-white/60"
-            }`}
+            className={`h-2 w-2 rounded-full ${i === index ? "bg-white" : "bg-white/60"}`}
           />
         ))}
       </div>
