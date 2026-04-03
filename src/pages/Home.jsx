@@ -3,9 +3,9 @@ import Carousel from "../components/Carousel";
 
 export default function Home() {
   const slides = [
-    { src: "/slides/slide1.jpg", alt: "Cell Ag 1" },
-    { src: "/slides/slide2.jpg", alt: "Cell Ag 2" },
-    { src: "/slides/slide3.jpg", alt: "Cell Ag 3" },
+    { src: "evento.png", alt: "Cell Ag 1" },
+    // { src: "/slides/slide2.jpg", alt: "Cell Ag 2" },
+    // { src: "/slides/slide3.jpg", alt: "Cell Ag 3" },
   ];
 
   return (
