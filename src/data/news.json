@@ -1,18 +1,10 @@
 [
   {
-    "id": "n1",
-    "title": "Cell Ag Argentina impulsa nuevas articulaciones institucionales",
-    "excerpt": "La organización continúa fortaleciendo vínculos entre ciencia, industria y política pública.",
-    "date": "2026-03-28",
-    "image": "/news/news1.jpg",
-    "link": "#"
-  },
-  {
-    "id": "n2",
-    "title": "Nueva jornada sobre innovación alimentaria",
-    "excerpt": "Especialistas del ecosistema debatieron oportunidades para proteínas alternativas.",
-    "date": "2026-03-10",
-    "image": "/news/news2.jpg",
+    "id": "capa-2026",
+    "title": "CAPA 2026: Argentina se prepara para el evento que marcará el futuro de las proteínas alternativas",
+    "excerpt": "Argentina se prepara para dar un paso clave en el desarrollo de la nueva industria alimentaria. El 1° Congreso Argentino de Proteínas Alternativas (CAPA) 2026 se realizará los días 21, 22 y 23 de octubre en el Centro de Convenciones de Buenos Aires (CEC), en el marco de Crossing Over Latam.",
+    "date": "2026-04-03",
+    "image": "/evento.png",
     "link": "#"
   }
 ]

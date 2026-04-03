@@ -1,32 +1,16 @@
 [
-{
-"id": 1,
-"title": "Jornada sobre proteínas alternativas",
-"category": "Seminario",
-"date": "2026-04-15",
-"time": "18:00",
-"location": "Buenos Aires",
-"link": "#",
-"image": "/events/event1.jpg"
-},
-{
-"id": 2,
-"title": "Encuentro de innovación en agricultura celular",
-"category": "Encuentro",
-"date": "2026-05-08",
-"time": "10:00",
-"location": "Rosario",
-"link": "#",
-"image": "/events/event2.jpg"
-},
-{
-"id": 3,
-"title": "Mesa de trabajo ciencia e industria",
-"category": "Mesa de trabajo",
-"date": "2026-02-20",
-"time": "16:00",
-"location": "Online",
-"link": "#",
-"image": "/events/event3.jpg"
-}
+  {
+    "id": 1,
+    "title": "Congreso Argentino de Proteínas Alternativas",
+    "subtitle": "CAPA 2026",
+    "category": "Congreso",
+    "date": "2026-10-21",
+    "endDate": "2026-10-23",
+    "time": "Inscripción próximamente disponible",
+    "location": "Centro de Convenciones de Buenos Aires (CEC) – Recoleta",
+    "link": "#",
+    "image": "/evento.png",
+    "summary": "El Congreso Argentino de Proteínas Alternativas (CAPA) reúne a referentes de la ciencia, la industria, la inversión y la política para impulsar el desarrollo del sector en Argentina y la región.",
+    "details": "Durante tres jornadas, se abordarán temáticas clave como innovación, escalamiento, regulación, nutrición y cultura alimentaria, junto con espacios de networking, exhibiciones y experiencias gastronómicas."
+  }
 ]
