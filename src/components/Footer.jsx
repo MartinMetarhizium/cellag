@@ -6,13 +6,13 @@ export default function Footer() {
         Organización sin fines de lucro que impulsa la agricultura celular y las proteínas alternativas.
       </p>
       <div className="flex justify-center gap-4 mt-4 text-sm">
-        <a href="https://www.instagram.com/cellagbrazil/" target="_blank" rel="noreferrer" className="hover:underline">
+        <a href="https://www.instagram.com/cellagargentina/" target="_blank" rel="noreferrer" className="hover:underline">
           Instagram
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="hover:underline">
+        {/* <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="hover:underline">
           LinkedIn
-        </a>
-        <a href="mailto:info@cellagbrazil.net" className="hover:underline">
+        </a> */}
+        <a href="mailto:fedehorn@cellagargentina.com" className="hover:underline">
           Contacto
         </a>
       </div>

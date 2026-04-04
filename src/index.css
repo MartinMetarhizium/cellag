@@ -29,3 +29,16 @@ textarea,
 select {
   font: inherit;
 }
+
+@keyframes sponsors-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-sponsors-scroll {
+  animation: sponsors-scroll 25s linear infinite;
+}

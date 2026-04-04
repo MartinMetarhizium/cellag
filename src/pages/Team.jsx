@@ -40,7 +40,7 @@ export default function Equipo() {
 
       <Section title="Gestión" items={gestion} />
       <Section title="Socios de honor" items={honor} />
-      <Section title="Equipo" items={equipo} />
+      {/* <Section title="Equipo" items={equipo} /> */}
     </div>
   );
 }

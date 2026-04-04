@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
+import SponsorsCarousel from "../components/SponsorsCarousel";
 
 export default function Home() {
   const slides = [
@@ -51,18 +52,40 @@ export default function Home() {
         </div>
       </section>
 
+      <SponsorsCarousel />
+
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
           {[
-            ["Equipo", "Conocé la gestión y las personas que impulsan la organización."],
-            ["Eventos", "Mirá próximos encuentros, actividades y convocatorias."],
-            ["Noticias", "Seguí las novedades y publicaciones institucionales."],
-            ["Asociate", "Sumate a la comunidad y participá del crecimiento del sector."],
-          ].map(([title, text]) => (
-            <div key={title} className="rounded-2xl border p-6 shadow-sm">
+            [
+              "Equipo",
+              "Conocé la gestión y las personas que impulsan la organización.",
+              "/team",
+            ],
+            [
+              "Eventos",
+              "Mirá próximos encuentros, actividades y convocatorias.",
+              "/events",
+            ],
+            [
+              "Noticias",
+              "Seguí las novedades y publicaciones institucionales.",
+              "/news",
+            ],
+            [
+              "Asociate",
+              "Sumate a la comunidad y participá del crecimiento del sector.",
+              "/associate",
+            ],
+          ].map(([title, text, to]) => (
+            <Link
+              key={title}
+              to={to}
+              className="rounded-2xl border p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition block"
+            >
               <h2 className="text-xl font-semibold text-green-800 mb-3">{title}</h2>
               <p className="text-gray-600">{text}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
