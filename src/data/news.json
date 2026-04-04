@@ -1,10 +1,15 @@
 [
   {
-    "id": "capa-2026",
+    "id": "capa-2026-news",
     "title": "CAPA 2026: Argentina se prepara para el evento que marcará el futuro de las proteínas alternativas",
     "excerpt": "Argentina se prepara para dar un paso clave en el desarrollo de la nueva industria alimentaria. El 1° Congreso Argentino de Proteínas Alternativas (CAPA) 2026 se realizará los días 21, 22 y 23 de octubre en el Centro de Convenciones de Buenos Aires (CEC), en el marco de Crossing Over Latam.",
     "date": "2026-04-03",
     "image": "/evento.png",
-    "link": "https://argentinainvestiga.edu.ar/noticia.php?titulo=ltimos_lugares_primera_conferencia_sobre_protenas_alternativas_de_la_argentinaunsam&id=9648"
+    "content": [
+      "Argentina se prepara para dar un paso clave en el desarrollo de la nueva industria alimentaria.",
+      "El 1° Congreso Argentino de Proteínas Alternativas (CAPA) 2026 se realizará los días 21, 22 y 23 de octubre en el Centro de Convenciones de Buenos Aires (CEC), en el marco de Crossing Over Latam.",
+      "Impulsado en articulación con The UNSAM Alt. Protein Project, el congreso surge como una respuesta a la creciente necesidad de consolidar un ecosistema que integre ciencia, industria, inversión y política pública en torno a las proteínas alternativas.",
+      "Durante tres jornadas, CAPA reunirá a referentes nacionales e internacionales con el objetivo de acelerar el desarrollo del sector en Argentina y la región."
+    ]
   }
 ]

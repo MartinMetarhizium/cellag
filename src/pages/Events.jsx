@@ -1,13 +1,14 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import events from "../data/events.json";
 
 function formatEventDate(start, end) {
   if (!start) return "";
   if (!end || start === end) return start;
-  return `${start} al ${end}`;
+  return `${start} to ${end}`;
 }
 
-export default function Eventos() {
+export default function Events() {
   const [category, setCategory] = useState("Todos");
   const today = new Date();
 
@@ -49,25 +50,13 @@ export default function Eventos() {
           <p className="text-gray-700 mb-4">{event.summary}</p>
         )}
 
-        {event.details && (
-          <p className="text-sm text-gray-600 mb-6">{event.details}</p>
-        )}
-
         <div className="mt-auto">
-          {event.link && event.link !== "#" ? (
-            <a
-              href={event.link}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-800"
-            >
-              Entrar al evento
-            </a>
-          ) : (
-            <span className="inline-block bg-gray-200 text-gray-700 px-4 py-2 rounded-lg">
-              Inscripción próximamente disponible
-            </span>
-          )}
+          <Link
+            to={`/events/${event.id}`}
+            className="inline-block bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-800"
+          >
+            Ver detalles
+          </Link>
         </div>
       </div>
     </article>
@@ -78,7 +67,7 @@ export default function Eventos() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-bold text-green-900 mb-4">Eventos</h1>
         <p className="text-gray-700 max-w-3xl mb-8">
-          Explorá las actividades de Cell Ag Argentina y encontrá los eventos que te interesan.
+          Explorá las actividades de Cell Ag Argentina y encontra eventos cercanos a vos.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-10">
@@ -98,24 +87,16 @@ export default function Eventos() {
         </div>
 
         <section className="mb-14">
-          <h2 className="text-2xl font-bold text-green-800 mb-6">Próximos eventos</h2>
+          <h2 className="text-2xl font-bold text-green-800 mb-6">Eventos futuros</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {upcoming.length ? (
-              upcoming.map((e) => <Card key={e.id} event={e} />)
-            ) : (
-              <p>No hay eventos próximos.</p>
-            )}
+            {upcoming.length ? upcoming.map((e) => <Card key={e.id} event={e} />) : <p>No hay eventos futuros.</p>}
           </div>
         </section>
 
         <section>
           <h2 className="text-2xl font-bold text-green-800 mb-6">Eventos pasados</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {past.length ? (
-              past.map((e) => <Card key={e.id} event={e} />)
-            ) : (
-              <p>No hay eventos pasados.</p>
-            )}
+            {past.length ? past.map((e) => <Card key={e.id} event={e} />) : <p>No hay eventos pasados.</p>}
           </div>
         </section>
       </div>

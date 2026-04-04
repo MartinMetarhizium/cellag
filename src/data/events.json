@@ -1,16 +1,21 @@
 [
   {
-    "id": 1,
+    "id": "capa-2026",
     "title": "Congreso Argentino de Proteínas Alternativas",
     "subtitle": "CAPA 2026",
     "category": "Congreso",
     "date": "2026-10-21",
     "endDate": "2026-10-23",
-    "time": "Inscripción próximamente disponible",
+    "time": "Horario a confirmar",
     "location": "Centro de Convenciones de Buenos Aires (CEC) – Recoleta",
-    "link": "https://argentinainvestiga.edu.ar/noticia.php?titulo=ltimos_lugares_primera_conferencia_sobre_protenas_alternativas_de_la_argentinaunsam&id=9648",
     "image": "/evento.png",
     "summary": "El Congreso Argentino de Proteínas Alternativas (CAPA) reúne a referentes de la ciencia, la industria, la inversión y la política para impulsar el desarrollo del sector en Argentina y la región.",
-    "details": "Durante tres jornadas, se abordarán temáticas clave como innovación, escalamiento, regulación, nutrición y cultura alimentaria, junto con espacios de networking, exhibiciones y experiencias gastronómicas."
+    "details": "Durante tres jornadas, se abordarán temáticas clave como innovación, escalamiento, regulación, nutrición y cultura alimentaria, junto con espacios de networking, exhibiciones y experiencias gastronómicas.",
+    "content": [
+      "El Congreso Argentino de Proteínas Alternativas (CAPA) 2026 se realizará los días 21, 22 y 23 de octubre en el Centro de Convenciones de Buenos Aires.",
+      "El evento surge como una oportunidad para reunir ciencia, industria, inversión y política pública en torno al crecimiento del ecosistema de proteínas alternativas en Argentina.",
+      "Durante tres jornadas habrá espacios de intercambio, networking, exhibiciones y experiencias vinculadas a innovación, regulación, nutrición y cultura alimentaria.",
+      "El cronograma completo será anunciado próximamente."
+    ]
   }
 ]
