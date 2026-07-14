@@ -50,18 +50,21 @@ const speakers = [
     name: "Fabio Zon",
     company: "Chunk Foods",
     country: "Israel",
+    photo: "/speakers/fabio_zon.jpg",
     bio: "Consultor en biotech y primer miembro del equipo de Chunk Foods. Une ciencia y estrategia para el escalado de proteínas alternativas en la región.",
   },
   {
     name: "Valeria Bosio",
     company: "UNLP",
-    country: "Argentina",
+    country: "Argentina", 
+    photo: "/speakers/valeria_bosio.png",
     bio: "Doctora en Química y en Biomedicina. Se formó en ingeniería de tejidos en Tufts University y Harvard, dirige BIOMIT Lab y es consultora internacional.",
   },
   {
     name: "Lucía Cragnza",
     company: "Sartorius",
     country: "Argentina",
+    photo: "/speakers/fotoLC.jpg",
     bio: "Especialista y PhD en biotecnología, con experiencia en regulación, producción biofarmacéutica y soporte técnico en bioprocesos.",
   },
   {
@@ -81,6 +84,7 @@ const speakers = [
     name: "Eduardo Bittencourt",
     company: "Typcal",
     country: "Brasil",
+    photo: "/speakers/eduardosydney.jpeg",
     bio: "Emprendedor y científico, cofundador y CTO de Typcal. PhD en Ingeniería de Bioprocesos, autor de 25 artículos con más de 4.000 citas.",
   },
 ];
