@@ -42,3 +42,60 @@ select {
 .animate-sponsors-scroll {
   animation: sponsors-scroll 25s linear infinite;
 }
+
+.capa-launcher { position: fixed; right: 0; top: 42%; z-index: 45; width: 118px; padding: 18px 14px; border: 0; border-radius: 22px 0 0 22px; color: #fff; background: #122f27; box-shadow: 0 18px 45px rgba(18,47,39,.28); cursor: pointer; text-align: left; transition: transform .2s, background .2s; }
+.capa-launcher:hover { transform: translateX(-5px); background: #ed684a; }
+.capa-launcher > span:nth-child(2) { display: block; font-size: 30px; line-height: 1; font-weight: 900; letter-spacing: -.04em; margin: 5px 0; }
+.capa-launcher-kicker, .capa-launcher small { display: block; font-size: 10px; font-weight: 800; letter-spacing: .09em; }
+.capa-launcher small { line-height: 1.25; opacity: .85; letter-spacing: 0; }
+.capa-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: rgba(8,24,20,.72); backdrop-filter: blur(8px); animation: capa-fade .2s ease-out; }
+.capa-modal { position: relative; width: min(1040px, 100%); max-height: calc(100vh - 48px); overflow: auto; border-radius: 30px; background: #f8f3e9; box-shadow: 0 30px 100px rgba(0,0,0,.35); animation: capa-rise .35s ease-out; }
+.capa-close { position: absolute; z-index: 2; right: 18px; top: 18px; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; color: white; background: rgba(0,0,0,.18); font-size: 28px; line-height: 1; cursor: pointer; }
+.capa-hero { padding: 62px 7% 50px; color: white; background: radial-gradient(circle at 85% 10%, rgba(238,104,74,.95), transparent 35%), linear-gradient(130deg,#0d2f27,#185b45); }
+.capa-eyebrow { max-width: 520px; text-transform: uppercase; letter-spacing: .18em; font-size: 12px; font-weight: 800; opacity: .8; }
+.capa-hero h2 { margin: 8px 0 0; font-size: clamp(58px,10vw,118px); line-height: .9; font-weight: 950; letter-spacing: -.07em; }
+.capa-hero h2 span { color: #f6aa4d; font-size: .42em; letter-spacing: -.02em; }
+.capa-date { margin: 18px 0 30px; font-size: clamp(17px,2vw,23px); font-weight: 650; }
+.capa-countdown { display: grid; grid-template-columns: repeat(4,minmax(70px,120px)); gap: 10px; }
+.capa-countdown div { padding: 13px 8px; border: 1px solid rgba(255,255,255,.2); border-radius: 14px; background: rgba(255,255,255,.08); text-align: center; }
+.capa-countdown strong, .capa-countdown span { display: block; }
+.capa-countdown strong { font-size: clamp(24px,4vw,40px); line-height: 1; font-variant-numeric: tabular-nums; }
+.capa-countdown span { margin-top: 6px; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; opacity: .75; }
+.capa-speakers { padding: 42px 7% 48px; }
+.capa-section-heading p { margin: 0; color: #ed684a; text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 900; }
+.capa-section-heading h3 { margin: 2px 0 24px; color: #122f27; font-size: clamp(32px,5vw,50px); letter-spacing: -.04em; }
+.capa-speaker-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; }
+.capa-speaker-card { overflow: hidden; border-radius: 17px; background: white; box-shadow: 0 8px 25px rgba(18,47,39,.08); }
+.capa-speaker-photo, .capa-speaker-placeholder { width: 100%; aspect-ratio: 4/3.5; overflow: hidden; }
+.capa-speaker-photo img { width: 100%; height: 100%; object-fit: cover; }
+.capa-photo-emiliano img { height: 116%; transform: translateY(-7%); }
+.capa-speaker-placeholder { display: grid; place-items: end center; color: #789287; background: linear-gradient(145deg,#d9e7df,#bcd1c5); }
+.capa-speaker-placeholder svg { width: 72%; fill: currentColor; opacity: .7; }
+.capa-speaker-card > div:last-child { padding: 15px; }
+.capa-speaker-card h4 { margin: 0 0 4px; color: #122f27; font-size: 17px; }
+.capa-speaker-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 9px; color: #ed684a; font-size: 11px; }
+.capa-speaker-meta span { flex: 0 0 auto; padding: 2px 7px; border-radius: 999px; color: #315c4e; background: #e5eee8; font-weight: 800; }
+.capa-speaker-card p { margin: 0; color: #718078; font-size: 12px; line-height: 1.45; }
+.capa-cta { display: inline-flex; margin-top: 28px; padding: 13px 20px; border-radius: 999px; color: white; background: #ed684a; font-weight: 800; transition: transform .2s, background .2s; }
+.capa-cta:hover { transform: translateY(-2px); background: #d95135; }
+@keyframes capa-fade { from { opacity: 0; } }
+@keyframes capa-rise { from { opacity: 0; transform: translateY(18px) scale(.98); } }
+
+@media (max-width: 720px) {
+  .capa-launcher { top: auto; bottom: 18px; width: 104px; }
+  .capa-backdrop { padding: 10px; }
+  .capa-modal { max-height: calc(100vh - 20px); border-radius: 22px; }
+  .capa-hero { padding: 55px 24px 34px; }
+  .capa-countdown { grid-template-columns: repeat(4,1fr); gap: 5px; }
+  .capa-countdown div { padding: 10px 2px; }
+  .capa-speakers { padding: 32px 24px 36px; }
+  .capa-speaker-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 460px) {
+  .capa-speaker-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capa-backdrop, .capa-modal { animation: none; }
+}
