@@ -15,18 +15,21 @@ const speakers = [
     name: "Pancho Piñero",
     company: "Asociación de Productores a Base de Plantas",
     country: "Argentina",
+    photo: "/speakers/pancho_piñero.jpeg",
     bio: "Fundador de la Asociación a Base de Plantas y CEO de VNG, referente en el desarrollo del sector plant-based.",
   },
   {
     name: "Kris Blanchard",
     company: "Luyef",
     country: "Chile",
+    photo: "/speakers/kris_blanchard.jpg",
     bio: "Biotecnólogo y emprendedor deep-biotech. Como CEO de Luyef Biotechnologies, impulsa tecnologías para biomanufactura sostenible y producción animal-free.",
   },
   {
     name: "Agustín Belloso",
     company: "Tomorrow Foods",
     country: "Argentina",
+    photo: "/speakers/agustin_belloso.jpg",
     bio: "Cofundador y CEO de Tomorrow Foods. Abogado por la UBA y MBA por Cambridge; impulsa ingredientes innovadores a partir de cultivos regenerativos.",
   },
   {
