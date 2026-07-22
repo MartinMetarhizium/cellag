@@ -110,25 +110,13 @@ function SpeakerPlaceholder() {
   );
 }
 
-export default function CapaModal() {
-  const [open, setOpen] = useState(false);
+export function CapaContent({ isPage = false }) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
     const timer = window.setInterval(() => setTimeLeft(getTimeLeft()), 1000);
     return () => window.clearInterval(timer);
   }, []);
-
-  useEffect(() => {
-    if (!open) return undefined;
-    const onKeyDown = (event) => event.key === "Escape" && setOpen(false);
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open]);
 
   const countdown = useMemo(
     () => [
@@ -141,26 +129,7 @@ export default function CapaModal() {
   );
 
   return (
-    <>
-      <button className="capa-launcher" onClick={() => setOpen(true)}>
-        <span className="capa-launcher-kicker">21 OCT 2026</span>
-        <span>CAPA</span>
-        <small>Conocé el congreso →</small>
-      </button>
-
-      {open && (
-        <div className="capa-backdrop" role="presentation" onMouseDown={() => setOpen(false)}>
-          <section
-            className="capa-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="capa-title"
-            onMouseDown={(event) => event.stopPropagation()}
-          >
-            <button className="capa-close" onClick={() => setOpen(false)} aria-label="Cerrar CAPA">
-              ×
-            </button>
-
+    <section className={isPage ? "capa-page" : "capa-modal"} aria-labelledby="capa-title">
             <div className="capa-hero">
               <p className="capa-eyebrow">Congreso Argentino de Proteínas Alternativas</p>
               <h2 id="capa-title">CAPA <span>2026</span></h2>
@@ -202,7 +171,37 @@ export default function CapaModal() {
               </div>
               <a className="capa-cta" href="/events/capa-2026">Ver detalles del evento</a>
             </div>
-          </section>
+    </section>
+  );
+}
+
+export default function CapaModal() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKeyDown = (event) => event.key === "Escape" && setOpen(false);
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
+  return (
+    <>
+      <button className="capa-launcher" onClick={() => setOpen(true)}>
+        <span className="capa-launcher-kicker">21 OCT 2026</span>
+        <span>CAPA</span>
+        <small>Conocé el congreso →</small>
+      </button>
+      {open && (
+        <div className="capa-backdrop" role="presentation" onMouseDown={() => setOpen(false)}>
+          <div onMouseDown={(event) => event.stopPropagation()}>
+            <button className="capa-close" onClick={() => setOpen(false)} aria-label="Cerrar CAPA">×</button>
+            <CapaContent />
+          </div>
         </div>
       )}
     </>

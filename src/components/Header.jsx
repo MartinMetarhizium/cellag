@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 p-4">
-        <NavLink to="/" className="flex items-center gap-3">
+        <NavLink to="/home" className="flex items-center gap-3">
           <img
             src="/cell.png"
             alt="Cell Ag Argentina"
@@ -22,6 +22,12 @@ export default function Header() {
         </NavLink>
 
         <nav className="flex flex-wrap justify-center gap-4 text-gray-700">
+          <NavLink
+            to="/capa"
+            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+          >
+            CAPA
+          </NavLink>
           <NavLink
             to="/team"
             className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}

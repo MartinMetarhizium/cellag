@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import SponsorsCarousel from "../components/SponsorsCarousel";
-import CapaModal from "../components/CapaModal";
 
 export default function Home() {
   const slides = [
@@ -12,7 +11,6 @@ export default function Home() {
 
   return (
     <>
-      <CapaModal />
       <section className="bg-green-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
           <div>
@@ -49,6 +47,9 @@ export default function Home() {
           </div>
 
           <div>
+            <p className="text-green-700 font-semibold uppercase tracking-[0.18em] mb-3">
+              Noticias
+            </p>
             <Carousel slides={slides} aspect="aspect-[4/3]" />
           </div>
         </div>

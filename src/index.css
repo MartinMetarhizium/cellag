@@ -50,6 +50,8 @@ select {
 .capa-launcher small { line-height: 1.25; opacity: .85; letter-spacing: 0; }
 .capa-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: rgba(8,24,20,.72); backdrop-filter: blur(8px); animation: capa-fade .2s ease-out; }
 .capa-modal { position: relative; width: min(1040px, 100%); max-height: calc(100vh - 48px); overflow: auto; border-radius: 30px; background: #f8f3e9; box-shadow: 0 30px 100px rgba(0,0,0,.35); animation: capa-rise .35s ease-out; }
+.capa-page { width: 100%; background: #f8f3e9; }
+.capa-page .capa-hero, .capa-page .capa-speakers { padding-left: max(6%, calc((100% - 1152px) / 2)); padding-right: max(6%, calc((100% - 1152px) / 2)); }
 .capa-close { position: absolute; z-index: 2; right: 18px; top: 18px; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; color: white; background: rgba(0,0,0,.18); font-size: 28px; line-height: 1; cursor: pointer; }
 .capa-hero { padding: 62px 7% 50px; color: white; background: radial-gradient(circle at 85% 10%, rgba(238,104,74,.95), transparent 35%), linear-gradient(130deg,#0d2f27,#185b45); }
 .capa-eyebrow { max-width: 520px; text-transform: uppercase; letter-spacing: .18em; font-size: 12px; font-weight: 800; opacity: .8; }
@@ -98,4 +100,22 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
   .capa-backdrop, .capa-modal { animation: none; }
+}
+
+.hackathon-launcher { position: fixed; right: 0; bottom: 28px; z-index: 48; width: 148px; padding: 15px 14px; border: 0; border-radius: 20px 0 0 20px; color: #102c25; background: #f6aa4d; box-shadow: 0 15px 40px rgba(18,47,39,.24); cursor: pointer; text-align: left; transition: transform .2s, background .2s; }
+.hackathon-launcher:hover { transform: translateX(-5px); background: #ffbd6a; }
+.hackathon-launcher span, .hackathon-launcher small { display: block; }
+.hackathon-launcher span { font-size: 17px; font-weight: 950; letter-spacing: .08em; }
+.hackathon-launcher small { margin-top: 2px; font-weight: 700; }
+.hackathon-backdrop { position: fixed; inset: 0; z-index: 110; display: grid; place-items: center; padding: 20px; background: rgba(8,24,20,.72); backdrop-filter: blur(8px); }
+.hackathon-modal { position: relative; width: min(600px,100%); overflow: hidden; padding: 58px clamp(28px,7vw,68px); border-radius: 30px; color: white; background: radial-gradient(circle at 92% 8%,#f6aa4d 0,transparent 35%),linear-gradient(135deg,#122f27,#185b45); box-shadow: 0 30px 100px rgba(0,0,0,.35); animation: capa-rise .3s ease-out; }
+.hackathon-modal > button { position: absolute; right: 18px; top: 18px; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; color: white; background: rgba(0,0,0,.16); font-size: 28px; cursor: pointer; }
+.hackathon-modal > p:first-of-type { margin: 0; color: #f6aa4d; font-size: 12px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+.hackathon-modal h2 { margin: 6px 0 0; font-size: clamp(48px,10vw,84px); line-height: .95; letter-spacing: -.06em; }
+.hackathon-modal h3 { margin: 14px 0 20px; font-size: clamp(20px,4vw,28px); }
+.hackathon-copy { max-width: 480px; color: rgba(255,255,255,.78); line-height: 1.65; }
+.hackathon-status { display: inline-block; margin-top: 20px; padding: 10px 15px; border-radius: 999px; color: #102c25; background: #f6aa4d; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+
+@media (max-width: 720px) {
+  .hackathon-launcher { right: 0; bottom: 18px; width: 130px; }
 }
