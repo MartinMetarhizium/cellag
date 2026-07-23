@@ -81,6 +81,20 @@ const speakers = [
     photo: "/speakers/eduardosydney.jpeg",
     bio: "Emprendedor y científico, cofundador y CTO de Typcal. PhD en Ingeniería de Bioprocesos, autor de 25 artículos con más de 4.000 citas.",
   },
+  {
+    name: "Celeste Marín",
+    company: "Onelab",
+    country: "Argentina",
+    photo: "/speakers/celeste_maribn.png",
+    bio: "Licenciada en Ciencias Biológicas, con experiencia en biotecnología, calidad, GMP, escalado industrial y estrategia científico-tecnológica.",
+  },
+  {
+    name: "Bruno Rosolem",
+    company: "Amazonika Mundi",
+    country: "Brasil",
+    photo: "/speakers/bruno_rosolem.png",
+    bio: "CCO de Amazonika Mundi. Lidera la expansión global y comercialización de fibra alimentaria innovadora elaborada con cáscara de castaña de cajú.",
+  },
 ];
 
 function getTimeLeft() {
