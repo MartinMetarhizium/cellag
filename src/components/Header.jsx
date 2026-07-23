@@ -29,6 +29,12 @@ export default function Header() {
             CAPA
           </NavLink>
           <NavLink
+            to="/hackathon"
+            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+          >
+            Hackathon
+          </NavLink>
+          <NavLink
             to="/team"
             className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
           >
