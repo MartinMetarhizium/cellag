@@ -75,12 +75,6 @@ const speakers = [
     bio: "Subgerente Operativa de Alimentos en INTI. Especialista en innovación, desarrollo tecnológico y agregado de valor en alimentos.",
   },
   {
-    name: "Celina Moreno",
-    company: "SAGyP",
-    country: "Argentina",
-    bio: "Subsecretaria de Economía.",
-  },
-  {
     name: "Eduardo Bittencourt",
     company: "Typcal",
     country: "Brasil",
@@ -143,6 +137,22 @@ export function CapaContent({ isPage = false }) {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="capa-description">
+              <p className="capa-description-kicker">Primer congreso nacional</p>
+              <h3>Proteínas alternativas, ciencia e innovación en un mismo lugar</h3>
+              <p>
+                El Congreso Argentino de Proteínas Alternativas (CAPA) es el primer congreso
+                nacional dedicado a proteínas alternativas en Argentina, realizado por Cell Ag
+                Argentina y The UNSAM Alt. Protein Project. Se realiza en el marco de Crossing
+                Over LatAm Bioexpo y tendrá lugar en el Centro de Convenciones de Buenos Aires,
+                en Recoleta, los días 21, 22 y 23 de octubre.
+              </p>
+              <a href="https://crossingoverlatam.bio/" target="_blank" rel="noreferrer">
+                Conseguí tu entrada
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
 
             <div className="capa-speakers">
