@@ -9,6 +9,7 @@ import NewsDetail from "./pages/NewsDetails";
 import Associate from "./pages/Associate";
 import Capa from "./pages/Capa";
 import Hackathon from "./pages/Hackathon";
+import Mission from "./pages/Mission";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="hackathon" element={<Hackathon />} />
         <Route path="home" element={<Home />} />
         <Route path="team" element={<Team />} />
+        <Route path="mission" element={<Mission />} />
         <Route path="events" element={<Events />} />
         <Route path="events/:id" element={<EventDetail />} />
         <Route path="news" element={<News />} />

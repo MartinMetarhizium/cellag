@@ -41,6 +41,12 @@ export default function Header() {
             Equipo
           </NavLink>
           <NavLink
+            to="/mission"
+            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+          >
+            Misión
+          </NavLink>
+          <NavLink
             to="/events"
             className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
           >
