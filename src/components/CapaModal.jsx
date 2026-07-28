@@ -163,10 +163,16 @@ export function CapaContent({ isPage = false }) {
                 Over LatAm Bioexpo y tendrá lugar en el Centro de Convenciones de Buenos Aires,
                 en Recoleta, los días 21, 22 y 23 de octubre.
               </p>
-              <a href="https://crossingoverlatam.bio/" target="_blank" rel="noreferrer">
-                Conseguí tu entrada
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div className="capa-ticket-row">
+                <a href="https://crossingoverlatam.bio/" target="_blank" rel="noreferrer">
+                  Conseguí tu entrada
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <div className="capa-discount" aria-label="Código de descuento CAPAXO">
+                  <span>Código de descuento</span>
+                  <strong>CAPAXO</strong>
+                </div>
+              </div>
             </div>
 
             <div className="capa-speakers">

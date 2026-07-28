@@ -69,6 +69,11 @@ select {
 .capa-description h3 { max-width: 760px; margin: 6px 0 16px; font-size: clamp(27px,4vw,42px); line-height: 1.05; letter-spacing: -.035em; }
 .capa-description > p:not(.capa-description-kicker) { max-width: 860px; margin: 0; color: #52665e; font-size: 17px; line-height: 1.7; }
 .capa-description a { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; padding: 13px 20px; border-radius: 999px; color: white; background: #ed684a; font-weight: 850; }
+.capa-ticket-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+.capa-ticket-row > a { margin-top: 0; }
+.capa-discount { display: flex; align-items: center; gap: 14px; padding: 10px 12px 10px 17px; border: 2px dashed #185b45; border-radius: 14px; color: #185b45; background: white; box-shadow: 0 7px 20px rgba(18,47,39,.08); }
+.capa-discount span { font-size: 11px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.capa-discount strong { padding: 7px 12px; border-radius: 9px; color: white; background: #185b45; font-size: 20px; letter-spacing: .12em; }
 .capa-speakers { padding: 42px 7% 48px; }
 .capa-section-heading p { margin: 0; color: #ed684a; text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 900; }
 .capa-section-heading h3 { margin: 2px 0 24px; color: #122f27; font-size: clamp(32px,5vw,50px); letter-spacing: -.04em; }
