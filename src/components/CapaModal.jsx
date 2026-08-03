@@ -1,6 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const EVENT_DATE = new Date("2026-10-21T09:00:00-03:00");
+
+const countryFlags = {
+  Argentina: "🇦🇷",
+  Brasil: "🇧🇷",
+  Chile: "🇨🇱",
+  Israel: "🇮🇱",
+};
 
 const speakers = [
   {
@@ -95,6 +102,27 @@ const speakers = [
     photo: "/speakers/bruno_rosolem.png",
     bio: "CCO de Amazonika Mundi. Lidera la expansión global y comercialización de fibra alimentaria innovadora elaborada con cáscara de castaña de cajú.",
   },
+  {
+    name: "Alysson Soares",
+    company: "GFI Brasil",
+    country: "Brasil",
+    photo: "/speakers/alysson_soares.jpg",
+    bio: "Politólogo con más de 11 años de experiencia en Relaciones Institucionales y Gubernamentales en Brasil y América Latina. Como jefe de Políticas Públicas de GFI Brasil, lidera estrategias nacionales e internacionales sobre regulación, políticas públicas y proteínas alternativas.",
+  },
+  {
+    name: "Martín Sabatini",
+    company: "Michroma",
+    country: "Argentina",
+    photo: "/speakers/martin_sabatini.png",
+    bio: "Licenciado en Biotecnología y Doctor en Ciencias Biológicas. Como CSO de Michroma, lidera la estrategia científica, regulatoria y de escalado industrial para producir ingredientes naturales mediante fermentación de precisión y hongos filamentosos junto a equipos internacionales.",
+  },
+  {
+    name: "Juan Martín Oteiza",
+    company: "CIATI",
+    country: "Argentina",
+    photo: "/speakers/martin_oteiza.JPG",
+    bio: "Licenciado en Ciencias Biológicas y Doctor en Ciencias Exactas por la UNLP, e Investigador Independiente del CONICET. En CIATI-Centro Tecnológico coordina I+D y se especializa en microbiología e inocuidad alimentaria, con más de 20 años de experiencia.",
+  },
 ];
 
 function getTimeLeft() {
@@ -120,6 +148,7 @@ function SpeakerPlaceholder() {
 
 export function CapaContent({ isPage = false }) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
+  const speakersTrackRef = useRef(null);
 
   useEffect(() => {
     const timer = window.setInterval(() => setTimeLeft(getTimeLeft()), 1000);
@@ -135,6 +164,14 @@ export function CapaContent({ isPage = false }) {
     ],
     [timeLeft],
   );
+
+  const navigateSpeakers = (direction) => {
+    const track = speakersTrackRef.current;
+    if (!track) return;
+    const card = track.querySelector(".capa-speaker-card");
+    const distance = card ? card.getBoundingClientRect().width + 15 : track.clientWidth;
+    track.scrollBy({ left: direction * distance, behavior: "smooth" });
+  };
 
   return (
     <section className={isPage ? "capa-page" : "capa-modal"} aria-labelledby="capa-title">
@@ -176,11 +213,17 @@ export function CapaContent({ isPage = false }) {
             </div>
 
             <div className="capa-speakers">
-              <div className="capa-section-heading">
-                <p>Voces que transforman</p>
-                <h3>Speakers</h3>
+              <div className="capa-speakers-header">
+                <div className="capa-section-heading">
+                  <p>Voces que transforman</p>
+                  <h3>Speakers</h3>
+                </div>
+                <div className="capa-speaker-controls" aria-label="Navegación de speakers">
+                  <button onClick={() => navigateSpeakers(-1)} aria-label="Ver speakers anteriores">←</button>
+                  <button onClick={() => navigateSpeakers(1)} aria-label="Ver speakers siguientes">→</button>
+                </div>
               </div>
-              <div className="capa-speaker-grid">
+              <div className="capa-speaker-grid" ref={speakersTrackRef} tabIndex="0">
                 {speakers.map((speaker, index) => (
                   <article className="capa-speaker-card" key={`${speaker.name}-${index}`}>
                     {speaker.photo ? (
@@ -192,7 +235,14 @@ export function CapaContent({ isPage = false }) {
                       <h4>{speaker.name}</h4>
                       <div className="capa-speaker-meta">
                         <strong>{speaker.company}</strong>
-                        <span>{speaker.country}</span>
+                        <span
+                          className="capa-country-flag"
+                          title={speaker.country}
+                          role="img"
+                          aria-label={speaker.country}
+                        >
+                          {countryFlags[speaker.country] || "🌎"}
+                        </span>
                       </div>
                       <p>{speaker.bio}</p>
                     </div>
