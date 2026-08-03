@@ -2,13 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 const EVENT_DATE = new Date("2026-10-21T09:00:00-03:00");
 
-const countryFlags = {
-  Argentina: "🇦🇷",
-  Brasil: "🇧🇷",
-  Chile: "🇨🇱",
-  Israel: "🇮🇱",
-};
-
 const speakers = [
   {
     name: "Emiliano Benito",
@@ -146,6 +139,29 @@ function SpeakerPlaceholder() {
   );
 }
 
+function CountryFlag({ country }) {
+  const commonProps = {
+    className: "capa-flag-svg",
+    viewBox: "0 0 36 24",
+    role: "img",
+    "aria-label": country,
+  };
+
+  if (country === "Argentina") {
+    return <svg {...commonProps}><rect width="36" height="24" fill="#74acdf"/><rect y="8" width="36" height="8" fill="#fff"/><circle cx="18" cy="12" r="2.3" fill="#f6b40e"/></svg>;
+  }
+  if (country === "Brasil") {
+    return <svg {...commonProps}><rect width="36" height="24" fill="#009c3b"/><path d="M18 3 32 12 18 21 4 12Z" fill="#ffdf00"/><circle cx="18" cy="12" r="5.2" fill="#002776"/><path d="M13 10.8c3.5-.8 7-.1 10 2" fill="none" stroke="#fff" strokeWidth="1"/></svg>;
+  }
+  if (country === "Chile") {
+    return <svg {...commonProps}><rect width="36" height="24" fill="#d52b1e"/><rect width="36" height="12" fill="#fff"/><rect width="12" height="12" fill="#0039a6"/><path d="m6 2.8.8 2.1 2.2.1-1.7 1.4.6 2.2L6 7.3 4.1 8.6l.6-2.2L3 5l2.2-.1Z" fill="#fff"/></svg>;
+  }
+  if (country === "Israel") {
+    return <svg {...commonProps}><rect width="36" height="24" fill="#fff"/><rect y="3" width="36" height="3" fill="#0038b8"/><rect y="18" width="36" height="3" fill="#0038b8"/><path d="m18 7 4.3 7.5h-8.6Zm0 10-4.3-7.5h8.6Z" fill="none" stroke="#0038b8" strokeWidth="1"/></svg>;
+  }
+  return <span className="capa-flag-fallback" role="img" aria-label={country}>🌎</span>;
+}
+
 export function CapaContent({ isPage = false }) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
   const speakersTrackRef = useRef(null);
@@ -235,13 +251,8 @@ export function CapaContent({ isPage = false }) {
                       <h4>{speaker.name}</h4>
                       <div className="capa-speaker-meta">
                         <strong>{speaker.company}</strong>
-                        <span
-                          className="capa-country-flag"
-                          title={speaker.country}
-                          role="img"
-                          aria-label={speaker.country}
-                        >
-                          {countryFlags[speaker.country] || "🌎"}
+                        <span className="capa-country-flag" title={speaker.country}>
+                          <CountryFlag country={speaker.country} />
                         </span>
                       </div>
                       <p>{speaker.bio}</p>

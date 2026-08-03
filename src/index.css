@@ -91,7 +91,9 @@ select {
 .capa-speaker-card > div:last-child { padding: 15px; }
 .capa-speaker-card h4 { margin: 0 0 4px; color: #122f27; font-size: 17px; }
 .capa-speaker-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 9px; color: #ed684a; font-size: 11px; }
-.capa-speaker-meta .capa-country-flag { flex: 0 0 auto; padding: 3px 7px; border-radius: 999px; background: #e5eee8; font-size: 20px; line-height: 1.15; cursor: help; }
+.capa-speaker-meta .capa-country-flag { display: inline-flex; flex: 0 0 auto; overflow: hidden; border: 1px solid #d5dfd9; border-radius: 5px; background: white; box-shadow: 0 1px 3px rgba(18,47,39,.12); cursor: help; }
+.capa-flag-svg { display: block; width: 30px; height: 20px; }
+.capa-flag-fallback { display: grid; place-items: center; width: 30px; height: 20px; font-size: 16px; }
 .capa-speaker-card p { margin: 0; color: #718078; font-size: 12px; line-height: 1.45; }
 .capa-cta { display: inline-flex; margin-top: 28px; padding: 13px 20px; border-radius: 999px; color: white; background: #ed684a; font-weight: 800; transition: transform .2s, background .2s; }
 .capa-cta:hover { transform: translateY(-2px); background: #d95135; }
