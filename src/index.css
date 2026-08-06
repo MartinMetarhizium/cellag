@@ -24,7 +24,8 @@ a {
 }
 
 .language-switch { display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px 4px 5px; border: 1px solid #b9c9c0; border-radius: 999px; color: #185b45; background: #f5f9f6; cursor: pointer; }
-.language-switch span { display: grid; place-items: center; min-width: 27px; height: 27px; border-radius: 50%; color: white; background: #185b45; font-size: 10px; font-weight: 900; }
+.language-switch span { display: grid; place-items: center; overflow: hidden; width: 29px; height: 20px; border: 1px solid #d3ddd7; border-radius: 4px; background: white; }
+.language-switch span svg { display: block; width: 100%; height: 100%; }
 .language-switch small { font-size: 11px; font-weight: 750; }
 
 button,

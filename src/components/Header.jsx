@@ -4,6 +4,13 @@ import { useI18n } from "../i18n/I18nContext";
 const linkBase = "transition hover:text-green-700";
 const activeClass = "text-green-700 font-semibold";
 
+function LanguageFlag({ locale }) {
+  if (locale === "es") {
+    return <svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#74acdf"/><rect y="8" width="36" height="8" fill="#fff"/><circle cx="18" cy="12" r="2.2" fill="#f6b40e"/></svg>;
+  }
+  return <svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#fff"/>{[0,4,8,12,16,20].map((y)=><rect key={y} y={y} width="36" height="2" fill="#b22234"/>)}<rect width="15" height="12" fill="#3c3b6e"/><g fill="#fff">{[3,7,11].flatMap((x)=>[3,6,9].map((y)=><circle key={`${x}-${y}`} cx={x} cy={y} r=".7"/>))}</g></svg>;
+}
+
 export default function Header() {
   const { locale, t, toggleLocale } = useI18n();
   return (
@@ -67,8 +74,8 @@ export default function Header() {
             {t("nav.join")}
           </NavLink>
           <button className="language-switch" onClick={toggleLocale} aria-label={t("languageLabel")}>
-            <span>{locale === "es" ? "EN" : "ES"}</span>
-            <small>{locale === "es" ? "English" : "Español"}</small>
+            <span><LanguageFlag locale={locale} /></span>
+            <small>{locale === "es" ? "Español" : "English"}</small>
           </button>
         </nav>
       </div>
