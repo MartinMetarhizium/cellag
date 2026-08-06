@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useI18n } from "../i18n/I18nContext";
 
 const EVENT_DATE = new Date("2026-10-21T09:00:00-03:00");
 
@@ -116,7 +117,34 @@ const speakers = [
     photo: "/speakers/martin_oteiza.JPG",
     bio: "Licenciado en Ciencias Biológicas y Doctor en Ciencias Exactas por la UNLP, e Investigador Independiente del CONICET. En CIATI-Centro Tecnológico coordina I+D y se especializa en microbiología e inocuidad alimentaria, con más de 20 años de experiencia.",
   },
+  {
+    name: "Carla Molento",
+    company: "Cell Ag Brazil",
+    country: "Brasil",
+    photo: "/speakers/carla_molento.jpg",
+    bio: "Profesora de la UFPR y presidenta de Cell Ag Brazil. Investiga bienestar animal, carne cultivada y sistemas alimentarios libres de animales.",
+  },
 ];
+
+const englishSpeakerBios = {
+  "Emiliano Benito": "Agricultural Engineer and cofounder of Elementa Foods, an Argentine non-GMO plant protein ingredient company operating in more than 10 countries.",
+  "Pancho Piñero": "Founder of the Plant-Based Association and CEO of VNG, a leading figure in the development of the plant-based sector.",
+  "Kris Blanchard": "Biotechnologist and deep-biotech entrepreneur. As CEO of Luyef Biotechnologies, he advances technologies for sustainable biomanufacturing and animal-free production.",
+  "Agustín Belloso": "Cofounder and CEO of Tomorrow Foods. UBA-trained lawyer with an MBA from Cambridge, advancing innovative ingredients from regenerative crops.",
+  "Lorena Pinho": "Science and Technology Specialist at GFI Brazil and regional mentor for the Alt Protein Project, with over 15 years of R&D experience in alternative proteins.",
+  "María Laura Matos": "Technical Director of INTI’s Industrial Biotechnology Center. PhD in Biology specializing in industrial bioprocesses and precision fermentation.",
+  "Fabio Zon": "Biotech consultant and the first member of the Chunk Foods team, connecting science and strategy to scale alternative proteins across the region.",
+  "Valeria Bosio": "PhD in Chemistry and Biomedicine, trained in tissue engineering at Tufts and Harvard. Director of BIOMIT Lab and international consultant.",
+  "Lucía Cragnza": "Biotechnology specialist and PhD with experience in regulation, biopharmaceutical production and technical support for bioprocesses.",
+  "Mariana Sánchez": "Operational Deputy Manager for Food at INTI, specializing in innovation, technology development and value creation in food.",
+  "Eduardo Bittencourt": "Entrepreneur and scientist, cofounder and CTO of Typcal. PhD in Bioprocess Engineering and author of 25 papers with more than 4,000 citations.",
+  "Celeste Marín": "Biological Sciences graduate with experience in biotechnology, quality, GMP, industrial scale-up and science and technology strategy.",
+  "Bruno Rosolem": "CCO of Amazonika Mundi, leading global expansion and commercialization of an innovative dietary fiber made from cashew shells.",
+  "Alysson Soares": "Political scientist with over 11 years of institutional and government relations experience in Brazil and Latin America. Head of Public Policy at GFI Brazil.",
+  "Martín Sabatini": "Biotechnologist and PhD in Biological Sciences. As CSO of Michroma, he leads scientific, regulatory and industrial scale-up strategy for precision-fermented natural ingredients.",
+  "Juan Martín Oteiza": "Biologist, PhD in Exact Sciences from UNLP and Independent CONICET Researcher. He leads R&D at CIATI with over 20 years of food microbiology and safety experience.",
+  "Carla Molento": "UFPR professor and President of Cell Ag Brazil, researching animal welfare, cultivated meat and animal-free food systems.",
+};
 
 function getTimeLeft() {
   const distance = Math.max(0, EVENT_DATE.getTime() - Date.now());
@@ -163,6 +191,7 @@ function CountryFlag({ country }) {
 }
 
 export function CapaContent({ isPage = false }) {
+  const { locale, t } = useI18n();
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
   const speakersTrackRef = useRef(null);
 
@@ -173,12 +202,12 @@ export function CapaContent({ isPage = false }) {
 
   const countdown = useMemo(
     () => [
-      [timeLeft.days, "días"],
-      [timeLeft.hours, "horas"],
-      [timeLeft.minutes, "min"],
-      [timeLeft.seconds, "seg"],
+      [timeLeft.days, t("capa.days")],
+      [timeLeft.hours, t("capa.hours")],
+      [timeLeft.minutes, t("capa.minutes")],
+      [timeLeft.seconds, t("capa.seconds")],
     ],
-    [timeLeft],
+    [timeLeft, t],
   );
 
   const navigateSpeakers = (direction) => {
@@ -192,11 +221,11 @@ export function CapaContent({ isPage = false }) {
   return (
     <section className={isPage ? "capa-page" : "capa-modal"} aria-labelledby="capa-title">
             <div className="capa-hero">
-              <p className="capa-eyebrow">Congreso Argentino de Proteínas Alternativas</p>
+              <p className="capa-eyebrow">{t("capa.congress")}</p>
               <h2 id="capa-title">CAPA <span>2026</span></h2>
-              <p className="capa-date">21–23 de octubre · Buenos Aires</p>
+              <p className="capa-date">{t("capa.date")}</p>
 
-              <div className="capa-countdown" aria-label="Cuenta regresiva para CAPA 2026">
+              <div className="capa-countdown" aria-label={t("capa.countdownLabel")}>
                 {countdown.map(([value, label]) => (
                   <div key={label}>
                     <strong>{String(value).padStart(2, "0")}</strong>
@@ -207,22 +236,16 @@ export function CapaContent({ isPage = false }) {
             </div>
 
             <div className="capa-description">
-              <p className="capa-description-kicker">Primer congreso nacional</p>
-              <h3>Proteínas alternativas, ciencia e innovación en un mismo lugar</h3>
-              <p>
-                El Congreso Argentino de Proteínas Alternativas (CAPA) es el primer congreso
-                nacional dedicado a proteínas alternativas en Argentina, realizado por Cell Ag
-                Argentina y The UNSAM Alt. Protein Project. Se realiza en el marco de Crossing
-                Over LatAm Bioexpo y tendrá lugar en el Centro de Convenciones de Buenos Aires,
-                en Recoleta, los días 21, 22 y 23 de octubre.
-              </p>
+              <p className="capa-description-kicker">{t("capa.firstCongress")}</p>
+              <h3>{t("capa.descriptionTitle")}</h3>
+              <p>{t("capa.description")}</p>
               <div className="capa-ticket-row">
                 <a href="https://crossingoverlatam.bio/" target="_blank" rel="noreferrer">
-                  Conseguí tu entrada
+                  {t("capa.tickets")}
                   <span aria-hidden="true">↗</span>
                 </a>
-                <div className="capa-discount" aria-label="Código de descuento CAPAXO">
-                  <span>Código de descuento</span>
+                <div className="capa-discount" aria-label={t("capa.discountLabel")}>
+                  <span>{t("capa.discount")}</span>
                   <strong>CAPAXO</strong>
                 </div>
               </div>
@@ -231,12 +254,12 @@ export function CapaContent({ isPage = false }) {
             <div className="capa-speakers">
               <div className="capa-speakers-header">
                 <div className="capa-section-heading">
-                  <p>Voces que transforman</p>
-                  <h3>Speakers</h3>
+                  <p>{t("capa.voices")}</p>
+                  <h3>{t("capa.speakers")}</h3>
                 </div>
                 <div className="capa-speaker-controls" aria-label="Navegación de speakers">
-                  <button onClick={() => navigateSpeakers(-1)} aria-label="Ver speakers anteriores">←</button>
-                  <button onClick={() => navigateSpeakers(1)} aria-label="Ver speakers siguientes">→</button>
+                  <button onClick={() => navigateSpeakers(-1)} aria-label={t("capa.previous")}>←</button>
+                  <button onClick={() => navigateSpeakers(1)} aria-label={t("capa.next")}>→</button>
                 </div>
               </div>
               <div className="capa-speaker-grid" ref={speakersTrackRef} tabIndex="0">
@@ -255,12 +278,12 @@ export function CapaContent({ isPage = false }) {
                           <CountryFlag country={speaker.country} />
                         </span>
                       </div>
-                      <p>{speaker.bio}</p>
+                      <p>{locale === "en" ? englishSpeakerBios[speaker.name] || speaker.bio : speaker.bio}</p>
                     </div>
                   </article>
                 ))}
               </div>
-              <a className="capa-cta" href="/events/capa-2026">Ver detalles del evento</a>
+              <a className="capa-cta" href="/events/capa-2026">{t("capa.details")}</a>
             </div>
     </section>
   );
