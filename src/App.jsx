@@ -10,6 +10,7 @@ import Associate from "./pages/Associate";
 import Capa from "./pages/Capa";
 import Hackathon from "./pages/Hackathon";
 import Mission from "./pages/Mission";
+import CapaTalkDetails from "./pages/CapaTalkDetails";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/capa" replace />} />
         <Route path="capa" element={<Capa />} />
+        <Route path="capa/charlas/:id" element={<CapaTalkDetails />} />
         <Route path="hackathon" element={<Hackathon />} />
         <Route path="home" element={<Home />} />
         <Route path="team" element={<Team />} />
