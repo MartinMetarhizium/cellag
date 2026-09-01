@@ -4,6 +4,7 @@ import capaTalks from "../data/capaTalks";
 import { useI18n } from "../i18n/I18nContext";
 
 const days = ["wednesday", "thursday", "friday"];
+const rooms = ["D", "E"];
 const dayCopy = {
   es: { wednesday: ["Miércoles", "21 OCT"], thursday: ["Jueves", "22 OCT"], friday: ["Viernes", "23 OCT"] },
   en: { wednesday: ["Wednesday", "OCT 21"], thursday: ["Thursday", "OCT 22"], friday: ["Friday", "OCT 23"] },
@@ -39,18 +40,27 @@ export default function CapaSchedule() {
       <div className="capa-day-tabs" role="tablist" aria-label={copy.title}>
         {days.map((day) => <button key={day} role="tab" aria-selected={activeDay === day} className={activeDay === day ? "active" : ""} onClick={() => setActiveDay(day)}><strong>{dayCopy[locale][day][0]}</strong><small>{dayCopy[locale][day][1]}</small><em>{capaTalks.filter((talk) => talk.day === day).length}</em></button>)}
       </div>
-      <div className="capa-talk-grid" role="tabpanel">
-        {talks.map((talk) => (
-          <Link className="capa-talk-card" to={`/capa/charlas/${talk.id}`} key={talk.id}>
-            <div className="capa-talk-photo">{talk.photo ? <img src={talk.photo} alt={talk.name} /> : <TalkPlaceholder name={talk.name} />}<span className={`talk-mode ${talk.mode}`}>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</span></div>
-            <div className="capa-talk-body">
-              <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
-              <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><span className="talk-flag" title={talk.country}><Flag country={talk.country} /></span></div>
-              <h5>{talk.title}</h5>
-              <div className="capa-talk-footer"><span>{talk.language}</span><span>{talk.category}</span><strong>{copy.details} →</strong></div>
+      <div className="capa-room-groups" role="tabpanel">
+        {rooms.map((room) => {
+          const roomTalks = talks.filter((talk) => talk.room === room);
+          if (!roomTalks.length) return null;
+          return <section className="capa-room-group" key={room}>
+            <div className="capa-room-heading"><span>{copy.room}</span><strong>{room}</strong><em>{roomTalks.length}</em></div>
+            <div className="capa-talk-grid">
+              {roomTalks.map((talk) => (
+                <Link className="capa-talk-card" to={`/capa/charlas/${talk.id}`} key={talk.id}>
+                  <div className="capa-talk-photo">{talk.photo ? <img src={talk.photo} alt={talk.name} /> : <TalkPlaceholder name={talk.name} />}<span className={`talk-mode ${talk.mode}`}>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</span></div>
+                  <div className="capa-talk-body">
+                    <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
+                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><span className="talk-flag" title={talk.country}><Flag country={talk.country} /></span></div>
+                    <h5>{talk.title}</h5>
+                    <div className="capa-talk-footer"><span>{talk.language}</span><span>{talk.category}</span><strong>{copy.details} →</strong></div>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </Link>
-        ))}
+          </section>;
+        })}
       </div>
     </section>
   );

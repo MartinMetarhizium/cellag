@@ -38,12 +38,6 @@ export default function Header() {
             {t("nav.capa")}
           </NavLink>
           <NavLink
-            to="/hackathon"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
-          >
-            {t("nav.hackathon")}
-          </NavLink>
-          <NavLink
             to="/team"
             className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
           >
@@ -54,12 +48,6 @@ export default function Header() {
             className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
           >
             {t("nav.mission")}
-          </NavLink>
-          <NavLink
-            to="/events"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
-          >
-            {t("nav.events")}
           </NavLink>
           <NavLink
             to="/news"
