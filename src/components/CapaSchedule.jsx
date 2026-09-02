@@ -10,6 +10,17 @@ const dayCopy = {
   en: { wednesday: ["Wednesday", "OCT 21"], thursday: ["Thursday", "OCT 22"], friday: ["Friday", "OCT 23"] },
 };
 
+const categoryNames = {
+  es: { PB: "Proteínas vegetales", CA: "Agricultura celular", FE: "Fermentación", PP: "Políticas públicas", IS: "Innovation Spotlight" },
+  en: { PB: "Plant-based proteins", CA: "Cellular agriculture", FE: "Fermentation", PP: "Public policy", IS: "Innovation Spotlight" },
+};
+
+const languageNames = {
+  ES: "Spanish",
+  EN: "English",
+  PT: "Portuguese",
+};
+
 function Flag({ country }) {
   const props = { viewBox: "0 0 36 24", role: "img", "aria-label": country };
   if (country === "Argentina") return <svg {...props}><rect width="36" height="24" fill="#74acdf"/><rect y="8" width="36" height="8" fill="#fff"/><circle cx="18" cy="12" r="2.2" fill="#f6b40e"/></svg>;
@@ -52,9 +63,9 @@ export default function CapaSchedule() {
                   <div className="capa-talk-photo">{talk.photo ? <img src={talk.photo} alt={talk.name} /> : <TalkPlaceholder name={talk.name} />}<span className={`talk-mode ${talk.mode}`}>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</span></div>
                   <div className="capa-talk-body">
                     <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
-                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><span className="talk-flag" title={talk.country}><Flag country={talk.country} /></span></div>
+                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><div className="talk-origin"><span className="talk-flag" title={talk.country}><Flag country={talk.country} /></span><small>{languageNames[talk.language] || talk.language}</small></div></div>
                     <h5>{talk.title}</h5>
-                    <div className="capa-talk-footer"><span>{talk.language}</span><span>{talk.category}</span><strong>{copy.details} →</strong></div>
+                    <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{categoryNames[locale][talk.category] || talk.category}</span><strong>{copy.details} →</strong></div>
                   </div>
                 </Link>
               ))}
