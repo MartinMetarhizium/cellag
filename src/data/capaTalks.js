@@ -22,7 +22,7 @@ const capaTalks = [
   },
   {
     id: "maria-laura-matos-bioprocesos",
-    name: "María Laura Matos", company: "INTI", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/team/laura-matos.jpeg",
+    name: "María Laura Matos", company: "INTI", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "D", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/team/laura-matos.jpeg",
     title: "Del laboratorio a la escala industrial: bioprocesos y fermentación de precisión desde el INTI",
     description: ["María Laura Matos, Directora Técnica del Centro de Biotecnología Industrial del INTI, compartirá la experiencia de la institución en el desarrollo y escalado de procesos biotecnológicos aplicados a la industria alimentaria.", "Abordará los desafíos técnicos de llevar la fermentación de precisión del laboratorio a una escala productiva real y el papel de las instituciones públicas en el acompañamiento de la industria argentina de proteínas alternativas."],
     topics: ["Bioprocesos industriales", "Fermentación de precisión", "Escalado productivo", "Ciencia pública e industria"],
@@ -78,14 +78,14 @@ const capaTalks = [
   },
   {
     id: "rodrigo-ledesma-bioproduccion",
-    name: "Rodrigo Ledesma-Amaro", company: "Imperial College London", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "ES", country: "Reino Unido", photo: "/speakers/ledesma_rodrigo.jpg",
+    name: "Rodrigo Ledesma-Amaro", company: "Imperial College London", day: "thursday", date: "22 de octubre", time: "10:50–11:20", room: "E", category: "FE", mode: "remoto", language: "ES", country: "Reino Unido", photo: "/speakers/ledesma_rodrigo.jpg",
     title: "Bioproducción microbiana y fermentación: escalando proteína sustentable desde el Bezos Centre y el Microbial Food Hub",
     description: ["Dr. Rodrigo Ledesma-Amaro, Profesor en Imperial College London, Director del Bezos Centre for Sustainable Protein y del Microbial Food Hub, experto en bioproducción microbiana y fermentación, compartirá su investigación sobre cómo diseñar microorganismos para producir proteína sustentable a escala.", "Rodrigo abordará la ciencia detrás de la bioproducción microbiana, el rol de centros académicos como el Bezos Centre y el Microbial Food Hub en conectar la investigación de base con la aplicación industrial, y hacia dónde se dirige globalmente la producción de proteína basada en fermentación."],
     topics: ["Bioproducción microbiana", "Fermentación como plataforma", "Proteína sustentable", "Academia y aplicación industrial"],
   },
   {
     id: "chris-bryant-politica-publica",
-    name: "Chris Bryant", company: "Bryant Research", day: "wednesday", date: "21 de octubre", time: "10:50–11:20", room: "E", category: "PP", mode: "presencial", language: "EN", country: "Reino Unido", photo: "/speakers/chris_bryant.png",
+    name: "Chris Bryant", company: "Bryant Research", day: "wednesday", date: "21 de octubre", time: "10:50–11:20", room: "E", category: "PP", mode: "remoto", language: "EN", country: "Reino Unido", photo: "/speakers/chris_bryant.png",
     title: "Palancas de política pública para la transición proteica: qué funciona realmente",
     description: ["Dr. Chris Bryant, Executive Director de Bryant Research, presentará palancas de política pública basadas en evidencia para impulsar la transición proteica, a partir del trabajo revisado por pares de Bryant Research sobre la reducción de la producción y el consumo de carne en países de altos ingresos. Basándose en una revisión de políticas de tipo financiero, prescriptivo, informativo y conductual, Chris mostrará cuáles son políticamente viables y con probabilidad real de impacto, a diferencia de opciones impopulares como un impuesto a la carne."],
     topics: ["Palancas financieras y prescriptivas", "Información y cambio conductual", "Viabilidad política", "Subsidios y estándares", "Opciones plant-based por defecto"],
