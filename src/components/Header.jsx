@@ -38,12 +38,6 @@ export default function Header() {
             {t("nav.capa")}
           </NavLink>
           <NavLink
-            to="/team"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
-          >
-            {t("nav.team")}
-          </NavLink>
-          <NavLink
             to="/mission"
             className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
           >

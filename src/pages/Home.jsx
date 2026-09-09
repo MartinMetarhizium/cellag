@@ -4,8 +4,8 @@ import SponsorsCarousel from "../components/SponsorsCarousel";
 import { useI18n } from "../i18n/I18nContext";
 
 const copy = {
-  es: { title: "Impulsamos el futuro de la agricultura celular en Argentina", intro: "Cell Ag Argentina es una organización sin fines de lucro que impulsa el desarrollo de la agricultura celular y las proteínas alternativas en el país.", body: "Articula ciencia, industria y política para promover sistemas alimentarios más sostenibles, innovadores y alineados con los desafíos del futuro.", join: "Asociate", team: "Conocer el equipo", news: "Noticias", cards: [["Equipo","Conocé la gestión y las personas que impulsan la organización.","/team"],["Misión","Conocé nuestra misión y visión para el futuro de las proteínas alternativas.","/mission"],["Noticias","Seguí las novedades y publicaciones institucionales.","/news"],["Asociate","Sumate a la comunidad y participá del crecimiento del sector.","/associate"]] },
-  en: { title: "Advancing the future of cellular agriculture in Argentina", intro: "Cell Ag Argentina is a nonprofit organization advancing cellular agriculture and alternative proteins across the country.", body: "We connect science, industry and policy to promote more sustainable and innovative food systems prepared for the challenges ahead.", join: "Join us", team: "Meet the team", news: "News", cards: [["Team","Meet the people leading and advancing the organization.","/team"],["Mission","Learn about our mission and vision for the future of alternative proteins.","/mission"],["News","Follow our latest news and institutional updates.","/news"],["Join us","Become part of the community and help the sector grow.","/associate"]] },
+  es: { title: "Impulsamos el futuro de la agricultura celular en Argentina", intro: "Cell Ag Argentina es una organización sin fines de lucro que impulsa el desarrollo de la agricultura celular y las proteínas alternativas en el país.", body: "Articula ciencia, industria y política para promover sistemas alimentarios más sostenibles, innovadores y alineados con los desafíos del futuro.", join: "Contacto", team: "Conocer el equipo", news: "Noticias", cards: [["Sobre nosotros","Conocé nuestro propósito, visión y a las personas que impulsan la organización.","/mission"],["Noticias","Seguí las novedades y publicaciones institucionales.","/news"],["Contacto","Sumate a la comunidad y participá del crecimiento del sector.","/associate"]] },
+  en: { title: "Advancing the future of cellular agriculture in Argentina", intro: "Cell Ag Argentina is a nonprofit organization advancing cellular agriculture and alternative proteins across the country.", body: "We connect science, industry and policy to promote more sustainable and innovative food systems prepared for the challenges ahead.", join: "Contact", team: "Meet the team", news: "News", cards: [["About us","Learn about our purpose, vision and the people advancing the organization.","/mission"],["News","Follow our latest news and institutional updates.","/news"],["Contact","Become part of the community and help the sector grow.","/associate"]] },
 };
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
                 {c.join}
               </Link>
               <Link
-                to="/team"
+                to="/mission#equipo"
                 className="border border-green-700 text-green-700 px-6 py-3 rounded-lg hover:bg-green-100"
               >
                 {c.team}
@@ -63,7 +63,7 @@ export default function Home() {
       <SponsorsCarousel />
 
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
           {c.cards.map(([title, text, to]) => (
             <Link
               key={title}

@@ -9,9 +9,6 @@ export default function Footer() {
         {t("footerDescription")}
       </p>
       <div className="flex justify-center gap-4 mt-4 text-sm">
-        <a href="https://www.instagram.com/cellagargentina/" target="_blank" rel="noreferrer" className="hover:underline">
-          Instagram
-        </a>
         {/* <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="hover:underline">
           LinkedIn
         </a> */}

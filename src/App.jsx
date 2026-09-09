@@ -1,7 +1,6 @@
 import { Navigate, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Team from "./pages/Team";
 import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetails";
 import Associate from "./pages/Associate";
@@ -17,7 +16,7 @@ export default function App() {
         <Route path="capa" element={<Capa />} />
         <Route path="capa/charlas/:id" element={<CapaTalkDetails />} />
         <Route path="home" element={<Home />} />
-        <Route path="team" element={<Team />} />
+        <Route path="team" element={<Navigate to="/mission#equipo" replace />} />
         <Route path="mission" element={<Mission />} />
         <Route path="news" element={<News />} />
         <Route path="news/:id" element={<NewsDetail />} />

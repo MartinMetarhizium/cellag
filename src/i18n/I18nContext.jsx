@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const translations = {
   es: {
-    nav: { capa: "CAPA", hackathon: "Hackathon", team: "Equipo", mission: "Misión", events: "Eventos", news: "Noticias", join: "Asociate" },
+    nav: { capa: "CAPA", hackathon: "Hackathon", team: "Equipo", mission: "Sobre nosotros", events: "Eventos", news: "Noticias", join: "Contacto" },
     headerTagline: "Agricultura celular y proteínas alternativas",
     languageLabel: "Cambiar idioma a inglés",
     footerDescription: "Organización sin fines de lucro que impulsa la agricultura celular y las proteínas alternativas.",
@@ -21,7 +21,7 @@ const translations = {
     },
   },
   en: {
-    nav: { capa: "CAPA", hackathon: "Hackathon", team: "Team", mission: "Mission", events: "Events", news: "News", join: "Join us" },
+    nav: { capa: "CAPA", hackathon: "Hackathon", team: "Team", mission: "About us", events: "Events", news: "News", join: "Contact" },
     headerTagline: "Cellular agriculture and alternative proteins",
     languageLabel: "Switch language to Spanish",
     footerDescription: "A nonprofit organization advancing cellular agriculture and alternative proteins.",
