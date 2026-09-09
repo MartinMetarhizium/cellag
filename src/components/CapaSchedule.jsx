@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import capaTalks from "../data/capaTalks";
 import capaProgram from "../data/capaProgram";
 import { useI18n } from "../i18n/I18nContext";
+import CountryFlag from "./CountryFlag";
 
 const days = ["wednesday", "thursday", "friday"];
 const rooms = ["D", "E"];
@@ -21,16 +22,6 @@ const languageNames = {
   EN: "English",
   PT: "Portuguese",
 };
-
-function Flag({ country }) {
-  const props = { viewBox: "0 0 36 24", role: "img", "aria-label": country };
-  if (country === "Argentina") return <svg {...props}><rect width="36" height="24" fill="#74acdf"/><rect y="8" width="36" height="8" fill="#fff"/><circle cx="18" cy="12" r="2.2" fill="#f6b40e"/></svg>;
-  if (country === "Brasil") return <svg {...props}><rect width="36" height="24" fill="#009c3b"/><path d="M18 3 32 12 18 21 4 12Z" fill="#ffdf00"/><circle cx="18" cy="12" r="5" fill="#002776"/></svg>;
-  if (country === "Chile") return <svg {...props}><rect width="36" height="24" fill="#d52b1e"/><rect width="36" height="12" fill="#fff"/><rect width="12" height="12" fill="#0039a6"/><circle cx="6" cy="6" r="2" fill="#fff"/></svg>;
-  if (country === "Reino Unido") return <svg {...props}><rect width="36" height="24" fill="#012169"/><path d="M0 0 36 24M36 0 0 24" stroke="#fff" strokeWidth="5"/><path d="M0 0 36 24M36 0 0 24" stroke="#c8102e" strokeWidth="2"/><path d="M18 0v24M0 12h36" stroke="#fff" strokeWidth="7"/><path d="M18 0v24M0 12h36" stroke="#c8102e" strokeWidth="4"/></svg>;
-  if (country === "Países Bajos") return <svg {...props}><rect width="36" height="8" fill="#ae1c28"/><rect y="8" width="36" height="8" fill="#fff"/><rect y="16" width="36" height="8" fill="#21468b"/></svg>;
-  return <span aria-label={country}>🌎</span>;
-}
 
 function TalkPlaceholder({ name }) {
   const initials = name.split(" ").map((part) => part[0]).slice(0, 2).join("");
@@ -74,7 +65,7 @@ export default function CapaSchedule() {
                   <div className="capa-talk-photo">{talk.photo ? <img src={talk.photo} alt={talk.name} /> : <TalkPlaceholder name={talk.name} />}<span className={`talk-mode ${talk.mode}`}>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</span></div>
                   <div className="capa-talk-body">
                     <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
-                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><div className="talk-origin"><span className="talk-flag" title={talk.country}><Flag country={talk.country} /></span><small>{languageNames[talk.language] || talk.language}</small></div></div>
+                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><div className="talk-origin"><span className="talk-flag" title={talk.country || "País no informado"}><CountryFlag country={talk.country} /></span><small>{languageNames[talk.language] || talk.language}</small></div></div>
                     <h5>{talk.title || talk.name}</h5>
                     <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>
                   </div>
