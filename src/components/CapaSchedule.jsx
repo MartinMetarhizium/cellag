@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import capaTalks from "../data/capaTalks";
 import capaProgram from "../data/capaProgram";
@@ -54,6 +54,20 @@ function SpeakerPortrait({ speaker }) {
   </div>;
 }
 
+function SpeakerPhotoCarousel({ speakers }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveIndex(0);
+    if (speakers.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const interval = window.setInterval(() => setActiveIndex((current) => (current + 1) % speakers.length), 3000);
+    return () => window.clearInterval(interval);
+  }, [speakers.length]);
+
+  const activeSpeaker = speakers[activeIndex] || speakers[0];
+  return <><SpeakerPortrait speaker={activeSpeaker} key={`${activeSpeaker.name}-${activeIndex}`} />{speakers.length > 1 && <span className="talk-photo-count" aria-label={`${speakers.length} disertantes`}>{activeIndex + 1}/{speakers.length}</span>}</>;
+}
+
 function getSpeakers(talk) {
   if (talk.speakers?.length) return talk.speakers;
   return [{ name: talk.name, company: talk.company, country: talk.country, photo: talk.photo }];
@@ -80,21 +94,22 @@ function TalkCard({ talk, copy, locale }) {
   const organizations = getOrganizations(talk, speakers);
   const countries = [...new Set(speakers.flatMap((speaker) => Array.isArray(speaker.country) ? speaker.country : [speaker.country]).filter(Boolean))];
   return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()}`} {...cardProps}>
-    <div className={`capa-talk-photo speaker-count-${Math.min(speakers.length, 4)}`}>
-      {speakers.map((speaker, index) => <SpeakerPortrait speaker={speaker} key={`${speaker.name}-${index}`} />)}
+    <div className="capa-talk-photo">
+      <SpeakerPhotoCarousel speakers={speakers} />
       <span className={`talk-mode ${talk.mode}`}>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</span>
     </div>
     <div className="capa-talk-body">
-      <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
+      <h5>{talk.title || talk.name}</h5>
       <div className="capa-talk-person"><div className="talk-person-copy">
-        {speakers.map((speaker, index) => <div className="talk-speaker-copy" key={`${speaker.name}-${index}`}><h4>{speaker.name}</h4>{speaker.company && <p>{speaker.company}</p>}</div>)}
+        <div className="talk-speaker-names">{speakers.map((speaker, index) => <h4 key={`${speaker.name}-${index}`}>{speaker.name}</h4>)}</div>
+        <p className="talk-company-text">{organizations.map((organization) => typeof organization === "string" ? organization : organization.name).join(" · ")}</p>
         <div className="talk-company-logos">{organizations.map((organization) => {
           const company = typeof organization === "string" ? organization : organization.name;
           const logo = typeof organization === "string" ? null : organization.logo;
           return <OrganizationLogo company={company} logo={logo} key={company} />;
         })}</div>
       </div><div className="talk-origin"><span className={`talk-flag ${countries.length > 1 ? "multiple" : ""}`} title={countries.join(" · ") || "País no informado"}><CountryFlag country={countries.length > 1 ? countries : countries[0]} /></span><small>{languageNames[talk.language] || talk.language}</small></div></div>
-      <h5>{talk.title || talk.name}</h5>
+      <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
       <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>
     </div>
   </Card>;

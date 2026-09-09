@@ -30,7 +30,7 @@ const capaTalksSupplemental = [
     topics: ["Evidencia científica y dossiers regulatorios", "Diversidad de marcos normativos", "Regulación desde el inicio", "Fermentación de precisión"],
   },
   {
-    id: "biba-bebidas-vegetales", name: "BIBA", company: "BIBA", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina",
+    id: "biba-bebidas-vegetales", name: "Emiliano Kakisu", company: "BIBA", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Emiliano Kakisu.jpeg",
     title: "BIBA y el futuro de las bebidas vegetales: sabor, funcionalidad y escala en Argentina",
     description: ["BIBA compartirá su experiencia en el desarrollo de bebidas vegetales para el mercado argentino y los desafíos de formulación necesarios para competir en sabor, textura, estabilidad, funcionalidad y costo."],
     topics: ["Sabor y textura", "Selección de materias primas", "Formulación y estabilidad", "Escala productiva", "Tendencias de consumo"],
@@ -115,7 +115,7 @@ const capaTalksSupplemental = [
     topics: ["IA aplicada al desarrollo de productos", "Aceleración de I+D", "Licenciamiento de Giuseppe", "Sabor y textura plant-based"],
   },
   {
-    id: "juan-martin-oteiza-ciati", name: "Juan Martín Oteiza", company: "CIATI", day: "thursday", date: "22 de octubre", time: "14:00–14:30", room: "E", category: "AD", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/J. MARTÍN OTEIZA~2.JPG",
+    id: "juan-martin-oteiza-ciati", name: "Juan Martín Oteiza", company: "CIATI", day: "thursday", date: "22 de octubre", time: "14:00–14:30", room: "E", category: "AD", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/JUAN MARTIN OTEIZA.JPG",
     title: "CIATI: microbiología e inocuidad para la innovación alimentaria",
     description: ["Presentación de Juan Martín Oteiza y CIATI. El temario específico permanece pendiente de confirmación."],
     topics: ["Microbiología alimentaria", "Inocuidad", "Investigación y desarrollo"],
@@ -133,7 +133,7 @@ const capaTalksSupplemental = [
     topics: ["Investigación universitaria", "Proyectos y laboratorios", "Vinculación tecnológica"],
   },
   {
-    id: "ajinomoto-carne-cultivada", name: "Ajinomoto", company: "Ajinomoto", day: "friday", date: "23 de octubre", time: "09:00–09:30", room: "E", category: "CA", mode: "remoto", language: "EN", country: "Japón",
+    id: "ajinomoto-carne-cultivada", name: "Yasufumi Furuhata", company: "Ajinomoto", day: "friday", date: "23 de octubre", time: "09:00–09:30", room: "E", category: "CA", mode: "remoto", language: "EN", country: "Japón", photo: "/capa-assets/Yasufumi Furuhata.jpeg",
     title: "Ajinomoto y la carne cultivada: bajando el costo de uno de sus componentes más caros",
     description: ["Ajinomoto presentará sus iniciativas en fermentación de precisión y carne cultivada, con foco en una tecnología que reemplaza la transferrina del medio de cultivo por hinokitiol para reducir costos y acercar la producción a escala comercial."],
     topics: ["Fermentación y carne cultivada", "Reemplazo de transferrina por hinokitiol", "Reducción del costo del medio", "Escala comercial"],
