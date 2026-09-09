@@ -23,7 +23,7 @@ const capaProgram = [
 
   // Jueves · Salón D
   { day: "thursday", room: "D", time: "09:00–09:30", name: "Tobias Leenaert", company: "ProVeg International", category: "AD", mode: "remoto", language: "EN", country: "Bélgica" },
-  { day: "thursday", room: "D", time: "09:35–10:20", name: "Cell Ag Argentina · Brasil · Chile", company: "Panel regional", category: "CA", mode: "presencial", language: "ES" },
+  { day: "thursday", room: "D", time: "09:35–10:20", name: "Cell Ag Argentina · Brasil · Chile", company: "Panel regional", category: "CA", mode: "presencial", language: "ES", country: ["Argentina", "Brasil", "Chile"] },
   { day: "thursday", room: "D", time: "10:50–11:55", name: "Dr. Michael Greger", company: "NutritionFacts.org", category: "AD", mode: "remoto", language: "EN", country: "Estados Unidos" },
   { day: "thursday", room: "D", time: "12:00–12:30", detailsId: "celina-moreno-marco-regulatorio" },
   { day: "thursday", room: "D", time: "14:00–14:30", detailsId: "martin-sabatini-fermentacion" },

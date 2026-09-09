@@ -65,7 +65,7 @@ export default function CapaSchedule() {
                   <div className="capa-talk-photo">{talk.photo ? <img src={talk.photo} alt={talk.name} /> : <TalkPlaceholder name={talk.name} />}<span className={`talk-mode ${talk.mode}`}>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</span></div>
                   <div className="capa-talk-body">
                     <div className="capa-talk-time"><strong>{talk.time}</strong><span>{copy.room} {talk.room}</span></div>
-                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><div className="talk-origin"><span className="talk-flag" title={talk.country || "País no informado"}><CountryFlag country={talk.country} /></span><small>{languageNames[talk.language] || talk.language}</small></div></div>
+                    <div className="capa-talk-person"><div><h4>{talk.name}</h4><p>{talk.company}</p></div><div className="talk-origin"><span className={`talk-flag ${Array.isArray(talk.country) ? "multiple" : ""}`} title={Array.isArray(talk.country) ? talk.country.join(" · ") : talk.country || "País no informado"}><CountryFlag country={talk.country} /></span><small>{languageNames[talk.language] || talk.language}</small></div></div>
                     <h5>{talk.title || talk.name}</h5>
                     <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>
                   </div>

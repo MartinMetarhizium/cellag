@@ -16,6 +16,11 @@ function normalizeCountry(country = "") {
 }
 
 export default function CountryFlag({ country, className = "" }) {
+  if (Array.isArray(country)) {
+    return <span className={`country-flag-group ${className}`} role="group" aria-label={country.join(", ")}>
+      {country.map((item) => <CountryFlag country={item} key={item} />)}
+    </span>;
+  }
   const code = normalizeCountry(country);
   const props = { viewBox: "0 0 36 24", role: "img", "aria-label": country, className };
 
