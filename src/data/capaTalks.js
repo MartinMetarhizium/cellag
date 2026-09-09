@@ -1,3 +1,5 @@
+import capaTalksSupplemental from "./capaTalksSupplemental.js";
+
 const capaTalks = [
   {
     id: "emiliano-benito-lupino",
@@ -78,7 +80,7 @@ const capaTalks = [
   },
   {
     id: "rodrigo-ledesma-bioproduccion",
-    name: "Rodrigo Ledesma-Amaro", company: "Imperial College London", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "ES", country: "Reino Unido", photo: "/capa-assets/ledesma rodrigo.jpg",
+    name: "Rodrigo Ledesma-Amaro", company: "Imperial College London", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Reino Unido", photo: "/capa-assets/ledesma rodrigo.jpg",
     title: "Bioproducción microbiana y fermentación: escalando proteína sustentable desde el Bezos Centre y el Microbial Food Hub",
     description: ["Dr. Rodrigo Ledesma-Amaro, Profesor en Imperial College London, Director del Bezos Centre for Sustainable Protein y del Microbial Food Hub, experto en bioproducción microbiana y fermentación, compartirá su investigación sobre cómo diseñar microorganismos para producir proteína sustentable a escala.", "Rodrigo abordará la ciencia detrás de la bioproducción microbiana, el rol de centros académicos como el Bezos Centre y el Microbial Food Hub en conectar la investigación de base con la aplicación industrial, y hacia dónde se dirige globalmente la producción de proteína basada en fermentación."],
     topics: ["Bioproducción microbiana", "Fermentación como plataforma", "Proteína sustentable", "Academia y aplicación industrial"],
@@ -97,6 +99,7 @@ const capaTalks = [
     description: ["El Dr. Mark Post, Profesor Emérito de Ingeniería de Tejidos Industriales Sostenibles en la Universidad de Maastricht, cofundador y Chief Scientific Officer de Mosa Meat, hizo historia en 2013 al presentar la primera hamburguesa de carne vacuna cultivada del mundo. Desde entonces, ha liderado el desarrollo científico de la carne cultivada, impulsando su transición desde un avance de laboratorio hacia una realidad comercial.", "Recientemente, Mosa Meat inauguró su planta de escalado en Maastricht, que posteriormente se convirtió en C.a.S. (Cultivate at Scale) gracias a una subvención del gobierno neerlandés que permitió abrir sus instalaciones al ecosistema. Se trata de una de las mayores plantas de carne cultivada del mundo y cuenta con biorreactores de 1.000 litros para avanzar en el escalado de la producción de cara a la aprobación regulatoria. La compañía también presentó ante la Unión Europea su solicitud de autorización para grasa cultivada, como parte de su estrategia de entrada al mercado.", "En su presentación, Mark repasará más de una década de desarrollo de carne cultivada, el camino técnico y regulatorio hacia la paridad de precios y los desafíos que deberá superar la industria para alcanzar una escala verdaderamente comercial."],
     topics: ["Del primer burger a escala industrial", "Biorreactores de 1.000 litros", "Regulación en la Unión Europea", "Paridad de precios", "Futuro de la carne cultivada"],
   },
+  ...capaTalksSupplemental,
 ];
 
 export default capaTalks;

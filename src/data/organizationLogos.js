@@ -29,6 +29,7 @@ const organizationLogos = {
   "universidad nacional de hurlingham": "/capa-assets/unahur logo.jpeg",
   "universidad nacional de san martin": "/capa-assets/UNSAM.jpg",
   "universidad nacional de la plata": "/capa-assets/Logo_UNLP.jpg",
+  "porta hermanos": "/capa-assets/Porta Hermanos.jpeg",
 };
 
 function normalizeOrganization(value = "") {

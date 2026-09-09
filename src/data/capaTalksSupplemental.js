@@ -1,0 +1,153 @@
+const capaTalksSupplemental = [
+  {
+    id: "unsam-proteinas-alternativas", name: "María Laura Cerutti", company: "UNSAM", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/CERUTTI_MARIA LAURA.jpg",
+    title: "UNSAM y las proteínas alternativas: investigación pública y vinculación con la industria",
+    description: ["Panel institucional de UNSAM, encabezado por su Secretaría de Vinculación Tecnológica, que presentará el trabajo de la universidad en proteínas alternativas y las oportunidades de colaboración con la industria."],
+    topics: ["Líneas de investigación en proteínas alternativas", "Proyectos y laboratorios destacados", "Oportunidades de vinculación con la industria"],
+  },
+  {
+    id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "10:50–11:20", room: "D", category: "CA", mode: "remoto", language: "EN", country: "Israel",
+    title: "Del laboratorio al plato: el camino regulatorio y comercial de la carne cultivada",
+    description: ["Aleph Farms compartirá su recorrido desde el desarrollo científico hasta la aprobación regulatoria y la llegada al consumidor, a partir de su Thin-Cut Steak híbrido y su experiencia en mercados asiáticos.", "La charla abordará los tiempos reales de la industria, el escalado productivo y el papel de las alianzas comerciales para llevar la carne cultivada a la mesa."],
+    topics: ["Regulación en Singapur y Tailandia", "Productos híbridos", "Alianza con Thai Union y Aleph Cuts", "Escalado en Asia-Pacífico", "Comercialización de carne cultivada"],
+  },
+  {
+    id: "eduardo-bittencourt-typcal", name: "Eduardo Bittencourt", company: "Typcal", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "D", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/EduardoSydney.jpeg",
+    title: "Poniendo a Brasil en el mapa de la micoproteína: escalando la fermentación circular de micelio del laboratorio a la industria",
+    description: ["Dr. Eduardo Bittencourt, cofundador y CTO de Typcal, presentará cómo la empresa desarrolla fermentación circular de micelio sobre una amplia variedad de materias primas.", "Recorrerá el escalado desde una planta piloto de 200 litros hasta el objetivo industrial de 60 toneladas mensuales y los diferentes formatos de producto obtenidos de una misma plataforma."],
+    topics: ["Fermentación circular de micelio", "Escalado de 200 a 50.000 litros", "Biomasa, polvo proteico y concentrado", "Micoproteína latinoamericana"],
+  },
+  {
+    id: "ines-palolo-smartserum", name: "Inês Palolo", company: "Sticta Biologicals", day: "wednesday", date: "21 de octubre", time: "15:10–15:40", room: "D", category: "FE", mode: "remoto", language: "ES", country: "Chile",
+    title: "SmartSerum: reemplazando el suero animal para escalar la carne cultivada",
+    description: ["Sticta Biologicals desarrolla una plataforma de fermentación con levaduras no convencionales para producir medios de cultivo libres de suero animal. SmartSerum busca reemplazar el suero fetal bovino y reducir el costo de producción de carne cultivada."],
+    topics: ["Medios de cultivo libres de suero animal", "Reducción de costos", "Colaboración con Meatable y GFI", "Levaduras no convencionales"],
+  },
+  {
+    id: "eugenia-maciero-regulacion", name: "Eugenia Maciero", company: "Consultora", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "D", category: "PP", mode: "presencial", language: "ES", country: "Argentina",
+    title: "Ingredientes innovadores y regulación: cómo construir el camino hacia el mercado",
+    description: ["Eugenia Maciero recorrerá qué evidencia científica necesita un dossier regulatorio, cómo varían los marcos normativos entre mercados y qué decisiones tempranas aceleran o frenan la llegada de un ingrediente innovador al mercado.", "La propuesta integra la regulación desde el primer día como parte de la estrategia de desarrollo y de negocio."],
+    topics: ["Evidencia científica y dossiers regulatorios", "Diversidad de marcos normativos", "Regulación desde el inicio", "Fermentación de precisión"],
+  },
+  {
+    id: "biba-bebidas-vegetales", name: "BIBA", company: "BIBA", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina",
+    title: "BIBA y el futuro de las bebidas vegetales: sabor, funcionalidad y escala en Argentina",
+    description: ["BIBA compartirá su experiencia en el desarrollo de bebidas vegetales para el mercado argentino y los desafíos de formulación necesarios para competir en sabor, textura, estabilidad, funcionalidad y costo."],
+    topics: ["Sabor y textura", "Selección de materias primas", "Formulación y estabilidad", "Escala productiva", "Tendencias de consumo"],
+  },
+  {
+    id: "agustin-belloso-tomorrow-foods", name: "Agustín Belloso", company: "Tomorrow Foods", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/agustin belloso.jpg",
+    title: "De la legumbre al ingrediente: cómo Tomorrow Foods está reconstruyendo la cadena de proteína vegetal desde el campo argentino",
+    description: ["Agustín Belloso presentará el desarrollo de ingredientes vegetales a partir de arveja, garbanzo, poroto y arroz producidos bajo agricultura regenerativa y siembra directa.", "La charla recorrerá una cadena de valor con trazabilidad completa, desde el cultivo hasta el ingrediente funcional, y el potencial de Argentina como origen de innovación proteica."],
+    topics: ["Agricultura regenerativa", "Legumbres como fuente proteica", "Fijación de nitrógeno", "Trazabilidad y certificación", "Innovación argentina"],
+  },
+  {
+    id: "uade-proteinas-alternativas", name: "María Cecilia Melucci", company: "UADE", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/María Cecilia Melucci.png",
+    title: "UADE y las proteínas alternativas: investigación pública y vinculación con la industria",
+    description: ["Panel institucional de UADE sobre el trabajo de la universidad en proteínas alternativas, sus proyectos académicos y las oportunidades de colaboración con la industria."],
+    topics: ["Investigación universitaria", "Proyectos y laboratorios", "Vinculación tecnológica"],
+  },
+  {
+    id: "francisco-romero-amande", name: "Francisco Romero", company: "Amande", day: "wednesday", date: "21 de octubre", time: "14:00–14:30", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Francisco Romero.jpeg",
+    title: "Amande: el desafío de construir una marca nacional de lácteos vegetales en Argentina",
+    description: ["Francisco Romero presentará el recorrido de Amande en el desarrollo y producción local de bebidas vegetales a base de almendras, desde la formulación hasta la llegada a góndola."],
+    topics: ["Desarrollo de una bebida vegetal argentina", "Producción local", "Decisiones de formulación", "Consumidor y barreras de adopción"],
+  },
+  {
+    id: "carla-molento-zootecnia-celular", name: "Carla Molento", company: "UFPR · ZOOCEL / ABAC", day: "wednesday", date: "21 de octubre", time: "14:35–15:05", room: "E", category: "CA", mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/carla molentoi.jpg",
+    title: "Zootecnia celular: producir carne sin sacrificio animal, desde la academia latinoamericana",
+    description: ["Carla Molento presentará la zootecnia celular desde la universidad pública, los avances del ZOOCEL y la importancia de incorporar el bienestar y la ética animal como ejes centrales del desarrollo de carne cultivada."],
+    topics: ["Zootecnia celular", "ZOOCEL", "Bienestar y ética animal", "Universidad pública y ABAC"],
+  },
+  {
+    id: "fabio-zon-chunk-foods", name: "Fabio Zon", company: "Chunk Foods", day: "wednesday", date: "21 de octubre", time: "15:10–15:40", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Israel", photo: "/capa-assets/fabio zon.jpg",
+    title: "Cortes enteros de carne basada en plantas: cómo Chunk Foods escala la carne alternativa con fermentación en estado sólido",
+    description: ["Fabio Zon compartirá cómo Chunk Foods utiliza fermentación en estado sólido para recrear cortes enteros y escalar con menor inversión de capital, desde sus primeras alianzas con foodservice hasta el retail norteamericano."],
+    topics: ["Fermentación sólida y sumergida", "Cortes enteros", "Escalado con baja inversión", "De foodservice a retail", "Rentabilidad"],
+  },
+  {
+    id: "tobias-leenaert-proveg", name: "Tobias Leenaert", company: "ProVeg International", day: "thursday", date: "22 de octubre", time: "09:00–09:30", room: "D", category: "AD", mode: "remoto", language: "EN", country: "Bélgica", photo: "/capa-assets/Tobias Leenaert (3).jpg",
+    title: "Una estrategia pragmática para acelerar la transición hacia proteínas alternativas",
+    description: ["Tobias Leenaert presentará un enfoque pragmático para generar cambios duraderos en los sistemas alimentarios, centrado en el cambio de comportamiento y en cómo acercar las proteínas alternativas al consumidor masivo."],
+    topics: ["Pragmatismo e idealismo", "Cambio de comportamiento", "Estrategia de consumo", "El enfoque de ProVeg International"],
+  },
+  {
+    id: "cell-ag-cono-sur", name: "Cell Ag Argentina · Brasil · Chile", company: "Panel regional", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "D", category: "CA", mode: "presencial", language: "ES", country: ["Argentina", "Brasil", "Chile"],
+    title: "Agricultura celular en el Cono Sur: construyendo el ecosistema desde Argentina, Brasil y Chile",
+    description: ["Este panel reúne a los ecosistemas de agricultura celular de Argentina, Brasil y Chile para compartir cómo se construyen comunidades regionales desde la academia pública, la ciencia abierta y la colaboración."],
+    topics: ["Estado de la agricultura celular regional", "Universidad pública y ciencia abierta", "Comunidad antes que competencia", "Colaboración latinoamericana"],
+    organizations: ["Cell Ag Argentina", "Cell Ag Brazil", "Cell Ag Chile"],
+  },
+  {
+    id: "michael-greger-ultraprocesados", name: "Michael Greger", company: "NutritionFacts.org", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "D", category: "AD", mode: "remoto", language: "EN", country: "Estados Unidos", photo: "/capa-assets/dr greger.png",
+    title: "Ultraprocesados: la excepción del plant-based en medio del pánico alimentario",
+    description: ["El Dr. Michael Greger presentará evidencia para evaluar el impacto de los análogos vegetales ultraprocesados frente a alimentos vegetales integrales y productos de origen animal, diferenciando la evidencia científica del temor asociado al término ultraprocesado."],
+    topics: ["Qué es un ultraprocesado", "Análogos plant-based como excepción", "Microbioma, inflamación y enfermedad crónica", "Comunicación basada en evidencia"],
+  },
+  {
+    id: "lucia-cragnza-sartorius", name: "Lucía Cragnza", company: "Sartorius", day: "thursday", date: "22 de octubre", time: "14:35–15:05", room: "D", category: "IS", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Lucia Cragnza.jpg",
+    title: "Soluciones Sartorius para escalar bioprocesos, equipos y tecnología al servicio de la industria",
+    description: ["La Dra. Lucía Cragnza presentará el portfolio de soluciones de Sartorius para acompañar a las empresas de proteínas alternativas en el escalado de sus procesos de bioproducción."],
+    topics: ["Equipos y soluciones para bioprocesos", "Escalado de carne cultivada", "Soporte técnico y regulatorio"],
+  },
+  {
+    id: "cluster-proteinas-vegetales", name: "María Laura Aparicio · Emiliano Benito · Maia Senss Freese", company: "Clúster de Proteínas Vegetales", day: "thursday", date: "22 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina",
+    title: "Proteínas vegetales: de la materia prima al producto — panorama del sector",
+    description: ["Presentación del Clúster de Proteínas Vegetales sobre materias primas, obtención de harinas, concentrados y aislados, propiedades funcionales, aplicaciones, mercado internacional y desafíos regulatorios y tecnológicos."],
+    topics: ["Materias primas e ingredientes", "Propiedades y aplicaciones", "Mercado y exportación", "Regulación y tecnología"],
+    speakers: [
+      { name: "María Laura Aparicio", company: "Farmesa", country: "Argentina", photo: "/capa-assets/Lali.Aparicio.2026.10x10cm.jpg" },
+      { name: "Emiliano Benito", company: "Elementa Foods", country: "Argentina", photo: "/capa-assets/emiliano benito.jpg" },
+      { name: "Maia Senss Freese", company: "Porta Hermanos", country: "Argentina", photo: "/capa-assets/Maia Senss Freese.jpeg" },
+    ],
+    organizations: ["Farmesa", "Elementa Foods", "Porta Hermanos"],
+  },
+  {
+    id: "unahur-proteinas-alternativas", name: "UNAHUR", company: "Universidad Nacional de Hurlingham", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina",
+    title: "UNAHUR y las proteínas alternativas: ciencia con compromiso social desde una universidad joven",
+    description: ["UNAHUR presentará su Alt Protein Project, el trabajo del Laboratorio de Investigación en Nuevos Alimentos y Nutrición y desarrollos con yacón, proteínas vegetales y fermentación orientados al impacto comunitario."],
+    topics: ["UNAHUR Alt Protein Project", "Ciencia interdisciplinaria", "Yacón y proteínas vegetales", "Kéfir y alimentos funcionales", "Vinculación con la industria"],
+  },
+  {
+    id: "mariana-brizzio-notco", name: "Mariana Brizzio", company: "NotCo", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "E", category: "PB", mode: "remoto", language: "ES", country: "Chile", photo: "/capa-assets/FOTO MARIANA BRIZZIO.jpeg",
+    title: "Giuseppe: la inteligencia artificial que está detrás de NotCo",
+    description: ["Mariana Brizzio presentará Giuseppe, la plataforma de inteligencia artificial de NotCo que analiza ingredientes vegetales para replicar sabor, textura y nutrición, y explicará cómo la compañía está evolucionando hacia un modelo de licenciamiento tecnológico."],
+    topics: ["IA aplicada al desarrollo de productos", "Aceleración de I+D", "Licenciamiento de Giuseppe", "Sabor y textura plant-based"],
+  },
+  {
+    id: "juan-martin-oteiza-ciati", name: "Juan Martín Oteiza", company: "CIATI", day: "thursday", date: "22 de octubre", time: "14:00–14:30", room: "E", category: "AD", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/J. MARTÍN OTEIZA~2.JPG",
+    title: "CIATI: microbiología e inocuidad para la innovación alimentaria",
+    description: ["Presentación de Juan Martín Oteiza y CIATI. El temario específico permanece pendiente de confirmación."],
+    topics: ["Microbiología alimentaria", "Inocuidad", "Investigación y desarrollo"],
+  },
+  {
+    id: "leonardo-vieira-future-cow", name: "Leonardo Vieira", company: "Future Cow", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "E", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/Leonardo Vieira.jpg",
+    title: "De 0 a respaldado por VCs: cómo Future Cow está reinventando los lácteos con fermentación de precisión en Brasil",
+    description: ["Leonardo Vieira presentará el desarrollo de leche y queso mediante fermentación de precisión, el trabajo con cepas propias y los desafíos técnicos y financieros de construir una startup deep-tech."],
+    topics: ["Lácteos por fermentación de precisión", "Desarrollo de cepas", "Escalado productivo", "Fundraising deep-tech"],
+  },
+  {
+    id: "unlp-ciprove-proteinas-alternativas", name: "Gonzalo Cosme Márquez", company: "UNLP · CIProVe", day: "friday", date: "23 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Gonzalo Cosme Marquez.jpeg",
+    title: "UNLP y las proteínas alternativas: investigación pública y vinculación con la industria",
+    description: ["Panel institucional de UNLP y CIProVe sobre investigación en proteínas alternativas, proyectos académicos y oportunidades de colaboración con la industria."],
+    topics: ["Investigación universitaria", "Proyectos y laboratorios", "Vinculación tecnológica"],
+  },
+  {
+    id: "ajinomoto-carne-cultivada", name: "Ajinomoto", company: "Ajinomoto", day: "friday", date: "23 de octubre", time: "09:00–09:30", room: "E", category: "CA", mode: "remoto", language: "EN", country: "Japón",
+    title: "Ajinomoto y la carne cultivada: bajando el costo de uno de sus componentes más caros",
+    description: ["Ajinomoto presentará sus iniciativas en fermentación de precisión y carne cultivada, con foco en una tecnología que reemplaza la transferrina del medio de cultivo por hinokitiol para reducir costos y acercar la producción a escala comercial."],
+    topics: ["Fermentación y carne cultivada", "Reemplazo de transferrina por hinokitiol", "Reducción del costo del medio", "Escala comercial"],
+  },
+  {
+    id: "gfi-brasil-ciencia-politica", name: "Lorena Pinho · Alysson Soares", company: "GFI Brasil", day: "friday", date: "23 de octubre", time: "09:35–10:20", room: "E", category: "PP", mode: "presencial", language: "PT", country: "Brasil",
+    title: "Ciencia y política pública en proteínas alternativas: la mirada de GFI Brasil",
+    description: ["Lorena Pinho y Alysson Soares ofrecerán una mirada combinada sobre el desarrollo científico, los ingredientes, la regulación y las políticas públicas necesarias para escalar las proteínas alternativas en Brasil y América Latina."],
+    topics: ["I+D en proteínas alternativas", "Desarrollo de ingredientes", "Políticas públicas y regulación", "Relaciones institucionales", "Estrategias regionales"],
+    speakers: [
+      { name: "Lorena Pinho", company: "GFI Brasil", country: "Brasil", photo: "/capa-assets/lorena pinho.jpeg" },
+      { name: "Alysson Soares", company: "GFI Brasil", country: "Brasil", photo: "/capa-assets/Alysson.jpg" },
+    ],
+  },
+];
+
+export default capaTalksSupplemental;
