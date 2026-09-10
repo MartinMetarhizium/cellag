@@ -6,7 +6,7 @@ const capaTalksSupplemental = [
     topics: ["Líneas de investigación en proteínas alternativas", "Proyectos y laboratorios destacados", "Oportunidades de vinculación con la industria"],
   },
   {
-    id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "10:50–11:20", room: "D", category: "CA", mode: "remoto", language: "EN", country: "Israel",
+    id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "11:25–11:55", room: "D", category: "CA", mode: "remoto", language: "EN", country: "Israel",
     title: "Del laboratorio al plato: el camino regulatorio y comercial de la carne cultivada",
     description: ["Aleph Farms compartirá su recorrido desde el desarrollo científico hasta la aprobación regulatoria y la llegada al consumidor, a partir de su Thin-Cut Steak híbrido y su experiencia en mercados asiáticos.", "La charla abordará los tiempos reales de la industria, el escalado productivo y el papel de las alianzas comerciales para llevar la carne cultivada a la mesa."],
     topics: ["Regulación en Singapur y Tailandia", "Productos híbridos", "Alianza con Thai Union y Aleph Cuts", "Escalado en Asia-Pacífico", "Comercialización de carne cultivada"],
@@ -36,7 +36,7 @@ const capaTalksSupplemental = [
     topics: ["Sabor y textura", "Selección de materias primas", "Formulación y estabilidad", "Escala productiva", "Tendencias de consumo"],
   },
   {
-    id: "agustin-belloso-tomorrow-foods", name: "Agustín Belloso", company: "Tomorrow Foods", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/agustin belloso.jpg",
+    id: "agustin-belloso-tomorrow-foods", name: "Agustín Belloso", company: "Tomorrow Foods", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/agustin belloso.jpg",
     title: "De la legumbre al ingrediente: cómo Tomorrow Foods está reconstruyendo la cadena de proteína vegetal desde el campo argentino",
     description: ["Agustín Belloso presentará el desarrollo de ingredientes vegetales a partir de arveja, garbanzo, poroto y arroz producidos bajo agricultura regenerativa y siembra directa.", "La charla recorrerá una cadena de valor con trazabilidad completa, desde el cultivo hasta el ingrediente funcional, y el potencial de Argentina como origen de innovación proteica."],
     topics: ["Agricultura regenerativa", "Legumbres como fuente proteica", "Fijación de nitrógeno", "Trazabilidad y certificación", "Innovación argentina"],
@@ -109,7 +109,7 @@ const capaTalksSupplemental = [
     topics: ["UNAHUR Alt Protein Project", "Ciencia interdisciplinaria", "Yacón y proteínas vegetales", "Kéfir y alimentos funcionales", "Vinculación con la industria"],
   },
   {
-    id: "mariana-brizzio-notco", name: "Mariana Brizzio", company: "NotCo", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "E", category: "PB", mode: "remoto", language: "ES", country: "Chile", photo: "/capa-assets/FOTO MARIANA BRIZZIO.jpeg",
+    id: "mariana-brizzio-notco", name: "Mariana Brizzio", company: "NotCo", day: "thursday", date: "22 de octubre", time: "11:25–11:55", room: "E", category: "PB", mode: "remoto", language: "ES", country: "Chile", photo: "/capa-assets/FOTO MARIANA BRIZZIO.jpeg",
     title: "Giuseppe: la inteligencia artificial que está detrás de NotCo",
     description: ["Mariana Brizzio presentará Giuseppe, la plataforma de inteligencia artificial de NotCo que analiza ingredientes vegetales para replicar sabor, textura y nutrición, y explicará cómo la compañía está evolucionando hacia un modelo de licenciamiento tecnológico."],
     topics: ["IA aplicada al desarrollo de productos", "Aceleración de I+D", "Licenciamiento de Giuseppe", "Sabor y textura plant-based"],
@@ -121,7 +121,7 @@ const capaTalksSupplemental = [
     topics: ["Microbiología alimentaria", "Inocuidad", "Investigación y desarrollo"],
   },
   {
-    id: "leonardo-vieira-future-cow", name: "Leonardo Vieira", company: "Future Cow", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "E", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/Leonardo Vieira.jpg",
+    id: "leonardo-vieira-future-cow", name: "Leonardo Vieira", company: "Future Cow", day: "wednesday", date: "21 de octubre", time: "10:50–11:20", room: "D", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/Leonardo Vieira.jpg",
     title: "De 0 a respaldado por VCs: cómo Future Cow está reinventando los lácteos con fermentación de precisión en Brasil",
     description: ["Leonardo Vieira presentará el desarrollo de leche y queso mediante fermentación de precisión, el trabajo con cepas propias y los desafíos técnicos y financieros de construir una startup deep-tech."],
     topics: ["Lácteos por fermentación de precisión", "Desarrollo de cepas", "Escalado productivo", "Fundraising deep-tech"],
