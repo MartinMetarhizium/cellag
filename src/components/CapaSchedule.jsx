@@ -148,7 +148,7 @@ export default function CapaSchedule() {
               <time>{slot.label}</time>
               {rooms.map((room) => {
                 const cellTalks = talks.filter((talk) => talk.room === room && talk.time.startsWith(slot.start));
-                return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : "is-tbd"}`} key={room}>
+                return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : "is-tbd"}`} data-room={`${copy.room} ${room}`} key={room}>
                   {cellTalks.length ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} key={`${talk.room}-${talk.time}-${talk.name}`} />) : <span>TBD</span>}
                 </div>;
               })}
