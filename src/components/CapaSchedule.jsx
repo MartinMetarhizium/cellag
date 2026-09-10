@@ -71,7 +71,7 @@ function TalkVisualCarousel({ visuals, fallbackName }) {
     {activeVisual.type === "photo"
       ? <SpeakerPortrait speaker={activeVisual} key={`${activeVisual.name}-${activeIndex}`} />
       : <div className="talk-organization-visual" key={`${activeVisual.name}-${activeIndex}`}><img src={activeVisual.src} alt={`Logo de ${activeVisual.name}`} /></div>}
-    {visuals.length > 1 && <span className="talk-photo-count" aria-label={`${visuals.length} elementos visuales`}>{activeIndex + 1}/{visuals.length}</span>}
+    {visuals.length > 1 && <span className="talk-visual-dots" aria-label={`Elemento ${activeIndex + 1} de ${visuals.length}`}>{visuals.map((visual, index) => <i className={index === activeIndex ? "active" : ""} key={`${visual.type}-${visual.name}-${index}`} />)}</span>}
   </>;
 }
 
