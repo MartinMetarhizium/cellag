@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import capaTalks from "../data/capaTalks";
 import capaProgram from "../data/capaProgram";
 import { useI18n } from "../i18n/I18nContext";
@@ -68,9 +68,11 @@ function TalkVisualCarousel({ visuals, fallbackName }) {
   const activeVisual = visuals[activeIndex];
   if (!activeVisual) return <TalkPlaceholder name={fallbackName} />;
   return <>
-    {activeVisual.type === "photo"
-      ? <SpeakerPortrait speaker={activeVisual} key={`${activeVisual.name}-${activeIndex}`} />
-      : <div className="talk-organization-visual" key={`${activeVisual.name}-${activeIndex}`}><img src={activeVisual.src} alt={`Logo de ${activeVisual.name}`} /></div>}
+    {activeVisual.type === "paired"
+      ? <div className="talk-paired-visual" key={`${activeVisual.name}-${activeIndex}`}><SpeakerPortrait speaker={activeVisual} /><div className="talk-paired-logo">{activeVisual.logo ? <img src={activeVisual.logo} alt={`Logo de ${activeVisual.company}`} /> : <span>{activeVisual.company}</span>}</div></div>
+      : activeVisual.type === "photo"
+        ? <SpeakerPortrait speaker={activeVisual} key={`${activeVisual.name}-${activeIndex}`} />
+        : <div className="talk-organization-visual" key={`${activeVisual.name}-${activeIndex}`}><img src={activeVisual.src} alt={`Logo de ${activeVisual.name}`} /></div>}
     {visuals.length > 1 && <span className="talk-visual-dots" aria-label={`Elemento ${activeIndex + 1} de ${visuals.length}`}>{visuals.map((visual, index) => <i className={index === activeIndex ? "active" : ""} key={`${visual.type}-${visual.name}-${index}`} />)}</span>}
   </>;
 }
@@ -127,24 +129,30 @@ function AutoFitTitle({ children }) {
 function TalkCard({ talk, copy, locale, selectedRoom }) {
   const Card = talk.id ? Link : "article";
   const returnRoom = talk.common ? selectedRoom : talk.room;
-  const cardProps = talk.id ? { to: `/capa/charlas/${talk.id}?day=${talk.day}&room=${returnRoom || "D"}` } : {};
+  const cardProps = talk.id ? {
+    to: `/capa/charlas/${talk.id}?day=${talk.day}&room=${returnRoom || "D"}`,
+    onClick: () => window.sessionStorage.setItem("capa-return-scroll", String(window.scrollY)),
+  } : {};
   const speakers = getSpeakers(talk);
   const organizations = getOrganizations(talk, speakers);
   const countries = [...new Set(speakers.flatMap((speaker) => Array.isArray(speaker.country) ? speaker.country : [speaker.country]).filter(Boolean))];
-  const visuals = [
-    ...speakers.filter((speaker) => speaker.photo).map((speaker) => ({ ...speaker, type: "photo" })),
-    ...organizations.map((organization) => {
-      const name = typeof organization === "string" ? organization : organization.name;
-      const logo = typeof organization === "string" ? null : organization.logo;
-      return { type: "logo", name, src: getOrganizationLogo(name, logo) };
-    }).filter((visual) => visual.src),
-  ];
+  const visuals = talk.pairedVisuals
+    ? speakers.map((speaker) => ({ ...speaker, type: "paired", logo: getOrganizationLogo(speaker.company, speaker.logo) }))
+    : [
+      ...speakers.filter((speaker) => speaker.photo).map((speaker) => ({ ...speaker, type: "photo" })),
+      ...organizations.map((organization) => {
+        const name = typeof organization === "string" ? organization : organization.name;
+        const logo = typeof organization === "string" ? null : organization.logo;
+        return { type: "logo", name, src: getOrganizationLogo(name, logo) };
+      }).filter((visual) => visual.src),
+    ];
   return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()}`} {...cardProps}>
     <div className="capa-talk-photo">
       <TalkVisualCarousel visuals={visuals} fallbackName={talk.name} />
     </div>
     <div className="capa-talk-body">
       <AutoFitTitle>{talk.title || talk.name}</AutoFitTitle>
+      {talk.keywords?.length > 0 && <div className="talk-card-keywords">{talk.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div>}
       <div className="capa-talk-person"><div className="talk-person-copy">
         <div className="talk-speaker-names">{speakers.map((speaker, index) => <h4 key={`${speaker.name}-${index}`}>{speaker.name}</h4>)}</div>
         <div className="talk-company-origin">
@@ -164,11 +172,33 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
 
 export default function CapaSchedule() {
   const { locale } = useI18n();
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const requestedDay = searchParams.get("day");
   const requestedRoom = searchParams.get("room");
   const [activeDay, setActiveDay] = useState(() => days.includes(requestedDay) ? requestedDay : "wednesday");
   const [activeRoom, setActiveRoom] = useState(() => rooms.includes(requestedRoom) ? requestedRoom : "D");
+
+  useLayoutEffect(() => {
+    if (!location.state?.restoreCapaScroll) return undefined;
+    const savedScroll = Number(window.sessionStorage.getItem("capa-return-scroll"));
+    if (!Number.isFinite(savedScroll)) return undefined;
+    window.sessionStorage.removeItem("capa-return-scroll");
+    const firstFrame = window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => window.scrollTo({ top: savedScroll, behavior: "auto" }));
+    });
+    return () => window.cancelAnimationFrame(firstFrame);
+  }, [location.state]);
+
+  const selectDay = (day) => {
+    setActiveDay(day);
+    setSearchParams({ day, room: activeRoom }, { replace: true });
+  };
+
+  const selectRoom = (room) => {
+    setActiveRoom(room);
+    setSearchParams({ day: activeDay, room }, { replace: true });
+  };
   const copy = locale === "en"
     ? { kicker: "CAPA 2026 PROGRAM", title: "Confirmed talks", intro: "Browse the program by day and open each talk to read its full description.", inPerson: "In person", remote: "Remote", room: "Room", details: "View talk" }
     : { kicker: "PROGRAMA CAPA 2026", title: "Charlas confirmadas", intro: "Navegá el programa por día y abrí cada charla para conocer su descripción completa.", inPerson: "Presencial", remote: "Remoto", room: "Salón", details: "Ver charla" };
@@ -186,10 +216,10 @@ export default function CapaSchedule() {
     <section className="capa-program" id="programa">
       <div className="capa-program-heading"><p>{copy.kicker}</p><h3>{copy.title}</h3><span>{copy.intro}</span></div>
       <div className="capa-day-tabs" role="tablist" aria-label={copy.title}>
-        {days.map((day) => <button key={day} role="tab" aria-selected={activeDay === day} className={activeDay === day ? "active" : ""} onClick={() => setActiveDay(day)}><strong>{dayCopy[locale][day][0]}</strong><small>{dayCopy[locale][day][1]}</small><em>{capaProgram.filter((talk) => talk.day === day && talk.kind !== "pause").length}</em></button>)}
+        {days.map((day) => <button key={day} role="tab" aria-selected={activeDay === day} className={activeDay === day ? "active" : ""} onClick={() => selectDay(day)}><strong>{dayCopy[locale][day][0]}</strong><small>{dayCopy[locale][day][1]}</small><em>{capaProgram.filter((talk) => talk.day === day && talk.kind !== "pause").length}</em></button>)}
       </div>
       <div className="capa-mobile-room-tabs" role="tablist" aria-label={locale === "en" ? "Choose a room" : "Elegir salón"}>
-        {rooms.map((room) => <button type="button" role="tab" aria-selected={activeRoom === room} className={activeRoom === room ? "active" : ""} onClick={() => setActiveRoom(room)} key={room}>{copy.room} {room}</button>)}
+        {rooms.map((room) => <button type="button" role="tab" aria-selected={activeRoom === room} className={activeRoom === room ? "active" : ""} onClick={() => selectRoom(room)} key={room}>{copy.room} {room}</button>)}
       </div>
       <div className="capa-agenda-scroll" role="tabpanel">
         <div className="capa-agenda-grid">
@@ -206,8 +236,9 @@ export default function CapaSchedule() {
               <time>{slot.label}</time>
               {rooms.map((room) => {
                 const cellTalks = talks.filter((talk) => talk.room === room && talk.time.startsWith(slot.start));
-                return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : "is-tbd"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
-                  {cellTalks.length ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} selectedRoom={activeRoom} key={`${talk.room}-${talk.time}-${talk.name}`} />) : <span>TBD</span>}
+                const coveredByTalk = talks.some((talk) => talk.room === room && talk.time.slice(0, 5) < slot.start && talk.time.slice(-5) > slot.start);
+                return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : coveredByTalk ? "is-covered" : "is-tbd"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
+                  {cellTalks.length ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} selectedRoom={activeRoom} key={`${talk.room}-${talk.time}-${talk.name}`} />) : coveredByTalk ? null : <span>TBD</span>}
                 </div>;
               })}
             </div>;

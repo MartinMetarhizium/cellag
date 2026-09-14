@@ -1,6 +1,6 @@
 import capaTalksSupplemental from "./capaTalksSupplemental.js";
 
-const capaTalks = [
+const rawCapaTalks = [
   {
     id: "emiliano-benito-lupino",
     name: "Emiliano Benito", company: "Elementa Foods", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/emiliano benito.jpg",
@@ -66,10 +66,11 @@ const capaTalks = [
   },
   {
     id: "bruno-rosolem-cashew",
-    name: "Bruno Rosolem", company: "Amazonika Mundi", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "E", category: "PB", mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/bruno Rosolem.png",
-    title: "Cashew apple bagasse: la fibra que Amazonika Mundi convierte en ingrediente de valor",
-    description: ["Bruno Rosolem lidera la expansión global de Amazonika Mundi y la comercialización de una innovadora fibra alimentaria hecha a partir del bagazo de la manzana de cajú, un subproducto ampliamente descartado por la industria."],
-    topics: ["De residuo a ingrediente", "Upcycling", "Clean label", "Aplicaciones alimentarias", "Expansión global"],
+    name: "Bruno Rosolem", company: "Amazonika Mundi", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/bruno Rosolem.png",
+    title: "De residuo de cajú a alternativa cárnica: cómo Amazonika Mundi construye una línea plant-based a partir de fibra amazónica reutilizada",
+    description: ["Bruno Rosolem, CCO de Amazonika Mundi, lidera la expansión global y comercialización de una innovadora fibra alimentaria elaborada a partir del bagazo de manzana de cajú, un subproducto ampliamente descartado por las principales empresas procesadoras de jugo de cajú de Brasil. Desarrollada en asociación con Embrapa, con una patente compartida, esta fibra reutilizada constituye hoy la base de una línea completa de productos plant-based: hamburguesas, albóndigas, dumplings y chicken tenders, todos elaborados sin aditivos químicos.", "Bruno presentará el portfolio de productos de Amazonika Mundi, la ciencia detrás de la transformación de residuos agroindustriales en una alternativa cárnica clean-label y la estrategia de la compañía para llevar la biodiversidad amazónica a los mercados globales."],
+    topics: ["Portfolio de Amazonika Mundi: hamburguesas, albóndigas, dumplings y chicken tenders.", "Upcycling del bagazo de manzana de cajú: transformar un residuo agroindustrial en un ingrediente alimentario.", "Formulación clean-label sin aditivos químicos.", "Colaboración con instituciones públicas de investigación como Embrapa para desarrollar propiedad intelectual compartida.", "Llevar la biodiversidad amazónica a mercados globales."],
+    keywords: ["PlantBased", "Upcycling", "CleanLabel"],
   },
   {
     id: "martin-blasco-escalado-bioprocesos",
@@ -102,5 +103,52 @@ const capaTalks = [
   },
   ...capaTalksSupplemental,
 ];
+
+const keywordsByTalk = {
+  "emiliano-benito-lupino": ["Lupino", "IngredientesVegetales", "CadenaDeValor"],
+  "pancho-pinero-plant-based-argentina": ["IndustriaPlantBased", "Regulación", "MercadoMasivo"],
+  "kris-blanchard-biomanufactura": ["Biomanufactura", "InsumosCelulares", "TAMEE"],
+  "maria-laura-matos-bioprocesos": ["Bioprocesos", "FermentaciónDePrecisión", "Escalado"],
+  "mariana-sanchez-innovacion-vegetal": ["ProteínasVegetales", "ValorAgregado", "IndustriaArgentina"],
+  "valeria-bosio-ingenieria-tejidos": ["IngenieríaDeTejidos", "Scaffolds", "CarneCultivada"],
+  "celina-moreno-marco-regulatorio": ["RegulaciónAlimentaria", "NuevosIngredientes", "MarcoNormativo"],
+  "martin-sabatini-fermentacion": ["FermentaciónDePrecisión", "ColorantesNaturales", "Escalado"],
+  "celeste-marin-calidad": ["ControlDeCalidad", "Reproducibilidad", "BancosCelulares"],
+  "bruno-rosolem-cashew": ["PlantBased", "Upcycling", "CleanLabel"],
+  "martin-blasco-escalado-bioprocesos": ["Bioprocesos", "Escalado", "TransferenciaTecnológica"],
+  "rodrigo-ledesma-bioproduccion": ["BioproducciónMicrobiana", "Fermentación", "ProteínaSustentable"],
+  "chris-bryant-politica-publica": ["ProteínasAlternativas", "CienciasSociales", "PolíticaAlimentaria"],
+  "mark-post-mosa-meat": ["CarneCultivada", "Biorreactores", "RegulaciónEuropea"],
+  "unsam-proteinas-alternativas": ["InvestigaciónPública", "Formación", "Vinculación"],
+  "didier-toubia-aleph-farms": ["Regulación", "CarneCultivada", "Comercialización"],
+  "eduardo-bittencourt-typcal": ["Micoproteína", "Fermentación", "Escalado"],
+  "ines-palolo-smartserum": ["SueroAnimalFree", "MediosDeCultivo", "CarneCultivada"],
+  "eugenia-maciero-regulacion": ["Regulación", "IngredientesInnovadores", "AccesoAMercado"],
+  "biba-bebidas-vegetales": ["BebidasVegetales", "Formulación", "Escalado"],
+  "agustin-belloso-tomorrow-foods": ["CultivosRegenerativos", "IngredientesVegetales", "CadenaDeValor"],
+  "uade-proteinas-alternativas": ["InvestigaciónUniversitaria", "ProteínasAlternativas", "Vinculación"],
+  "francisco-romero-amande": ["BebidasVegetales", "MarcaNacional", "Consumidores"],
+  "carla-molento-zootecnia-celular": ["ZootecniaCelular", "BienestarAnimal", "CarneCultivada"],
+  "fabio-zon-chunk-foods": ["CortesEnteros", "FermentaciónSólida", "Escalado"],
+  "tobias-leenaert-proveg": ["CambioDeComportamiento", "Consumidores", "TransiciónProteica"],
+  "cell-ag-cono-sur": ["AgriculturaCelular", "ConoSur", "ColaboraciónRegional"],
+  "michael-greger-ultraprocesados": ["Ultraprocesados", "Nutrición", "EvidenciaCientífica"],
+  "lucia-cragnza-sartorius": ["Bioprocesos", "Equipamiento", "Escalado"],
+  "cluster-proteinas-vegetales": ["ProteínasVegetales", "CadenaDeValor", "IndustriaArgentina"],
+  "unahur-proteinas-alternativas": ["CienciaInterdisciplinaria", "Yacón", "AlimentosFuncionales"],
+  "mariana-brizzio-notco": ["InteligenciaArtificial", "PlantBased", "DesarrolloDeProducto"],
+  "juan-martin-oteiza-ciati": ["Microbiología", "InocuidadAlimentaria", "InvestigaciónAplicada"],
+  "leonardo-vieira-future-cow": ["FermentaciónDePrecisión", "Lácteos", "Fundraising"],
+  "unlp-ciprove-proteinas-alternativas": ["InvestigaciónPública", "Laboratorios", "VinculaciónTecnológica"],
+  "ajinomoto-carne-cultivada": ["CarneCultivada", "Hinokitiol", "ReducciónDeCostos"],
+  "gfi-brasil-ciencia-politica": ["PolíticasPúblicas", "Ingredientes", "Regulación"],
+};
+
+const toHashtag = (keyword) => `#${keyword.replace(/^#/, "").replace(/[^\p{L}\p{N}_]/gu, "")}`;
+const capaTalks = rawCapaTalks.map((talk) => ({
+  ...talk,
+  keywords: (keywordsByTalk[talk.id] || talk.keywords || []).slice(0, 3).map(toHashtag),
+  participations: talk.participations?.map((participation) => ({ ...participation, keywords: participation.keywords.slice(0, 3).map(toHashtag) })),
+}));
 
 export default capaTalks;
