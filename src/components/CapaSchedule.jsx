@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import capaTalks from "../data/capaTalks";
 import capaProgram from "../data/capaProgram";
 import { useI18n } from "../i18n/I18nContext";
@@ -94,9 +94,40 @@ function getOrganizations(talk, speakers) {
   });
 }
 
-function TalkCard({ talk, copy, locale }) {
+function AutoFitTitle({ children }) {
+  const titleRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const title = titleRef.current;
+    if (!title) return undefined;
+
+    const fitTitle = () => {
+      title.style.fontSize = "";
+      const styles = window.getComputedStyle(title);
+      const initialSize = Number.parseFloat(styles.fontSize);
+      const minimumSize = Number.parseFloat(styles.getPropertyValue("--talk-title-min-size")) || 17;
+      let size = initialSize;
+
+      title.style.fontSize = `${size}px`;
+      while (title.scrollHeight > title.clientHeight + 1 && size > minimumSize) {
+        size = Math.max(minimumSize, size - 0.5);
+        title.style.fontSize = `${size}px`;
+      }
+    };
+
+    fitTitle();
+    const observer = new ResizeObserver(fitTitle);
+    observer.observe(title.parentElement);
+    return () => observer.disconnect();
+  }, [children]);
+
+  return <h5 ref={titleRef}>{children}</h5>;
+}
+
+function TalkCard({ talk, copy, locale, selectedRoom }) {
   const Card = talk.id ? Link : "article";
-  const cardProps = talk.id ? { to: `/capa/charlas/${talk.id}` } : {};
+  const returnRoom = talk.common ? selectedRoom : talk.room;
+  const cardProps = talk.id ? { to: `/capa/charlas/${talk.id}?day=${talk.day}&room=${returnRoom || "D"}` } : {};
   const speakers = getSpeakers(talk);
   const organizations = getOrganizations(talk, speakers);
   const countries = [...new Set(speakers.flatMap((speaker) => Array.isArray(speaker.country) ? speaker.country : [speaker.country]).filter(Boolean))];
@@ -113,25 +144,31 @@ function TalkCard({ talk, copy, locale }) {
       <TalkVisualCarousel visuals={visuals} fallbackName={talk.name} />
     </div>
     <div className="capa-talk-body">
-      <h5>{talk.title || talk.name}</h5>
+      <AutoFitTitle>{talk.title || talk.name}</AutoFitTitle>
       <div className="capa-talk-person"><div className="talk-person-copy">
         <div className="talk-speaker-names">{speakers.map((speaker, index) => <h4 key={`${speaker.name}-${index}`}>{speaker.name}</h4>)}</div>
-        <p className="talk-company-text">{organizations.map((organization) => typeof organization === "string" ? organization : organization.name).join(" · ")}</p>
+        <div className="talk-company-origin">
+          <p className="talk-company-text">{organizations.map((organization) => typeof organization === "string" ? organization : organization.name).join(" · ")}</p>
+          <span className={`talk-flag ${countries.length > 1 ? "multiple" : ""}`} title={countries.join(" · ") || "País no informado"}><CountryFlag country={countries.length > 1 ? countries : countries[0]} /></span>
+        </div>
       </div></div>
       <div className="talk-card-meta">
         <span className="capa-talk-time"><strong>🕒 {talk.time}</strong></span>
-        <span className="talk-language"><span className={`talk-flag ${countries.length > 1 ? "multiple" : ""}`} title={countries.join(" · ") || "País no informado"}><CountryFlag country={countries.length > 1 ? countries : countries[0]} /></span><strong>{languageNames[talk.language] || talk.language}</strong></span>
+        <span className="talk-language"><strong>{languageNames[talk.language] || talk.language}</strong></span>
         <span className={`talk-format ${talk.mode}`}><strong>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</strong></span>
       </div>
-      <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>
+      <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{(typeof talk.categoryLabel === "object" ? talk.categoryLabel[locale] : talk.categoryLabel) || categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>
     </div>
   </Card>;
 }
 
 export default function CapaSchedule() {
   const { locale } = useI18n();
-  const [activeDay, setActiveDay] = useState("wednesday");
-  const [activeRoom, setActiveRoom] = useState("D");
+  const [searchParams] = useSearchParams();
+  const requestedDay = searchParams.get("day");
+  const requestedRoom = searchParams.get("room");
+  const [activeDay, setActiveDay] = useState(() => days.includes(requestedDay) ? requestedDay : "wednesday");
+  const [activeRoom, setActiveRoom] = useState(() => rooms.includes(requestedRoom) ? requestedRoom : "D");
   const copy = locale === "en"
     ? { kicker: "CAPA 2026 PROGRAM", title: "Confirmed talks", intro: "Browse the program by day and open each talk to read its full description.", inPerson: "In person", remote: "Remote", room: "Room", details: "View talk" }
     : { kicker: "PROGRAMA CAPA 2026", title: "Charlas confirmadas", intro: "Navegá el programa por día y abrí cada charla para conocer su descripción completa.", inPerson: "Presencial", remote: "Remoto", room: "Salón", details: "Ver charla" };
@@ -163,14 +200,14 @@ export default function CapaSchedule() {
             </div>;
             const sharedTalk = talks.find((talk) => talk.common && talk.time.startsWith(slot.start));
             if (sharedTalk) return <div className="capa-agenda-row capa-agenda-row-shared" key={slot.start}>
-              <time>{slot.label}</time><div className="capa-agenda-shared"><span className="capa-shared-label">{copy.room} D + E</span><TalkCard talk={sharedTalk} copy={copy} locale={locale} /></div>
+              <time>{slot.label}</time><div className="capa-agenda-shared"><span className="capa-shared-label">{copy.room} D + E</span><TalkCard talk={sharedTalk} copy={copy} locale={locale} selectedRoom={activeRoom} /></div>
             </div>;
             return <div className="capa-agenda-row" key={slot.start}>
               <time>{slot.label}</time>
               {rooms.map((room) => {
                 const cellTalks = talks.filter((talk) => talk.room === room && talk.time.startsWith(slot.start));
                 return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : "is-tbd"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
-                  {cellTalks.length ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} key={`${talk.room}-${talk.time}-${talk.name}`} />) : <span>TBD</span>}
+                  {cellTalks.length ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} selectedRoom={activeRoom} key={`${talk.room}-${talk.time}-${talk.name}`} />) : <span>TBD</span>}
                 </div>;
               })}
             </div>;
