@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import capaTalks from "../data/capaTalks";
 import { useI18n } from "../i18n/I18nContext";
@@ -13,6 +14,11 @@ export default function CapaTalkDetails() {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
   const { locale } = useI18n();
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [id]);
+
   const talk = capaTalks.find((item) => item.id === id);
   const returnDay = ["wednesday", "thursday", "friday"].includes(searchParams.get("day")) ? searchParams.get("day") : talk?.day || "wednesday";
   const returnRoom = ["D", "E"].includes(searchParams.get("room")) ? searchParams.get("room") : talk?.room || "D";
