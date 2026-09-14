@@ -156,7 +156,6 @@ export default function CapaSchedule() {
       </div>
       <div className="capa-agenda-scroll" role="tabpanel">
         <div className="capa-agenda-grid">
-          <div className="capa-agenda-header">{locale === "en" ? "Time" : "Horario"}</div>
           {rooms.map((room) => <div className="capa-agenda-header" key={room}>{copy.room} {room}</div>)}
           {visibleTimeSlots.map((slot) => {
             if (slot.common) return <div className="capa-agenda-row capa-agenda-row-common" key={slot.start}>

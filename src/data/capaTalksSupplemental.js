@@ -1,9 +1,9 @@
 const capaTalksSupplemental = [
   {
-    id: "unsam-proteinas-alternativas", name: "María Laura Cerutti", company: "UNSAM", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/CERUTTI_MARIA LAURA.jpg",
+    id: "unsam-proteinas-alternativas", name: "María Laura Cerutti", company: "UNSAM", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/CERUTTI_MARIA LAURA.jpg", detailLogo: "/capa-assets/UNSAM.jpg",
     title: "UNSAM y las proteínas alternativas: investigación pública y vinculación con la industria",
-    description: ["Panel institucional de UNSAM, encabezado por su Secretaría de Vinculación Tecnológica, que presentará el trabajo de la universidad en proteínas alternativas y las oportunidades de colaboración con la industria."],
-    topics: ["Líneas de investigación en proteínas alternativas", "Proyectos y laboratorios destacados", "Oportunidades de vinculación con la industria"],
+    description: ["Panel institucional de UNSAM que presentará el trabajo desarrollado por sus equipos en el campo de las proteínas alternativas, sus capacidades de investigación y formación, y su vinculación con el ecosistema científico, productivo y emprendedor."],
+    topics: ["Investigación en proteínas alternativas en UNSAM", "Equipos, proyectos y capacidades científicas", "Formación de talento y participación estudiantil", "Vinculación con el ecosistema de proteínas alternativas"],
   },
   {
     id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "11:25–11:55", room: "D", category: "CA", mode: "remoto", language: "EN", country: "Israel",
