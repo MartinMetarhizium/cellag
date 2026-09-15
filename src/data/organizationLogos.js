@@ -1,8 +1,8 @@
 const organizationLogos = {
   "capa 2026": "/minimal_logo.png",
   "panel regional": "/minimal_logo.png",
-  "cell ag argentina": "/minimal_logo.png",
-  "cell ag brazil": "/minimal_logo.png",
+  "cell ag argentina": "/capa-assets/cell ag argentina logo.png",
+  "cell ag brazil": "/capa-assets/cellag brazil logo.png",
   "cell ag chile": "/minimal_logo.png",
   "gfi brasil": "/sponsors/sponsor1.png",
   "amande": "/capa-assets/Amande.png",
@@ -14,6 +14,7 @@ const organizationLogos = {
   "bioquest.bio": "/capa-assets/Bioquest_logo_.svg",
   "bryant research": "/capa-assets/Bryant Research logo-04.png",
   "ciati": "/capa-assets/CIATI.jpg",
+  "chunk foods": "/capa-assets/Chunk Foods_Logo_Tagline.png",
   "elementa foods": "/capa-assets/elementa logo.jpg",
   "biomit lab": "/capa-assets/Logo BIOMIT Lab.png",
   "inti": "/capa-assets/logoINTI.png",

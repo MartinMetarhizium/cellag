@@ -47,7 +47,7 @@ function TalkPlaceholder({ name }) {
 }
 
 function SpeakerPortrait({ speaker }) {
-  const cleanPhoto = speaker.useCleanPhoto ? `/capa-assets/${speaker.name} LIMPIO.png` : null;
+  const cleanPhoto = speaker.useCleanPhoto ? speaker.cleanPhoto : null;
   const [photoSource, setPhotoSource] = useState(cleanPhoto || speaker.photo || null);
 
   useEffect(() => {

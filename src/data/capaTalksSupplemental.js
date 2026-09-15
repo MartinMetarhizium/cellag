@@ -13,7 +13,7 @@ const capaTalksSupplemental = [
     keywords: ["Carne cultivada", "Regulación", "Comercialización", "Escalado"],
   },
   {
-    id: "eduardo-bittencourt-typcal", name: "Eduardo Bittencourt", company: "Typcal", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "D", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/EduardoSydney.jpeg",
+    id: "eduardo-bittencourt-typcal", name: "Eduardo Bittencourt", company: "Typcal", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "D", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/EduardoSydney.jpeg", cleanPhoto: "/capa-assets/Eduardo Bittencourt Limpio.png",
     title: "Poniendo a Brasil en el mapa de la micoproteína: escalando la fermentación circular de micelio del laboratorio a la industria",
     description: ["El Dr. Eduardo Bittencourt, emprendedor, científico, cofundador y CTO de Typcal, es Doctor en Ingeniería de Bioprocesos, con 25 artículos publicados y más de 4.000 citas. Compartirá cómo Typcal se convirtió en la primera empresa de América Latina en desarrollar fermentación de micelio mediante un proceso circular, produciendo micoproteína más rápido y utilizando una gama más amplia de materias primas que otras cepas fúngicas competidoras.", "Eduardo recorrerá el camino de Typcal desde una planta piloto en Curitiba con un biorreactor de 200 litros hasta su objetivo de producir alrededor de 60 toneladas de micoproteína por mes para 2027 mediante tres biorreactores de 50.000 litros, y explicará cómo la empresa desarrolló tres formatos de producto diferentes — biomasa fresca, polvo seco rico en proteínas y un concentrado de micelio para nutrición deportiva — a partir de una única plataforma de fermentación."],
     topics: ["Fermentación circular de micelio: el enfoque de Typcal sobre materias primas y diseño de proceso.", "Escalado desde un biorreactor piloto de 200 litros hasta producción a escala industrial.", "Desarrollo de múltiples formatos de producto a partir de una única plataforma de fermentación.", "Posicionamiento de América Latina en el mapa global de la micoproteína."],
@@ -32,13 +32,13 @@ const capaTalksSupplemental = [
     topics: ["Evidencia científica y dossiers regulatorios", "Diversidad de marcos normativos", "Regulación desde el inicio", "Fermentación de precisión"],
   },
   {
-    id: "biba-bebidas-vegetales", name: "Emiliano Kakisu", company: "BIBA", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Emiliano Kakisu.jpeg",
+    id: "biba-bebidas-vegetales", name: "Emiliano Kakisu", company: "BIBA", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Emiliano Kakisu.jpeg", cleanPhoto: "/capa-assets/Emiliano kakisu Limpio.png",
     title: "BIBA y el futuro de las bebidas vegetales: sabor, funcionalidad y escala en Argentina",
     description: ["BIBA compartirá su experiencia en el desarrollo de bebidas vegetales para el mercado argentino y los desafíos de formulación necesarios para competir en sabor, textura, estabilidad, funcionalidad y costo."],
     topics: ["Sabor y textura", "Selección de materias primas", "Formulación y estabilidad", "Escala productiva", "Tendencias de consumo"],
   },
   {
-    id: "agustin-belloso-tomorrow-foods", name: "Agustín Belloso", company: "Tomorrow Foods", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/agustin belloso.jpg",
+    id: "agustin-belloso-tomorrow-foods", name: "Agustín Belloso", company: "Tomorrow Foods", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/agustin belloso.jpg", cleanPhoto: "/capa-assets/Agustin Belloso Limpio.png",
     title: "De la legumbre al ingrediente: cómo Tomorrow Foods está reconstruyendo la cadena de proteína vegetal desde el campo argentino",
     description: ["Agustín Belloso presentará el desarrollo de ingredientes vegetales a partir de arveja, garbanzo, poroto y arroz producidos bajo agricultura regenerativa y siembra directa.", "La charla recorrerá una cadena de valor con trazabilidad completa, desde el cultivo hasta el ingrediente funcional, y el potencial de Argentina como origen de innovación proteica."],
     topics: ["Agricultura regenerativa", "Legumbres como fuente proteica", "Fijación de nitrógeno", "Trazabilidad y certificación", "Innovación argentina"],
@@ -56,7 +56,7 @@ const capaTalksSupplemental = [
     topics: ["Desarrollo de una bebida vegetal argentina", "Producción local", "Decisiones de formulación", "Consumidor y barreras de adopción"],
   },
   {
-    id: "carla-molento-zootecnia-celular", name: "Carla Molento", company: "UFPR · ZOOCEL / ABAC", day: "wednesday", date: "21 de octubre", time: "14:35–15:05", room: "E", category: "CA", mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/carla molentoi.jpg",
+    id: "carla-molento-zootecnia-celular", name: "Carla Molento", company: "UFPR · ZOOCEL / ABAC", day: "wednesday", date: "21 de octubre", time: "14:35–15:05", room: "E", category: "CA", mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/carla molentoi.jpg", cleanPhoto: "/capa-assets/Carla Molento Limpio.png",
     title: "Zootecnia celular: producir carne sin sacrificio animal, desde la academia latinoamericana",
     description: ["Carla Molento presentará la zootecnia celular desde la universidad pública, los avances del ZOOCEL y la importancia de incorporar el bienestar y la ética animal como ejes centrales del desarrollo de carne cultivada."],
     topics: ["Zootecnia celular", "ZOOCEL", "Bienestar y ética animal", "Universidad pública y ABAC"],
