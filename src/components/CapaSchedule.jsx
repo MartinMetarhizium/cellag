@@ -47,10 +47,21 @@ function TalkPlaceholder({ name }) {
 }
 
 function SpeakerPortrait({ speaker }) {
-  const [failed, setFailed] = useState(false);
+  const cleanPhoto = speaker.useCleanPhoto ? `/capa-assets/${speaker.name} LIMPIO.png` : null;
+  const [photoSource, setPhotoSource] = useState(cleanPhoto || speaker.photo || null);
+
+  useEffect(() => {
+    setPhotoSource(cleanPhoto || speaker.photo || null);
+  }, [cleanPhoto, speaker.photo]);
+
+  const handlePhotoError = () => {
+    if (photoSource === cleanPhoto && speaker.photo) setPhotoSource(speaker.photo);
+    else setPhotoSource(null);
+  };
+
   return <div className="talk-speaker-portrait">
-    {speaker.photo && !failed
-      ? <img src={speaker.photo} alt={speaker.name} onError={() => setFailed(true)} />
+    {photoSource
+      ? <img src={photoSource} alt={speaker.name} onError={handlePhotoError} />
       : <TalkPlaceholder name={speaker.name} />}
   </div>;
 }
@@ -136,16 +147,19 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
   const speakers = getSpeakers(talk);
   const organizations = getOrganizations(talk, speakers);
   const countries = [...new Set(speakers.flatMap((speaker) => Array.isArray(speaker.country) ? speaker.country : [speaker.country]).filter(Boolean))];
-  const visuals = talk.pairedVisuals
-    ? speakers.map((speaker) => ({ ...speaker, type: "paired", logo: getOrganizationLogo(speaker.company, speaker.logo) }))
-    : [
-      ...speakers.filter((speaker) => speaker.photo).map((speaker) => ({ ...speaker, type: "photo" })),
-      ...organizations.map((organization) => {
-        const name = typeof organization === "string" ? organization : organization.name;
-        const logo = typeof organization === "string" ? null : organization.logo;
-        return { type: "logo", name, src: getOrganizationLogo(name, logo) };
-      }).filter((visual) => visual.src),
-    ];
+  const representedOrganizations = new Set(speakers.map((speaker) => (speaker.company || talk.company || "").trim().toLocaleLowerCase()));
+  const speakerVisuals = speakers.map((speaker) => ({
+    ...speaker,
+    type: "paired",
+    useCleanPhoto: talk.day === "wednesday",
+    logo: getOrganizationLogo(speaker.company || talk.company, speaker.logo),
+  }));
+  const additionalOrganizationVisuals = organizations.map((organization) => {
+    const name = typeof organization === "string" ? organization : organization.name;
+    const explicitLogo = typeof organization === "string" ? null : organization.logo;
+    return { type: "logo", name, src: getOrganizationLogo(name, explicitLogo) };
+  }).filter((visual) => visual.src && !representedOrganizations.has(visual.name.trim().toLocaleLowerCase()));
+  const visuals = [...speakerVisuals, ...additionalOrganizationVisuals];
   return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()}`} {...cardProps}>
     <div className="capa-talk-photo">
       <TalkVisualCarousel visuals={visuals} fallbackName={talk.name} />
@@ -162,7 +176,7 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
       </div></div>
       <div className="talk-card-meta">
         <span className="capa-talk-time"><strong>🕒 {talk.time}</strong></span>
-        <span className="talk-language"><strong>{languageNames[talk.language] || talk.language}</strong></span>
+        <span className="talk-language"><strong>{(Array.isArray(talk.language) ? talk.language : [talk.language]).map((language) => languageNames[language] || language).join(" · ")}</strong></span>
         <span className={`talk-format ${talk.mode}`}><strong>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</strong></span>
       </div>
       <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{(typeof talk.categoryLabel === "object" ? talk.categoryLabel[locale] : talk.categoryLabel) || categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>

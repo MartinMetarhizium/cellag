@@ -2,6 +2,8 @@ const organizationLogos = {
   "capa 2026": "/minimal_logo.png",
   "panel regional": "/minimal_logo.png",
   "cell ag argentina": "/minimal_logo.png",
+  "cell ag brazil": "/minimal_logo.png",
+  "cell ag chile": "/minimal_logo.png",
   "gfi brasil": "/sponsors/sponsor1.png",
   "amande": "/capa-assets/Amande.png",
   "ajinomoto": "/capa-assets/Ajinomoto-Logo.jpg",
@@ -28,9 +30,12 @@ const organizationLogos = {
   "sartorius": "/capa-assets/Sartorius.png",
   "typcal": "/capa-assets/typcal-logo.png",
   "universidad argentina de la empresa": "/capa-assets/UADE.png",
+  "uade": "/capa-assets/UADE.png",
   "universidad nacional de hurlingham": "/capa-assets/unahur logo.jpeg",
   "universidad nacional de san martin": "/capa-assets/UNSAM.jpg",
+  "unsam": "/capa-assets/UNSAM.jpg",
   "universidad nacional de la plata": "/capa-assets/Logo_UNLP.jpg",
+  "unlp · ciprove": "/capa-assets/Logo_UNLP.jpg",
   "porta hermanos": "/capa-assets/Porta Hermanos.jpeg",
 };
 

@@ -76,7 +76,7 @@ const capaTalksSupplemental = [
     keywords: ["Cambio de comportamiento", "Consumidores", "Transición proteica"],
   },
   {
-    id: "cell-ag-cono-sur", name: "Cell Ag Argentina · Brasil · Chile", company: "Panel regional", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "D", category: "CA", mode: "presencial", language: "ES", country: ["Argentina", "Brasil", "Chile"],
+    id: "cell-ag-cono-sur", name: "Cell Ag Argentina · Brasil · Chile", company: "Panel regional", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "D", category: "CA", mode: "presencial", language: ["ES", "EN"], country: ["Argentina", "Brasil", "Chile"],
     title: "Agricultura celular en el Cono Sur: construyendo el ecosistema desde Argentina, Brasil y Chile",
     description: ["Este panel reúne a los ecosistemas de agricultura celular de Argentina, Brasil y Chile para compartir cómo se construyen comunidades regionales desde la academia pública, la ciencia abierta y la colaboración."],
     topics: ["Estado de la agricultura celular regional", "Universidad pública y ciencia abierta", "Comunidad antes que competencia", "Colaboración latinoamericana"],
