@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useI18n } from "../i18n/I18nContext";
 
@@ -13,45 +14,49 @@ function LanguageFlag({ locale }) {
 
 export default function Header() {
   const { locale, t, toggleLocale } = useI18n();
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <header className="bg-white shadow sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 p-4">
-        <NavLink to="/home" className="flex items-center gap-3">
-          <img
-            src="/cell.png"
-            alt="Cell Ag Argentina"
-            className="h-12 w-12 object-contain"
-          />
-          <div>
-            <p className="text-xl font-bold text-green-700">Cell Ag Argentina</p>
-            <p className="text-sm text-gray-500">
-              {t("headerTagline")}
-            </p>
-          </div>
-        </NavLink>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 p-2.5 md:p-4">
+        <div className="flex w-full items-center justify-between md:w-auto">
+          <NavLink to="/home" className="flex min-w-0 items-center gap-2 md:gap-3" onClick={() => setMobileOpen(false)}>
+            <img src="/cell.png" alt="Cell Ag Argentina" className="h-9 w-9 shrink-0 object-contain md:h-12 md:w-12" />
+            <div className="min-w-0">
+              <p className="text-base font-bold leading-tight text-green-700 md:text-xl">Cell Ag Argentina</p>
+              <p className="max-w-[220px] truncate text-[11px] leading-tight text-gray-500 md:max-w-none md:text-sm">{t("headerTagline")}</p>
+            </div>
+          </NavLink>
+          <button type="button" className="grid h-10 w-10 place-items-center rounded-lg border border-green-200 text-xl text-green-800 md:hidden" onClick={() => setMobileOpen((open) => !open)} aria-expanded={mobileOpen} aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}>
+            {mobileOpen ? "×" : "☰"}
+          </button>
+        </div>
 
-        <nav className="flex flex-wrap justify-center gap-4 text-gray-700">
+        <nav className={`${mobileOpen ? "flex" : "hidden"} w-full flex-wrap items-center justify-center gap-1.5 border-t border-gray-100 pt-2 text-sm text-gray-700 md:flex md:w-auto md:gap-4 md:border-0 md:pt-0 md:text-base`}>
           <NavLink
             to="/capa"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+            onClick={() => setMobileOpen(false)}
+            className={({ isActive }) => `${linkBase} rounded-md px-2 py-2 md:p-0 ${isActive ? activeClass : ""}`}
           >
             {t("nav.capa")}
           </NavLink>
           <NavLink
             to="/mission"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+            onClick={() => setMobileOpen(false)}
+            className={({ isActive }) => `${linkBase} rounded-md px-2 py-2 md:p-0 ${isActive ? activeClass : ""}`}
           >
             {t("nav.mission")}
           </NavLink>
           <NavLink
             to="/news"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+            onClick={() => setMobileOpen(false)}
+            className={({ isActive }) => `${linkBase} rounded-md px-2 py-2 md:p-0 ${isActive ? activeClass : ""}`}
           >
             {t("nav.news")}
           </NavLink>
           <NavLink
             to="/associate"
-            className={({ isActive }) => `${linkBase} ${isActive ? activeClass : ""}`}
+            onClick={() => setMobileOpen(false)}
+            className={({ isActive }) => `${linkBase} rounded-md px-2 py-2 md:p-0 ${isActive ? activeClass : ""}`}
           >
             {t("nav.join")}
           </NavLink>

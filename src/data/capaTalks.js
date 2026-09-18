@@ -10,9 +10,9 @@ const rawCapaTalks = [
   },
   {
     id: "pancho-pinero-plant-based-argentina",
-    name: "Pancho Piñero", company: "ABP / VNG", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/pancho piñero.jpeg",
+    name: "Pancho Piñero", company: "ABP", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Pancho piñeiro Limpio.png", detailLogo: "/capa-assets/APB logo.png",
     title: "Plant-based en Argentina: estado de la industria",
-    description: ["El sector plant-based argentino pasó en pocos años de ser un nicho a convertirse en una industria organizada, con reconocimiento oficial y proyección exportadora. Ese recorrido no fue espontáneo: requirió organización gremial, trabajo regulatorio y una readaptación constante del negocio a las demandas reales del mercado masivo.", "Pancho Piñero, fundador de la Asociación de Productores a Base de Plantas (ABP) y CEO de VNG, fue protagonista directo de ese proceso: lideró la consolidación de la ABP como cámara del sector, logró su reconocimiento como actividad estratégica ante el Estado y hoy conduce una de las compañías plant-based pioneras del país, en plena transformación hacia el consumidor flexitariano.", "A partir de esa doble experiencia —gremial y empresarial— compartirá el estado actual de la industria plant-based en Argentina, el trabajo colectivo de las empresas asociadas a la ABP, qué cambió en su propia visión del negocio al pasar a pensar en el consumidor masivo, y qué necesita el sector para consolidarse como industria exportadora de escala regional. La charla hará especial foco en las tendencias del sector y en cómo viene evolucionando la industria plant-based en Argentina.", "La charla propone una mirada honesta sobre el futuro de la alimentación a base de plantas: no se trata de imponer un modelo único, sino de construir una industria organizada, rentable y capaz de convivir con otras proteínas para ampliar, entre todos, las opciones de una alimentación más sustentable."],
+    description: ["El sector plant-based argentino pasó en pocos años de ser un nicho a convertirse en una industria organizada, con reconocimiento oficial y proyección exportadora. Ese recorrido no fue espontáneo: requirió organización gremial, trabajo regulatorio y una readaptación constante del negocio a las demandas reales del mercado masivo.", "Pancho Piñero, fundador de la Asociación de Productores a Base de Plantas (ABP), fue protagonista directo de ese proceso: lideró la consolidación de la ABP como cámara del sector y logró su reconocimiento como actividad estratégica ante el Estado.", "A partir de esa experiencia gremial compartirá el estado actual de la industria plant-based en Argentina, el trabajo colectivo de las empresas asociadas a la ABP y qué necesita el sector para consolidarse como industria exportadora de escala regional. La charla hará especial foco en las tendencias del sector y en cómo viene evolucionando la industria plant-based en Argentina.", "La charla propone una mirada honesta sobre el futuro de la alimentación a base de plantas: no se trata de imponer un modelo único, sino de construir una industria organizada, rentable y capaz de convivir con otras proteínas para ampliar, entre todos, las opciones de una alimentación más sustentable."],
     topics: ["Estado de la industria plant-based argentina", "Organización gremial y regulación", "Consumidor masivo e innovación de producto", "Potencial exportador", "Coexistencia de proteínas"],
   },
   {
@@ -31,14 +31,14 @@ const rawCapaTalks = [
   },
   {
     id: "mariana-sanchez-innovacion-vegetal",
-    name: "Mariana Sánchez", company: "INTI", day: "wednesday", date: "21 de octubre", time: "14:35–15:05", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Retrato Mariana Sanchez-1.jpg",
+    name: "Mariana Sánchez", company: "INTI", day: "wednesday", date: "21 de octubre", time: "14:35–15:05", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Mariana Sanchez Limpio.png",
     title: "El futuro ya se está cocinando: cómo Argentina puede liderar la innovación en proteínas vegetales",
     description: ["Mariana Sánchez invita a mirar el potencial de Argentina para posicionarse como protagonista de la innovación en proteínas vegetales, aprovechando su capacidad productiva, tradición agroalimentaria y el respaldo de instituciones como el INTI.", "Compartirá cómo el agregado de valor y el desarrollo tecnológico pueden transformar materias primas locales en productos de alto impacto."],
     topics: ["Argentina como polo de innovación", "Agregado de valor", "Materias primas locales", "Apoyo público a empresas", "Innovación alimentaria"],
   },
   {
     id: "valeria-bosio-ingenieria-tejidos",
-    name: "Valeria Bosio", company: "BIOMIT Lab", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "E", category: "CA", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/ValeriaBosio.png",
+    name: "Valeria Bosio", company: "BIOMIT Lab", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "E", category: "CA", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Valeria Bosio Limpio.png",
     title: "Proteínas para regeneración ósea: lo que la ingeniería de tejidos puede aportar a la carne cultivada",
     description: ["Dra. Valeria Bosio, Doctora en Química (Argentina) y Doctora en Biomedicina (Francia), formada en ingeniería de tejidos en Tufts University y Harvard, dirige el BIOMIT Lab (UNLP/CONICET), donde desarrolla scaffolds a partir de seda de gusano de seda (Bombyx mori) para regeneración de tejido óseo y vascular.", "Si bien su trabajo se centra en biomedicina, las técnicas de scaffolding e ingeniería de tejidos que desarrolla son la misma base tecnológica que necesita la carne cultivada para lograr estructuras y texturas similares a un corte real. Valeria compartirá su experiencia construyendo matrices tridimensionales para tejido biológico, y cómo ese conocimiento —nacido en la biomedicina— puede trasladarse al desarrollo de la carne cultivada."],
     topics: ["Ingeniería de tejidos", "Scaffolds de seda natural", "Textura y estructura en carne cultivada", "Puentes entre academia e industria"],
@@ -74,7 +74,7 @@ const rawCapaTalks = [
   },
   {
     id: "martin-blasco-escalado-bioprocesos",
-    name: "Martín Blasco", company: "Bioquest.bio", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/martin blasco.jpeg",
+    name: "Martín Blasco", company: "Bioquest.bio", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Martin Blasco Limpio.png",
     title: "Del laboratorio a la planta: un recorrido en biotecnología y el escalado de bioprocesos",
     description: ["Dr. Martín Blasco recorrerá su trayectoria profesional en biotecnología: sus inicios como investigador en CONICET y docente en la UNSAM, desarrollando plataformas de expresión de proteínas con hongos filamentosos; su paso por INTI como responsable del área de Bioprocesos; su rol como Chief Scientific Officer en Eternal Mycofoods, desarrollando biomasa fúngica como alimento; y su etapa actual al frente de Bioquest.bio, acompañando a empresas en producción piloto, escalado de bioprocesos y transferencia a escala industrial.", "A partir de ese recorrido, Martín compartirá los desafíos técnicos y de economía de procesos que implica llevar un desarrollo biotecnológico desde el laboratorio hasta la producción industrial, con foco en aplicaciones para la industria de proteínas alternativas."],
     topics: ["Investigación académica e industria", "Escalado de bioprocesos", "Economía de procesos", "Biomasa fúngica", "Transferencia industrial"],
@@ -105,6 +105,7 @@ const rawCapaTalks = [
 ];
 
 const keywordsByTalk = {
+  "apertura-capa-2026": ["Apertura", "Institucional", "ProteínasAlternativas"],
   "emiliano-benito-lupino": ["Lupino", "IngredientesVegetales", "CadenaDeValor"],
   "pancho-pinero-plant-based-argentina": ["IndustriaPlantBased", "Regulación", "MercadoMasivo"],
   "kris-blanchard-biomanufactura": ["Biomanufactura", "InsumosCelulares", "TAMEE"],

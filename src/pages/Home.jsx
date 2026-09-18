@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import SponsorsCarousel from "../components/SponsorsCarousel";
+import UnderConstructionNotice from "../components/UnderConstructionNotice";
 import { useI18n } from "../i18n/I18nContext";
 
 const copy = {
@@ -19,6 +20,9 @@ export default function Home() {
 
   return (
     <>
+      <div className="under-construction-wrap">
+        <UnderConstructionNotice />
+      </div>
       <section className="bg-green-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
           <div>

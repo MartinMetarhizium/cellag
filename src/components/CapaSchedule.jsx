@@ -90,7 +90,7 @@ function TalkVisualCarousel({ visuals, fallbackName }) {
 
 function getSpeakers(talk) {
   if (talk.speakers?.length) return talk.speakers;
-  return [{ name: talk.name, company: talk.company, country: talk.country, photo: talk.photo, cleanPhoto: talk.cleanPhoto, logo: talk.logo }];
+  return [{ name: talk.name, company: talk.company, country: talk.country, photo: talk.photo, cleanPhoto: talk.cleanPhoto, logo: talk.logo, photoFit: talk.photoFit }];
 }
 
 function getOrganizations(talk, speakers) {

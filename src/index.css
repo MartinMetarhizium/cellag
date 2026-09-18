@@ -177,6 +177,7 @@ select {
 .capa-program-break { grid-column:1/-1; display:flex; align-items:center; gap:16px; padding:13px 18px; border:1px dashed #b8c8bf; border-radius:12px; color:#66776f; background:rgba(255,255,255,.45); }.capa-program-break strong { color:#185b45; }.capa-program-break span { font-weight:850; text-transform:uppercase; letter-spacing:.08em; }
 .talk-detail-hero.category-accent-pb { box-shadow:inset 8px 0 #71b66d; }.talk-detail-hero.category-accent-ca { box-shadow:inset 8px 0 #62a9d6; }.talk-detail-hero.category-accent-fe { box-shadow:inset 8px 0 #e5b54c; }.talk-detail-hero.category-accent-pp { box-shadow:inset 8px 0 #aa75c4; }.talk-detail-hero.category-accent-is { box-shadow:inset 8px 0 #ed8068; }
 .capa-talk-detail { min-height:80vh; padding:50px max(6%,calc((100% - 1100px)/2)) 80px; background:#f8f3e9; }.talk-detail-back { display:inline-block; margin-bottom:25px; color:#185b45; font-weight:800; }.talk-detail-hero { padding:40px clamp(24px,5vw,55px); border-radius:26px; color:white; background:radial-gradient(circle at 90% 0,#ed684a,transparent 35%),linear-gradient(135deg,#122f27,#185b45); }.talk-detail-meta { display:flex; flex-wrap:wrap; gap:8px; }.talk-detail-meta span { padding:6px 10px; border:1px solid rgba(255,255,255,.25); border-radius:999px; background:rgba(255,255,255,.08); font-size:11px; font-weight:850; }.talk-detail-hero h1 { max-width:900px; margin:18px 0 0; font-size:clamp(32px,5vw,55px); line-height:1.05; letter-spacing:-.04em; }.talk-detail-layout { display:grid; grid-template-columns:300px 1fr; gap:32px; margin-top:30px; }.talk-speaker-panels { display:grid; align-self:start; gap:18px; }.talk-speaker-panel { overflow:hidden; align-self:start; border-radius:20px; background:white; box-shadow:0 8px 25px rgba(18,47,39,.08); }.talk-speaker-panel > img { width:100%; height:300px; object-fit:cover; }.talk-speaker-panel > p,.talk-speaker-panel > h2,.talk-speaker-panel > h3,.talk-speaker-panel dl { margin-left:22px; margin-right:22px; }.talk-speaker-panel > p { margin-top:22px; margin-bottom:3px; color:#ed684a; font-size:10px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; }.talk-speaker-panel h2 { margin-top:0; margin-bottom:3px; color:#122f27; }.talk-speaker-panel h3 { margin-top:0; color:#64756e; font-size:14px; }.talk-speaker-logo { display:grid; min-height:58px; margin:12px 22px 15px; padding:8px; place-items:center; border:1px solid #e1e8e4; border-radius:10px; color:#185b45; background:#fff; font-size:10px; font-weight:900; text-align:center; }.talk-speaker-logo img { display:block; width:100%; height:48px; object-fit:contain; }.talk-speaker-panel dl { padding:15px 0 20px; border-top:1px solid #edf1ee; }.talk-speaker-panel dl div { display:flex; justify-content:space-between; gap:10px; margin:8px 0; font-size:12px; }.talk-speaker-panel dt { color:#77877f; }.talk-speaker-panel dd { margin:0; color:#24473c; font-weight:800; text-align:right; }.talk-detail-institution-logo { display:grid; place-items:center; min-height:150px; padding:26px; border:1px solid #e2e9e5; border-radius:20px; background:#fff; box-shadow:0 8px 25px rgba(18,47,39,.08); }.talk-detail-institution-logo img { display:block; width:100%; max-height:110px; object-fit:contain; }.talk-detail-content { padding:10px 0; }.talk-detail-content section { margin-bottom:40px; }.talk-detail-content section > p:not(.talk-detail-kicker) { color:#52665e; font-size:17px; line-height:1.75; }.talk-detail-content ul { display:grid; gap:10px; padding:0; list-style:none; }.talk-detail-content li { padding:14px 17px 14px 42px; border-radius:12px; color:#375248; background:white; position:relative; }.talk-detail-content li::before { content:"✓"; position:absolute; left:16px; color:#ed684a; font-weight:900; }.talk-detail-keywords { display:flex; flex-wrap:wrap; gap:9px; }.talk-detail-keywords span { padding:8px 12px; border:1px solid #d7e2dc; border-radius:999px; color:#185b45; background:#fff; font-size:12px; font-weight:850; }.talk-participations { display:grid; gap:16px; }.talk-participations article { padding:20px; border:1px solid #e0e8e3; border-radius:16px; background:rgba(255,255,255,.78); }.talk-participations h2 { margin:0; color:#153f33; font-size:20px; }.talk-participations h3 { margin:4px 0 12px; color:#ed684a; font-size:14px; }.talk-participations p { color:#52665e; font-size:15px; line-height:1.65; }
+.talk-speaker-panel > img.contain { box-sizing:border-box; padding:24px; object-fit:contain; background:#fff; }
 @media(max-width:900px){.capa-talk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.talk-detail-layout{grid-template-columns:1fr}.talk-speaker-panel{display:grid;grid-template-columns:220px 1fr}.talk-speaker-panel>img,.talk-photo-placeholder.large{grid-row:1/6;height:100%;min-height:280px}.talk-speaker-panel dl{margin-right:22px}}
 @media(max-width:600px){.capa-day-tabs{grid-template-columns:1fr}.capa-day-tabs button{flex-direction:row;align-items:center;gap:8px}.capa-day-tabs small{margin:0}.capa-talk-grid{grid-template-columns:1fr}.capa-talk-card h5{min-height:0}.talk-detail-layout{display:block}.talk-speaker-panel{display:block;margin-bottom:30px}.talk-speaker-panel>img,.talk-photo-placeholder.large{height:290px}.talk-detail-hero{border-radius:20px}}
 .capa-speaker-card p { margin: 0; color: #718078; font-size: 12px; line-height: 1.45; }
@@ -285,4 +286,64 @@ select {
   .hackathon-stages, .hackathon-info-grid { grid-template-columns: 1fr; }
   .hackathon-dates > div { grid-template-columns: 1fr; gap: 4px; }
   .hackathon-legal { align-items: flex-start; flex-direction: column; }
+}
+
+/* Temporary institutional notice shown only on Home and News. */
+.under-construction-wrap {
+  max-width: 72rem;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.under-construction-notice {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #c9a227;
+  border-left: 5px solid #c9a227;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #fffdf4, #f3f8f1);
+  color: #173f35;
+  box-shadow: 0 10px 30px rgba(23, 63, 53, 0.08);
+}
+
+.under-construction-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: #173f35;
+  color: #f2c94c;
+}
+
+.under-construction-title {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #a16e00;
+}
+
+.under-construction-lead {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.under-construction-body {
+  margin: 0;
+  color: #52645f;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .under-construction-wrap { margin-top: 1rem; padding: 0 1rem; }
+  .under-construction-notice { align-items: flex-start; gap: 0.75rem; margin-bottom: 1.5rem; padding: 1rem; }
+  .under-construction-icon { width: 2.25rem; height: 2.25rem; }
+  .under-construction-lead { font-size: 0.98rem; }
+  .under-construction-body { font-size: 0.9rem; }
 }
