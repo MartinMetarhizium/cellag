@@ -295,6 +295,19 @@ select {
   padding: 0 1.5rem;
 }
 
+.construction-only-page {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(145deg, #f3f8f1, #fffdf4);
+}
+
+.construction-only-page .under-construction-notice {
+  width: min(100%, 46rem);
+  margin: 0;
+}
+
 .under-construction-notice {
   display: flex;
   align-items: center;

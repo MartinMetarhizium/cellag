@@ -13,7 +13,7 @@ const capaTalksSupplemental = [
     topics: ["Investigación en proteínas alternativas en UNSAM", "Equipos, proyectos y capacidades científicas", "Formación de talento y participación estudiantil", "Vinculación con el ecosistema de proteínas alternativas"],
   },
   {
-    id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "11:25–11:55", room: "D", category: "CA", categoryLabel: { es: "Carne Cultivada", en: "Cultivated Meat" }, mode: "remoto", language: "EN", country: "Israel",
+    id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "11:25–11:55", room: "D", category: "CA", categoryLabel: { es: "Carne Cultivada", en: "Cultivated Meat" }, mode: "remoto", language: "EN", country: "Israel", photo: "/capa-assets/Didier Toubia.png", detailLogo: "/capa-assets/aleph farms logo.png",
     title: "De la aprobación regulatoria al mercado: el camino de Aleph Farms hacia la comercialización de carne cultivada",
     description: ["La carne cultivada está pasando de la prueba de concepto tecnológica hacia la aprobación regulatoria y el despliegue comercial. Aleph Farms ha estado a la vanguardia de esta transición, obteniendo aprobación regulatoria para carne vacuna cultivada con Aleph Cuts y avanzando en procesos regulatorios en otros mercados, incluida Tailandia.", "Didier recorrerá el camino de Aleph Farms desde el desarrollo del producto hasta la aprobación regulatoria y la entrada al mercado: cómo se construyen los procesos regulatorios en distintos mercados, por qué la empresa eligió un producto híbrido que combina células animales cultivadas con una matriz de proteínas vegetales, y cómo las alianzas con actores consolidados de la industria alimentaria y manufacturera pueden ayudar a llevar la carne cultivada desde la aprobación hasta la escala comercial.", "La charla también abordará la estrategia de Aleph Farms en Asia y las lecciones que su experiencia puede aportar a mercados regulatorios emergentes, incluida América Latina."],
     topics: ["El camino regulatorio de la carne cultivada en diferentes mercados.", "Construcción de un dossier regulatorio y trabajo con autoridades en mercados emergentes.", "Por qué un producto híbrido — células animales cultivadas + matriz de proteínas vegetales — como primera vía de entrada al mercado.", "De la aprobación regulatoria a la comercialización: alianzas, entrada al mercado y distribución.", "Escalado mediante un modelo basado en alianzas.", "Lecciones para marcos regulatorios emergentes de carne cultivada, incluida América Latina."],
@@ -40,7 +40,7 @@ const capaTalksSupplemental = [
     topics: ["Medios de cultivo libres de suero animal", "Reducción de costos", "Colaboración con Meatable y GFI", "Levaduras no convencionales"],
   },
   {
-    id: "eugenia-maciero-regulacion", name: "Eugenia Maciero", company: "Consultora", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "D", category: "PP", mode: "presencial", language: "ES", country: "Argentina",
+    id: "eugenia-maciero-regulacion", name: "Eugenia Maciero", company: "Consultora", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "D", category: "PP", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/eugenia maciero.png",
     title: "Ingredientes innovadores y regulación: cómo construir el camino hacia el mercado",
     description: ["Eugenia Maciero recorrerá qué evidencia científica necesita un dossier regulatorio, cómo varían los marcos normativos entre mercados y qué decisiones tempranas aceleran o frenan la llegada de un ingrediente innovador al mercado.", "La propuesta integra la regulación desde el primer día como parte de la estrategia de desarrollo y de negocio."],
     topics: ["Evidencia científica y dossiers regulatorios", "Diversidad de marcos normativos", "Regulación desde el inicio", "Fermentación de precisión"],
@@ -83,7 +83,7 @@ const capaTalksSupplemental = [
     keywords: ["Fermentación", "Cortes enteros", "Escalado", "Carne alternativa"],
   },
   {
-    id: "tobias-leenaert-proveg", name: "Tobias Leenaert", company: "ProVeg International", day: "thursday", date: "22 de octubre", time: "09:00–09:30", room: "D", category: "AD", mode: "remoto", language: "EN", country: "Bélgica", photo: "/capa-assets/Tobias Leenaert (3).jpg",
+    id: "tobias-leenaert-proveg", name: "Tobias Leenaert", company: "ProVeg International", day: "thursday", date: "22 de octubre", time: "09:00–09:30", room: "D", category: "AD", mode: "remoto", language: "EN", country: "Bélgica", photo: "/capa-assets/Tobias Leenaert.png",
     title: "Una estrategia pragmática para acelerar la transición proteica",
     description: ["Tobias Leenaert, autor y cofundador de ProVeg International, compartirá una estrategia pragmática para impulsar la transición hacia las proteínas alternativas, basada en el cambio de comportamiento y en encontrarse con los consumidores allí donde están, en lugar de depender únicamente de argumentos morales o ideológicos. ProVeg International trabaja con el objetivo de reducir en un 50% el consumo global de productos de origen animal para 2040."],
     topics: ["Por qué el pragmatismo, y no solo el idealismo, impulsa cambios duraderos en los sistemas alimentarios.", "Cambio de comportamiento: cómo la actitud muchas veces sigue al comportamiento, y no al revés.", "Encontrarse con los consumidores allí donde están: aprendizajes para la industria de proteínas alternativas.", "El enfoque de ProVeg International para reducir globalmente el consumo de productos de origen animal."],
@@ -130,6 +130,20 @@ const capaTalksSupplemental = [
     ],
   },
   {
+    id: "maia-senss-freese-farmesa", name: "Maia Senss Freese", company: "Farmesa", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Maia Senss Freese.jpeg",
+    title: "Farmesa: investigación, tecnología e industria para impulsar las proteínas vegetales",
+    description: ["Maia Senss Freese presentará el trabajo de Farmesa en la vinculación entre investigación, tecnología e industria para impulsar el ecosistema de proteínas alternativas. Abordará sus productos y líneas de trabajo en proteínas vegetales, el desarrollo de nuevos productos y el rol de la calidad, la innovación y la investigación aplicada en el crecimiento del sector."],
+    topics: ["Productos y líneas de trabajo de Farmesa en proteínas vegetales.", "Vinculación entre investigación, tecnología e industria.", "Desarrollo de nuevos productos.", "Calidad, innovación e investigación aplicada."],
+    keywords: ["Innovación", "DesarrolloDeProducto", "Calidad"],
+  },
+  {
+    id: "maria-laura-aparicio-porta", name: "María Laura Aparicio", company: "Porta Hermanos", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Lali.Aparicio.2026.10x10cm.jpg",
+    title: "Porta Hermanos: ingredientes y formulación de análogos cárnicos",
+    description: ["María Laura Aparicio presentará la experiencia de Porta Hermanos en el desarrollo y aplicación de ingredientes para productos cárnicos y sus análogos vegetales. La presentación recorrerá el camino desde el laboratorio hasta la formulación, mostrando aplicaciones técnicas de ingredientes y la articulación entre industria, investigación y tecnología de alimentos."],
+    topics: ["Ingredientes de Porta Hermanos aplicados a análogos cárnicos.", "Del laboratorio a la formulación: aplicaciones técnicas de ingredientes.", "Desarrollo y formulación de productos.", "Articulación entre industria, investigación y tecnología de alimentos."],
+    keywords: ["Ingredientes", "Formulación", "AnálogosCárnicos"],
+  },
+  {
     id: "unahur-proteinas-alternativas", name: "UNAHUR", company: "Universidad Nacional de Hurlingham", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina",
     title: "UNAHUR y las proteínas alternativas: ciencia con compromiso social desde una universidad joven",
     description: ["UNAHUR presentará su Alt Protein Project, el trabajo del Laboratorio de Investigación en Nuevos Alimentos y Nutrición y desarrollos con yacón, proteínas vegetales y fermentación orientados al impacto comunitario."],
@@ -143,7 +157,7 @@ const capaTalksSupplemental = [
     keywords: ["Inteligencia artificial", "Plant-based", "Desarrollo de producto"],
   },
   {
-    id: "juan-martin-oteiza-ciati", name: "Juan Martín Oteiza", company: "CIATI", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "E", category: "AD", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Juan Martin Oteiza.png",
+    id: "juan-martin-oteiza-ciati", name: "Juan Martín Oteiza", company: "CIATI", day: "thursday", date: "22 de octubre", time: "09:00–09:30", room: "E", category: "AD", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/juan martin oteizaa.png",
     title: "CIATI: microbiología e inocuidad para la innovación alimentaria",
     description: ["Presentación de Juan Martín Oteiza y CIATI. El temario específico permanece pendiente de confirmación."],
     topics: ["Microbiología alimentaria", "Inocuidad", "Investigación y desarrollo"],

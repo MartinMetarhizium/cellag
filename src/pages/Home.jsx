@@ -9,6 +9,8 @@ const copy = {
   en: { title: "Advancing the future of cellular agriculture in Argentina", intro: "Cell Ag Argentina is a nonprofit organization advancing cellular agriculture and alternative proteins across the country.", body: "We connect science, industry and policy to promote more sustainable and innovative food systems prepared for the challenges ahead.", join: "Contact", team: "Meet the team", news: "News", cards: [["About us","Learn about our purpose, vision and the people advancing the organization.","/mission"],["News","Follow our latest news and institutional updates.","/news"],["Contact","Become part of the community and help the sector grow.","/associate"]] },
 };
 
+const UNDER_CONSTRUCTION = true;
+
 export default function Home() {
   const { locale } = useI18n();
   const c = copy[locale];
@@ -17,6 +19,14 @@ export default function Home() {
     // { src: "/slides/slide2.jpg", alt: "Cell Ag 2" },
     // { src: "/slides/slide3.jpg", alt: "Cell Ag 3" },
   ];
+
+  if (UNDER_CONSTRUCTION) {
+    return (
+      <main className="construction-only-page">
+        <UnderConstructionNotice />
+      </main>
+    );
+  }
 
   return (
     <>

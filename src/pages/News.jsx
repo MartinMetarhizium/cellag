@@ -5,6 +5,7 @@ import { useI18n } from "../i18n/I18nContext";
 import UnderConstructionNotice from "../components/UnderConstructionNotice";
 
 const newsEn = { "capa-2026-news": { title: "CAPA 2026: Argentina prepares for the event shaping the future of alternative proteins", excerpt: "Argentina is taking a key step in developing the new food industry. The first Argentine Alternative Protein Congress will be held October 21–23 at the Buenos Aires Convention Center as part of Crossing Over LatAm." } };
+const UNDER_CONSTRUCTION = true;
 
 export default function News() {
   const { locale } = useI18n();
@@ -18,6 +19,14 @@ export default function News() {
         `${n.title} ${n.excerpt}`.toLowerCase().includes(query.toLowerCase())
       );
   }, [query]);
+
+  if (UNDER_CONSTRUCTION) {
+    return (
+      <main className="construction-only-page">
+        <UnderConstructionNotice />
+      </main>
+    );
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">

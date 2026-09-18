@@ -19,9 +19,9 @@ const capaProgram = [
   { day: "wednesday", room: "E", time: "14:00–14:30", detailsId: "francisco-romero-amande" },
   { day: "wednesday", room: "E", time: "14:35–15:05", detailsId: "carla-molento-zootecnia-celular" },
   { day: "wednesday", room: "E", time: "15:10–15:40", detailsId: "fabio-zon-chunk-foods" },
-  { day: "wednesday", room: "E", time: "16:10–16:40", detailsId: "juan-martin-oteiza-ciati" },
-  { day: "wednesday", room: "E", time: "16:45–17:15", detailsId: "pancho-pinero-plant-based-argentina" },
-  { day: "wednesday", room: "E", time: "17:20–17:50", detailsId: "martin-blasco-escalado-bioprocesos" },
+  { day: "wednesday", room: "E", time: "16:10–16:40", detailsId: "maia-senss-freese-farmesa" },
+  { day: "wednesday", room: "E", time: "16:45–17:15", detailsId: "maria-laura-aparicio-porta" },
+  { day: "wednesday", room: "E", time: "17:20–17:50", detailsId: "emiliano-benito-lupino" },
 
   // Jueves · Salón D
   { day: "thursday", room: "D", time: "09:00–09:30", detailsId: "tobias-leenaert-proveg" },
@@ -30,9 +30,9 @@ const capaProgram = [
   { day: "thursday", room: "D", time: "12:00–12:30", detailsId: "celina-moreno-marco-regulatorio" },
   { day: "thursday", room: "D", time: "14:00–14:30", detailsId: "martin-sabatini-fermentacion" },
   { day: "thursday", room: "D", time: "14:35–15:05", detailsId: "lucia-cragnza-sartorius" },
-  { day: "thursday", room: "D", time: "16:10–17:50", detailsId: "cluster-proteinas-vegetales" },
 
   // Jueves · Salón E
+  { day: "thursday", room: "E", time: "09:00–09:30", detailsId: "juan-martin-oteiza-ciati" },
   { day: "thursday", room: "E", time: "09:35–10:20", detailsId: "unahur-proteinas-alternativas" },
   { day: "thursday", room: "E", time: "10:50–11:55", detailsId: "rodrigo-ledesma-bioproduccion" },
   { day: "thursday", room: "E", time: "11:25–11:55", detailsId: "mariana-brizzio-notco" },

@@ -3,17 +3,10 @@ import capaTalksSupplemental from "./capaTalksSupplemental.js";
 const rawCapaTalks = [
   {
     id: "emiliano-benito-lupino",
-    name: "Emiliano Benito", company: "Elementa Foods", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/emiliano benito.jpg",
-    title: "Lupino, la nueva generación de proteínas vegetales. Innovación, funcionalidad y sustentabilidad",
-    description: ["Durante décadas, el crecimiento de las proteínas vegetales estuvo dominado por pocas materias primas. Sin embargo, las nuevas demandas de consumidores e industrias están impulsando una nueva etapa: la diversificación de las fuentes proteicas.", "Emiliano Benito, Ingeniero Agrónomo, Co-Founder de Elementa Foods y parte del equipo desarrollador del lupino con mayor concentración de proteína del mundo, compartirá la experiencia de transformar una innovación agrícola en una plataforma de ingredientes de alto valor agregado con presencia internacional.", "A partir de este recorrido, analizará hacia dónde evoluciona el mercado global de proteínas, qué atributos demandará la industria en los próximos años y por qué el lupino reúne características únicas que combinan nutrición, funcionalidad, innovación y sustentabilidad. La presentación mostrará cómo una cadena de valor integrada, desde la genética de la semilla hasta el desarrollo de harinas, concentrados, aislados e ingredientes funcionales, permite generar soluciones para múltiples aplicaciones alimentarias.", "La presentación propone una mirada integradora sobre el futuro de las proteínas vegetales, entendiendo que el desafío no es reemplazar unas por otras, sino ampliar las alternativas disponibles para que la industria pueda desarrollar alimentos cada vez más nutritivos, funcionales y sostenibles. El futuro no pertenece a una única proteína, sino a la combinación inteligente de diferentes cultivos capaces de responder a los desafíos alimentarios y ambientales de las próximas décadas."],
-    topics: ["Tendencias globales del mercado de proteínas", "El lupino como nueva fuente proteica", "Funcionalidad y perfil nutricional", "Cadena de valor integrada", "Sustentabilidad y aplicaciones industriales"],
-  },
-  {
-    id: "pancho-pinero-plant-based-argentina",
-    name: "Pancho Piñero", company: "ABP", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Pancho piñeiro Limpio.png", detailLogo: "/capa-assets/APB logo.png",
-    title: "Plant-based en Argentina: estado de la industria",
-    description: ["El sector plant-based argentino pasó en pocos años de ser un nicho a convertirse en una industria organizada, con reconocimiento oficial y proyección exportadora. Ese recorrido no fue espontáneo: requirió organización gremial, trabajo regulatorio y una readaptación constante del negocio a las demandas reales del mercado masivo.", "Pancho Piñero, fundador de la Asociación de Productores a Base de Plantas (ABP), fue protagonista directo de ese proceso: lideró la consolidación de la ABP como cámara del sector y logró su reconocimiento como actividad estratégica ante el Estado.", "A partir de esa experiencia gremial compartirá el estado actual de la industria plant-based en Argentina, el trabajo colectivo de las empresas asociadas a la ABP y qué necesita el sector para consolidarse como industria exportadora de escala regional. La charla hará especial foco en las tendencias del sector y en cómo viene evolucionando la industria plant-based en Argentina.", "La charla propone una mirada honesta sobre el futuro de la alimentación a base de plantas: no se trata de imponer un modelo único, sino de construir una industria organizada, rentable y capaz de convivir con otras proteínas para ampliar, entre todos, las opciones de una alimentación más sustentable."],
-    topics: ["Estado de la industria plant-based argentina", "Organización gremial y regulación", "Consumidor masivo e innovación de producto", "Potencial exportador", "Coexistencia de proteínas"],
+    name: "Emiliano Benito", company: "Elementa Foods", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/emiliano benito.jpg",
+    title: "Elementa Foods: de la materia prima a ingredientes vegetales de mayor valor agregado",
+    description: ["Emiliano Benito presentará el trabajo de Elementa Foods en el desarrollo de proteínas vegetales desde la materia prima hasta su transformación en ingredientes para la industria alimentaria. Se abordará el desarrollo de harinas, texturizados, concentrados y aislados a partir de distintas fuentes vegetales, así como la integración entre producción agrícola, trazabilidad, tecnología de alimentos e industrialización para generar ingredientes de mayor valor agregado."],
+    topics: ["Desarrollo de harinas, texturizados, concentrados y aislados de proteínas vegetales.", "Transformación de materias primas en ingredientes para la industria alimentaria.", "Integración entre producción agrícola, trazabilidad e industrialización.", "Generación de ingredientes vegetales de mayor valor agregado."],
   },
   {
     id: "kris-blanchard-biomanufactura",
@@ -73,13 +66,6 @@ const rawCapaTalks = [
     keywords: ["PlantBased", "Upcycling", "CleanLabel"],
   },
   {
-    id: "martin-blasco-escalado-bioprocesos",
-    name: "Martín Blasco", company: "Bioquest.bio", day: "wednesday", date: "21 de octubre", time: "17:20–17:50", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Martin Blasco Limpio.png",
-    title: "Del laboratorio a la planta: un recorrido en biotecnología y el escalado de bioprocesos",
-    description: ["Dr. Martín Blasco recorrerá su trayectoria profesional en biotecnología: sus inicios como investigador en CONICET y docente en la UNSAM, desarrollando plataformas de expresión de proteínas con hongos filamentosos; su paso por INTI como responsable del área de Bioprocesos; su rol como Chief Scientific Officer en Eternal Mycofoods, desarrollando biomasa fúngica como alimento; y su etapa actual al frente de Bioquest.bio, acompañando a empresas en producción piloto, escalado de bioprocesos y transferencia a escala industrial.", "A partir de ese recorrido, Martín compartirá los desafíos técnicos y de economía de procesos que implica llevar un desarrollo biotecnológico desde el laboratorio hasta la producción industrial, con foco en aplicaciones para la industria de proteínas alternativas."],
-    topics: ["Investigación académica e industria", "Escalado de bioprocesos", "Economía de procesos", "Biomasa fúngica", "Transferencia industrial"],
-  },
-  {
     id: "rodrigo-ledesma-bioproduccion",
     name: "Rodrigo Ledesma-Amaro", company: "Imperial College London", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Reino Unido", photo: "/capa-assets/ledesma rodrigo.jpg",
     title: "Bioproducción microbiana y fermentación: escalando proteína sustentable desde el Bezos Centre y el Microbial Food Hub",
@@ -106,8 +92,7 @@ const rawCapaTalks = [
 
 const keywordsByTalk = {
   "apertura-capa-2026": ["Apertura", "Institucional", "ProteínasAlternativas"],
-  "emiliano-benito-lupino": ["Lupino", "IngredientesVegetales", "CadenaDeValor"],
-  "pancho-pinero-plant-based-argentina": ["IndustriaPlantBased", "Regulación", "MercadoMasivo"],
+  "emiliano-benito-lupino": ["IngredientesVegetales", "Procesamiento", "ValorAgregado"],
   "kris-blanchard-biomanufactura": ["Biomanufactura", "InsumosCelulares", "TAMEE"],
   "maria-laura-matos-bioprocesos": ["Bioprocesos", "FermentaciónDePrecisión", "Escalado"],
   "mariana-sanchez-innovacion-vegetal": ["ProteínasVegetales", "ValorAgregado", "IndustriaArgentina"],
@@ -116,7 +101,6 @@ const keywordsByTalk = {
   "martin-sabatini-fermentacion": ["FermentaciónDePrecisión", "ColorantesNaturales", "Escalado"],
   "celeste-marin-calidad": ["ControlDeCalidad", "Reproducibilidad", "BancosCelulares"],
   "bruno-rosolem-cashew": ["PlantBased", "Upcycling", "CleanLabel"],
-  "martin-blasco-escalado-bioprocesos": ["Bioprocesos", "Escalado", "TransferenciaTecnológica"],
   "rodrigo-ledesma-bioproduccion": ["BioproducciónMicrobiana", "Fermentación", "ProteínaSustentable"],
   "chris-bryant-politica-publica": ["ProteínasAlternativas", "CienciasSociales", "PolíticaAlimentaria"],
   "mark-post-mosa-meat": ["CarneCultivada", "Biorreactores", "RegulaciónEuropea"],
@@ -136,6 +120,8 @@ const keywordsByTalk = {
   "michael-greger-ultraprocesados": ["Ultraprocesados", "Nutrición", "EvidenciaCientífica"],
   "lucia-cragnza-sartorius": ["Bioprocesos", "Equipamiento", "Escalado"],
   "cluster-proteinas-vegetales": ["ProteínasVegetales", "CadenaDeValor", "IndustriaArgentina"],
+  "maia-senss-freese-farmesa": ["Innovación", "DesarrolloDeProducto", "Calidad"],
+  "maria-laura-aparicio-porta": ["Ingredientes", "Formulación", "AnálogosCárnicos"],
   "unahur-proteinas-alternativas": ["CienciaInterdisciplinaria", "Yacón", "AlimentosFuncionales"],
   "mariana-brizzio-notco": ["InteligenciaArtificial", "PlantBased", "DesarrolloDeProducto"],
   "juan-martin-oteiza-ciati": ["Microbiología", "InocuidadAlimentaria", "InvestigaciónAplicada"],
@@ -146,7 +132,13 @@ const keywordsByTalk = {
 };
 
 const toHashtag = (keyword) => `#${keyword.replace(/^#/, "").replace(/[^\p{L}\p{N}_]/gu, "")}`;
-const capaTalks = rawCapaTalks.map((talk) => ({
+const retiredTalkIds = new Set([
+  "pancho-pinero-plant-based-argentina",
+  "martin-blasco-escalado-bioprocesos",
+  "cluster-proteinas-vegetales",
+]);
+
+const capaTalks = rawCapaTalks.filter((talk) => !retiredTalkIds.has(talk.id)).map((talk) => ({
   ...talk,
   keywords: (keywordsByTalk[talk.id] || talk.keywords || []).slice(0, 3).map(toHashtag),
   participations: talk.participations?.map((participation) => ({ ...participation, keywords: participation.keywords.slice(0, 3).map(toHashtag) })),
