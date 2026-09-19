@@ -26,10 +26,13 @@ const capaProgram = [
   // Jueves · Salón D
   { day: "thursday", room: "D", time: "09:00–09:30", detailsId: "tobias-leenaert-proveg" },
   { day: "thursday", room: "D", time: "09:35–10:20", detailsId: "cell-ag-cono-sur" },
-  { day: "thursday", room: "D", time: "10:50–11:55", detailsId: "michael-greger-ultraprocesados" },
+  { day: "thursday", room: "D", time: "10:55–11:55", slotStart: "10:50", durationSlots: 2, detailsId: "michael-greger-ultraprocesados" },
   { day: "thursday", room: "D", time: "12:00–12:30", detailsId: "celina-moreno-marco-regulatorio" },
   { day: "thursday", room: "D", time: "14:00–14:30", detailsId: "martin-sabatini-fermentacion" },
   { day: "thursday", room: "D", time: "14:35–15:05", detailsId: "lucia-cragnza-sartorius" },
+  { day: "thursday", room: "D", time: "15:10–15:40", detailsId: "maria-laura-matos-bioprocesos" },
+  { day: "thursday", room: "D", time: "16:45–17:15", detailsId: "martin-blasco-escalado-bioprocesos" },
+  { day: "thursday", room: "D", time: "17:20–17:50", detailsId: "pancho-pinero-plant-based-argentina" },
 
   // Jueves · Salón E
   { day: "thursday", room: "E", time: "09:00–09:30", detailsId: "juan-martin-oteiza-ciati" },
@@ -37,7 +40,8 @@ const capaProgram = [
   { day: "thursday", room: "E", time: "10:50–11:55", detailsId: "rodrigo-ledesma-bioproduccion" },
   { day: "thursday", room: "E", time: "11:25–11:55", detailsId: "mariana-brizzio-notco" },
   { day: "thursday", room: "E", time: "12:00–12:30", detailsId: "bruno-rosolem-cashew" },
-  { day: "thursday", room: "E", time: "15:10–15:40", detailsId: "maria-laura-matos-bioprocesos" },
+  { day: "thursday", room: "E", time: "14:35–15:05", detailsId: "ergo-foods-tbd" },
+  { day: "thursday", room: "E", time: "15:10–15:40", detailsId: "matias-fassolari-merck" },
   { day: "wednesday", room: "D", time: "10:50–11:20", detailsId: "leonardo-vieira-future-cow" },
   { day: "thursday", room: "E", time: "16:10–16:40", detailsId: "kris-blanchard-biomanufactura" },
 

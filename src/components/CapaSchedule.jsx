@@ -148,7 +148,7 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
   const organizations = getOrganizations(talk, speakers);
   const countries = [...new Set(speakers.flatMap((speaker) => Array.isArray(speaker.country) ? speaker.country : [speaker.country]).filter(Boolean))];
   const representedOrganizations = new Set(speakers.map((speaker) => (speaker.company || talk.company || "").trim().toLocaleLowerCase()));
-  const speakerVisuals = speakers.map((speaker) => ({
+  const speakerVisuals = talk.logoOnly ? [{ type: "logo", name: talk.company, src: getOrganizationLogo(talk.company, talk.logo) }] : speakers.map((speaker) => ({
     ...speaker,
     type: "paired",
     useCleanPhoto: talk.day === "wednesday",
@@ -160,7 +160,7 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
     return { type: "logo", name, src: getOrganizationLogo(name, explicitLogo) };
   }).filter((visual) => visual.src && !representedOrganizations.has(visual.name.trim().toLocaleLowerCase()));
   const visuals = [...speakerVisuals, ...additionalOrganizationVisuals];
-  return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()}`} {...cardProps}>
+  return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()} ${talk.durationSlots > 1 ? `duration-slots-${talk.durationSlots}` : ""}`} {...cardProps}>
     <div className="capa-talk-photo">
       <TalkVisualCarousel visuals={visuals} fallbackName={talk.name} />
     </div>
@@ -177,7 +177,7 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
       <div className="talk-card-meta">
         <span className="capa-talk-time"><strong>🕒 {talk.time}</strong></span>
         <span className="talk-language"><strong>{(Array.isArray(talk.language) ? talk.language : [talk.language]).map((language) => languageNames[language] || language).join(" · ")}</strong></span>
-        <span className={`talk-format ${talk.mode}`}><strong>{talk.mode === "remoto" ? "💻" : "🎤"} {talk.mode === "remoto" ? copy.remote : copy.inPerson}</strong></span>
+        <span className={`talk-format ${talk.mode}`}><strong>{talk.mode === "TBD" ? "TBD" : `${talk.mode === "remoto" ? "💻" : "🎤"} ${talk.mode === "remoto" ? copy.remote : copy.inPerson}`}</strong></span>
       </div>
       <div className="capa-talk-footer"><span className={`talk-category category-${talk.category.toLowerCase()}`}>{(typeof talk.categoryLabel === "object" ? talk.categoryLabel[locale] : talk.categoryLabel) || categoryNames[locale][talk.category] || talk.category}</span>{talk.id && <strong>{copy.details} →</strong>}</div>
     </div>
@@ -249,8 +249,8 @@ export default function CapaSchedule() {
             return <div className="capa-agenda-row" key={slot.start}>
               <time>{slot.label}</time>
               {rooms.map((room) => {
-                const cellTalks = talks.filter((talk) => talk.room === room && talk.time.startsWith(slot.start));
-                const coveredByTalk = talks.some((talk) => talk.room === room && talk.time.slice(0, 5) < slot.start && talk.time.slice(-5) > slot.start);
+                const cellTalks = talks.filter((talk) => talk.room === room && (talk.slotStart || talk.time.slice(0, 5)) === slot.start);
+                const coveredByTalk = talks.some((talk) => talk.room === room && (talk.slotStart || talk.time.slice(0, 5)) < slot.start && talk.time.slice(-5) > slot.start);
                 return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : coveredByTalk ? "is-covered" : "is-tbd"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
                   {cellTalks.length ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} selectedRoom={activeRoom} key={`${talk.room}-${talk.time}-${talk.name}`} />) : coveredByTalk ? null : <span>TBD</span>}
                 </div>;

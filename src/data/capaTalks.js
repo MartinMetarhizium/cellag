@@ -10,14 +10,14 @@ const rawCapaTalks = [
   },
   {
     id: "kris-blanchard-biomanufactura",
-    name: "Kris Blanchard", company: "Luyef Biotechnologies", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "E", category: "CA", mode: "presencial", language: "ES", country: "Chile", photo: "/capa-assets/kris blanchard.jpg",
+    name: "Kris Blanchard", company: "Luyef Biotechnologies", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "E", category: "CA", mode: "presencial", language: "ES", country: "Chile", photo: "/capa-assets/kris blanchard+.png",
     title: "Biomanufactura 2.0: el camino de Luyef hacia el desarrollo industrial de la Agricultura Celular en LATAM",
     description: ["Kris Blanchard, ingeniero en biotecnología de la Universidad de Chile, cofundó Luyef Biotechnologies en 2020 con el objetivo de resolver uno de los cuellos de botella más grandes de la carne cultivada: el costo y la disponibilidad de insumos clave para el cultivo celular.", "A través del desarrollo de la fermentación de precisión, nueva tecnología asociada a cultivos celulares mamíferos, y el aprovechamiento de subproductos agroindustriales, Luyef desarrolla líneas celulares para la producción a escala de grasa cultivada, factores de crecimiento termoestables y suplementos nutritivos para medios de cultivo, además de TAMEE, un ingrediente a base de mioglobina bovina producido por fermentación de precisión que mejora el perfil sensorial de los análogos cárnicos.", "Kris compartirá cómo Luyef diversifica el riesgo de operar en carne cultivada desarrollando tecnología que también sirve a otras industrias —biomedicina y cosmética—, y cómo lograron asegurar 2,5 millones de dólares en subsidios de CORFO/ANID (Chile) y GFI para escalar su tecnología."],
     topics: ["Insumos para carne cultivada", "Fermentación de precisión", "Subproductos agroindustriales", "TAMEE y perfil sensorial", "Financiamiento y escalado deep-biotech"],
   },
   {
     id: "maria-laura-matos-bioprocesos",
-    name: "María Laura Matos", company: "INTI", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/laura matos.jpeg",
+    name: "María Laura Matos", company: "INTI", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "D", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/laura matos.png",
     title: "Del laboratorio a la escala industrial: bioprocesos y fermentación de precisión desde el INTI",
     description: ["María Laura Matos, Directora Técnica del Centro de Biotecnología Industrial del INTI, compartirá la experiencia de la institución en el desarrollo y escalado de procesos biotecnológicos aplicados a la industria alimentaria.", "Abordará los desafíos técnicos de llevar la fermentación de precisión del laboratorio a una escala productiva real y el papel de las instituciones públicas en el acompañamiento de la industria argentina de proteínas alternativas."],
     topics: ["Bioprocesos industriales", "Fermentación de precisión", "Escalado productivo", "Ciencia pública e industria"],
@@ -38,14 +38,14 @@ const rawCapaTalks = [
   },
   {
     id: "celina-moreno-marco-regulatorio",
-    name: "Celina Moreno", company: "SAGyP", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "D", category: "PP", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Celina Moreno Perfil.png",
+    name: "Celina Moreno", company: "SAGyP", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "D", category: "PP", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/celina moreno.png",
     title: "Marco regulatorio argentino y proteínas alternativas: qué implica para las empresas del sector",
     description: ["Celina Moreno, responsable del área de nutrición en la DNAyDR - SAGyP y especialista con más de 20 años de experiencia en legislación alimentaria, compartirá una mirada sobre el marco regulatorio argentino y la incorporación de nuevos ingredientes y productos.", "Abordará qué implica cumplir con la normativa vigente, los cambios recientes y el rol del Estado frente al crecimiento de la industria."],
     topics: ["Marco regulatorio argentino", "Nuevos ingredientes", "Cumplimiento normativo", "Cambios en legislación alimentaria", "Rol del Estado"],
   },
   {
     id: "martin-sabatini-fermentacion",
-    name: "Martín Sabatini", company: "Michroma", day: "thursday", date: "22 de octubre", time: "14:00–14:30", room: "D", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/martinsabatini.png",
+    name: "Martín Sabatini", company: "Michroma", day: "thursday", date: "22 de octubre", time: "14:00–14:30", room: "D", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/martin sabatini.png",
     title: "Fermentación de precisión: convirtiendo las limitaciones de los ingredientes naturales en variables de ingeniería",
     description: ["Dr. Martín Sabatini, Licenciado en Biotecnología y Doctor en Ciencias Biológicas, lidera como CSO de Michroma la estrategia científica, regulatoria y de escalado industrial para producir ingredientes naturales mediante fermentación de precisión y hongos filamentosos, junto a equipos internacionales entre Rosario y San Francisco.", "Martín Sabatini abordará cómo la fermentación de precisión puede cambiar la forma en que producimos ingredientes naturales, convirtiendo limitaciones tradicionalmente asociadas a la agricultura, la extracción y la variabilidad biológica en variables de ingeniería.", "A partir del caso de los colorantes naturales y del desarrollo de Red+, mostrará el recorrido desde laboratorio hasta escala industrial, los desafíos de performance, escalado y economía de proceso, y cómo una plataforma de fermentación puede extenderse hacia una nueva generación de ingredientes naturales."],
     topics: ["Fermentación de precisión", "Red+ y colorantes naturales", "Escalado industrial", "Performance y economía de proceso"],
@@ -59,7 +59,7 @@ const rawCapaTalks = [
   },
   {
     id: "bruno-rosolem-cashew",
-    name: "Bruno Rosolem", company: "Amazonika Mundi", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/bruno Rosolem.png",
+    name: "Bruno Rosolem", company: "Amazonika Mundi", day: "thursday", date: "22 de octubre", time: "12:00–12:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/Bruno Rosolem.png",
     title: "De residuo de cajú a alternativa cárnica: cómo Amazonika Mundi construye una línea plant-based a partir de fibra amazónica reutilizada",
     description: ["Bruno Rosolem, CCO de Amazonika Mundi, lidera la expansión global y comercialización de una innovadora fibra alimentaria elaborada a partir del bagazo de manzana de cajú, un subproducto ampliamente descartado por las principales empresas procesadoras de jugo de cajú de Brasil. Desarrollada en asociación con Embrapa, con una patente compartida, esta fibra reutilizada constituye hoy la base de una línea completa de productos plant-based: hamburguesas, albóndigas, dumplings y chicken tenders, todos elaborados sin aditivos químicos.", "Bruno presentará el portfolio de productos de Amazonika Mundi, la ciencia detrás de la transformación de residuos agroindustriales en una alternativa cárnica clean-label y la estrategia de la compañía para llevar la biodiversidad amazónica a los mercados globales."],
     topics: ["Portfolio de Amazonika Mundi: hamburguesas, albóndigas, dumplings y chicken tenders.", "Upcycling del bagazo de manzana de cajú: transformar un residuo agroindustrial en un ingrediente alimentario.", "Formulación clean-label sin aditivos químicos.", "Colaboración con instituciones públicas de investigación como Embrapa para desarrollar propiedad intelectual compartida.", "Llevar la biodiversidad amazónica a mercados globales."],
@@ -67,7 +67,7 @@ const rawCapaTalks = [
   },
   {
     id: "rodrigo-ledesma-bioproduccion",
-    name: "Rodrigo Ledesma-Amaro", company: "Imperial College London", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Reino Unido", photo: "/capa-assets/ledesma rodrigo.jpg",
+    name: "Rodrigo Ledesma-Amaro", company: "Bezos Earth Fund", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Inglaterra", photo: "/capa-assets/rodrigo ledesma.png", detailLogo: "/capa-assets/bezos earth fund.png",
     title: "Bioproducción microbiana y fermentación: escalando proteína sustentable desde el Bezos Centre y el Microbial Food Hub",
     description: ["Dr. Rodrigo Ledesma-Amaro, Profesor en Imperial College London, Director del Bezos Centre for Sustainable Protein y del Microbial Food Hub, experto en bioproducción microbiana y fermentación, compartirá su investigación sobre cómo diseñar microorganismos para producir proteína sustentable a escala.", "Rodrigo abordará la ciencia detrás de la bioproducción microbiana, el rol de centros académicos como el Bezos Centre y el Microbial Food Hub en conectar la investigación de base con la aplicación industrial, y hacia dónde se dirige globalmente la producción de proteína basada en fermentación."],
     topics: ["Bioproducción microbiana", "Fermentación como plataforma", "Proteína sustentable", "Academia y aplicación industrial"],
@@ -82,7 +82,7 @@ const rawCapaTalks = [
   },
   {
     id: "mark-post-mosa-meat",
-    name: "Mark Post", company: "Mosa Meat", day: "friday", date: "23 de octubre", time: "09:00–09:30", room: "D", category: "CA", mode: "remoto", language: "EN", country: "Países Bajos", photo: "/capa-assets/Mark Post 01.jpg",
+    name: "Mark Post", company: "Mosa Meat", day: "friday", date: "23 de octubre", time: "09:00–09:30", room: "D", category: "CA", mode: "remoto", language: "EN", country: "Países Bajos", photo: "/capa-assets/mark post.png",
     title: "Del primer burger cultivado a una industria escalable: el camino de Mosa Meat",
     description: ["El Dr. Mark Post, Profesor Emérito de Ingeniería de Tejidos Industriales Sostenibles en la Universidad de Maastricht, cofundador y Chief Scientific Officer de Mosa Meat, hizo historia en 2013 al presentar la primera hamburguesa de carne vacuna cultivada del mundo. Desde entonces, ha liderado el desarrollo científico de la carne cultivada, impulsando su transición desde un avance de laboratorio hacia una realidad comercial.", "Recientemente, Mosa Meat inauguró su planta de escalado en Maastricht, que posteriormente se convirtió en C.a.S. (Cultivate at Scale) gracias a una subvención del gobierno neerlandés que permitió abrir sus instalaciones al ecosistema. Se trata de una de las mayores plantas de carne cultivada del mundo y cuenta con biorreactores de 1.000 litros para avanzar en el escalado de la producción de cara a la aprobación regulatoria. La compañía también presentó ante la Unión Europea su solicitud de autorización para grasa cultivada, como parte de su estrategia de entrada al mercado.", "En su presentación, Mark repasará más de una década de desarrollo de carne cultivada, el camino técnico y regulatorio hacia la paridad de precios y los desafíos que deberá superar la industria para alcanzar una escala verdaderamente comercial."],
     topics: ["Del primer burger a escala industrial", "Biorreactores de 1.000 litros", "Regulación en la Unión Europea", "Paridad de precios", "Futuro de la carne cultivada"],
@@ -93,6 +93,7 @@ const rawCapaTalks = [
 const keywordsByTalk = {
   "apertura-capa-2026": ["Apertura", "Institucional", "ProteínasAlternativas"],
   "emiliano-benito-lupino": ["IngredientesVegetales", "Procesamiento", "ValorAgregado"],
+  "pancho-pinero-plant-based-argentina": ["IndustriaPlantBased", "Regulación", "MercadoMasivo"],
   "kris-blanchard-biomanufactura": ["Biomanufactura", "InsumosCelulares", "TAMEE"],
   "maria-laura-matos-bioprocesos": ["Bioprocesos", "FermentaciónDePrecisión", "Escalado"],
   "mariana-sanchez-innovacion-vegetal": ["ProteínasVegetales", "ValorAgregado", "IndustriaArgentina"],
@@ -101,6 +102,8 @@ const keywordsByTalk = {
   "martin-sabatini-fermentacion": ["FermentaciónDePrecisión", "ColorantesNaturales", "Escalado"],
   "celeste-marin-calidad": ["ControlDeCalidad", "Reproducibilidad", "BancosCelulares"],
   "bruno-rosolem-cashew": ["PlantBased", "Upcycling", "CleanLabel"],
+  "martin-blasco-escalado-bioprocesos": ["Bioprocesos", "Escalado", "TransferenciaTecnológica"],
+  "matias-fassolari-merck": ["CarneCultivada", "EscaladoIndustrial", "Bioprocesos"],
   "rodrigo-ledesma-bioproduccion": ["BioproducciónMicrobiana", "Fermentación", "ProteínaSustentable"],
   "chris-bryant-politica-publica": ["ProteínasAlternativas", "CienciasSociales", "PolíticaAlimentaria"],
   "mark-post-mosa-meat": ["CarneCultivada", "Biorreactores", "RegulaciónEuropea"],
@@ -133,8 +136,6 @@ const keywordsByTalk = {
 
 const toHashtag = (keyword) => `#${keyword.replace(/^#/, "").replace(/[^\p{L}\p{N}_]/gu, "")}`;
 const retiredTalkIds = new Set([
-  "pancho-pinero-plant-based-argentina",
-  "martin-blasco-escalado-bioprocesos",
   "cluster-proteinas-vegetales",
 ]);
 
