@@ -39,6 +39,7 @@ const languageNames = {
   ES: "Español",
   EN: "Inglés",
   PT: "Portugués",
+  IT: "Italiano",
 };
 
 function TalkPlaceholder({ name }) {
@@ -160,11 +161,6 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
     return { type: "logo", name, src: getOrganizationLogo(name, explicitLogo) };
   }).filter((visual) => visual.src && !representedOrganizations.has(visual.name.trim().toLocaleLowerCase()));
   const visuals = talk.fixedMainVisual ? speakerVisuals : [...speakerVisuals, ...additionalOrganizationVisuals];
-  const institutionalLogos = organizations.map((organization) => {
-    const name = typeof organization === "string" ? organization : organization.name;
-    const explicitLogo = typeof organization === "string" ? null : organization.logo;
-    return { name, src: getOrganizationLogo(name, explicitLogo) };
-  }).filter((organization) => organization.src);
   return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()} ${talk.durationSlots > 1 ? `duration-slots-${talk.durationSlots}` : ""}`} {...cardProps}>
     <div className="capa-talk-photo">
       <TalkVisualCarousel visuals={visuals} fallbackName={talk.name} />
@@ -178,7 +174,6 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
           <p className="talk-company-text">{organizations.map((organization) => typeof organization === "string" ? organization : organization.name).join(" · ")}</p>
           <span className={`talk-flag ${countries.length > 1 ? "multiple" : ""}`} title={countries.join(" · ") || "País no informado"}><CountryFlag country={countries.length > 1 ? countries : countries[0]} /></span>
         </div>
-        {institutionalLogos.length > 0 && <div className="talk-company-logos">{institutionalLogos.map((organization) => <span className="talk-company-logo" key={organization.name}><img src={organization.src} alt={`Logo de ${organization.name}`} /></span>)}</div>}
       </div></div>
       <div className="talk-card-meta">
         <span className="capa-talk-time"><strong>🕒 {talk.time}</strong></span>
@@ -230,7 +225,22 @@ export default function CapaSchedule() {
       return { ...details, ...item, id: item.detailsId || null };
     })
     .sort((a, b) => a.time.localeCompare(b.time)), [activeDay]);
-  const visibleTimeSlots = timeSlots.filter((slot) => slot.start <= dayLastSlot[activeDay]);
+  const visibleTimeSlots = useMemo(() => timeSlots.filter((slot) => slot.start <= dayLastSlot[activeDay]), [activeDay]);
+  const durationGroups = useMemo(() => {
+    const starts = new Map();
+    const covered = new Set();
+
+    talks.filter((talk) => talk.durationSlots > 1).forEach((talk) => {
+      const start = talk.slotStart || talk.time.slice(0, 5);
+      const startIndex = visibleTimeSlots.findIndex((slot) => slot.start === start);
+      if (startIndex < 0) return;
+      const slots = visibleTimeSlots.slice(startIndex, startIndex + talk.durationSlots);
+      starts.set(start, { talk, slots });
+      slots.slice(1).forEach((slot) => covered.add(slot.start));
+    });
+
+    return { starts, covered };
+  }, [talks, visibleTimeSlots]);
 
   return (
     <section className="capa-program" id="programa">
@@ -245,6 +255,7 @@ export default function CapaSchedule() {
         <div className="capa-agenda-grid">
           {rooms.map((room) => <div className="capa-agenda-header" key={room}>{copy.room} {room}</div>)}
           {visibleTimeSlots.map((slot) => {
+            if (durationGroups.covered.has(slot.start)) return null;
             if (slot.common) return <div className="capa-agenda-row capa-agenda-row-common" key={slot.start}>
               <time>{slot.label}</time><div className="capa-common-activity"><span>{slot.common === "Lunch" ? "🍽️" : "☕"}</span><strong>{slot.common}</strong></div>
             </div>;
@@ -252,8 +263,27 @@ export default function CapaSchedule() {
             if (sharedTalk) return <div className="capa-agenda-row capa-agenda-row-shared" key={slot.start}>
               <time>{slot.label}</time><div className="capa-agenda-shared"><span className="capa-shared-label">{copy.room} D + E</span><TalkCard talk={sharedTalk} copy={copy} locale={locale} selectedRoom={activeRoom} /></div>
             </div>;
-            const durationContinuation = talks.some((talk) => talk.durationSlots > 1 && (talk.slotStart || talk.time.slice(0, 5)) < slot.start && talk.time.slice(-5) > slot.start);
-            return <div className={`capa-agenda-row ${durationContinuation ? "has-duration-continuation" : ""}`} key={slot.start}>
+            const durationGroup = durationGroups.starts.get(slot.start);
+            if (durationGroup) return <div className={`capa-agenda-row capa-agenda-duration-group ${activeRoom === durationGroup.talk.room ? "mobile-spanning-active" : ""}`} key={slot.start}>
+              <time>{durationGroup.talk.time}</time>
+              {rooms.map((room) => {
+                const isSpanningRoom = room === durationGroup.talk.room;
+                return <div className={`capa-duration-room ${isSpanningRoom ? "is-spanning" : "is-stacked"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
+                  {isSpanningRoom
+                    ? <TalkCard talk={durationGroup.talk} copy={copy} locale={locale} selectedRoom={activeRoom} />
+                    : durationGroup.slots.map((subslot) => {
+                      const cellTalks = talks.filter((talk) => talk.room === room && (talk.slotStart || talk.time.slice(0, 5)) === subslot.start);
+                      return <div className={`capa-agenda-cell ${cellTalks.length ? "has-talk" : "is-tbd"}`} key={subslot.start}>
+                        <time className="capa-duration-slot-time">{subslot.label}</time>
+                        {cellTalks.length
+                          ? cellTalks.map((talk) => <TalkCard talk={talk} copy={copy} locale={locale} selectedRoom={activeRoom} key={`${talk.room}-${talk.time}-${talk.name}`} />)
+                          : <span>TBD</span>}
+                      </div>;
+                    })}
+                </div>;
+              })}
+            </div>;
+            return <div className="capa-agenda-row" key={slot.start}>
               <time>{slot.label}</time>
               {rooms.map((room) => {
                 const cellTalks = talks.filter((talk) => talk.room === room && (talk.slotStart || talk.time.slice(0, 5)) === slot.start);

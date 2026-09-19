@@ -119,7 +119,6 @@ select {
 .capa-agenda-header { padding:14px 18px; border-radius:13px; color:white; background:#185b45; box-shadow:0 8px 20px rgba(24,91,69,.16); font-size:13px; font-weight:900; letter-spacing:.08em; text-align:center; text-transform:uppercase; }
 .capa-agenda-row { display:grid; grid-column:1/-1; grid-template-columns:repeat(2,minmax(410px,1fr)); gap:12px 20px; background:transparent; }
 .capa-agenda-row > time { display:flex; grid-column:1/-1; width:max-content; align-items:center; justify-content:center; padding:8px 14px; border:1px solid #dbe5df; border-radius:999px; color:#185b45; background:rgba(255,255,255,.82); box-shadow:0 5px 14px rgba(18,47,39,.05); font-size:13px; font-weight:900; text-align:center; }
-.capa-agenda-row.has-duration-continuation > time { display:none; }
 .capa-agenda-cell { display:grid; align-content:start; gap:18px; min-height:148px; padding:0; background:transparent; }
 .capa-agenda-cell.is-tbd { place-items:center; min-height:110px; border:1px dashed #d2ded7; border-radius:16px; color:#9aaba2; background:rgba(255,255,255,.38); font-size:13px; font-weight:900; letter-spacing:.16em; }
 .capa-agenda-cell.is-covered { min-height:0; }
@@ -160,9 +159,14 @@ select {
 .category-border-tbd { border-top:5px solid #a6b2ac; background:#f5f7f6; }
 .category-tbd { color:#53625b; background:#e9eeeb; }
 .capa-agenda-cell .capa-talk-card { grid-template-columns:1fr; height:555px; min-height:555px; }
-.capa-agenda-cell .capa-talk-card.duration-slots-2 { height:720px; min-height:720px; }
-.capa-agenda-cell .capa-talk-card.duration-slots-2 .capa-talk-photo { height:340px; }
-.capa-agenda-cell .capa-talk-card.duration-slots-2 .capa-talk-body { height:380px; }
+.capa-agenda-duration-group { align-items:stretch; }
+.capa-duration-room { display:grid; min-width:0; gap:16px; }
+.capa-duration-room.is-spanning > .capa-talk-card { display:grid; grid-template-columns:1fr; height:100%; min-height:100%; }
+.capa-duration-room.is-spanning > .capa-talk-card .capa-talk-photo { height:555px; min-height:555px; }
+.capa-duration-room.is-spanning > .capa-talk-card .capa-talk-body { height:555px; }
+.capa-duration-room.is-stacked .capa-agenda-cell { position:relative; }
+.capa-duration-slot-time { position:absolute; z-index:4; top:10px; left:10px; padding:6px 9px; border-radius:999px; color:#185b45; background:rgba(255,255,255,.94); box-shadow:0 4px 12px rgba(18,47,39,.1); font-size:10px; font-weight:900; }
+.capa-duration-room.is-stacked .capa-agenda-cell.is-tbd { min-height:555px; }
 .capa-agenda-cell .capa-talk-photo { width:100%; height:265px; min-height:265px; }
 .capa-agenda-cell .capa-talk-body { height:290px; padding:14px 20px 10px; }
 .capa-agenda-cell .talk-speaker-portrait { display:flex; box-sizing:border-box; align-items:center; justify-content:center; padding:8px; background:#e8eee9; }
@@ -184,6 +188,7 @@ select {
 .talk-detail-hero.category-accent-pb { box-shadow:inset 8px 0 #71b66d; }.talk-detail-hero.category-accent-ca { box-shadow:inset 8px 0 #62a9d6; }.talk-detail-hero.category-accent-fe { box-shadow:inset 8px 0 #e5b54c; }.talk-detail-hero.category-accent-pp { box-shadow:inset 8px 0 #aa75c4; }.talk-detail-hero.category-accent-is { box-shadow:inset 8px 0 #ed8068; }
 .capa-talk-detail { min-height:80vh; padding:50px max(6%,calc((100% - 1100px)/2)) 80px; background:#f8f3e9; }.talk-detail-back { display:inline-block; margin-bottom:25px; color:#185b45; font-weight:800; }.talk-detail-hero { padding:40px clamp(24px,5vw,55px); border-radius:26px; color:white; background:radial-gradient(circle at 90% 0,#ed684a,transparent 35%),linear-gradient(135deg,#122f27,#185b45); }.talk-detail-meta { display:flex; flex-wrap:wrap; gap:8px; }.talk-detail-meta span { padding:6px 10px; border:1px solid rgba(255,255,255,.25); border-radius:999px; background:rgba(255,255,255,.08); font-size:11px; font-weight:850; }.talk-detail-hero h1 { max-width:900px; margin:18px 0 0; font-size:clamp(32px,5vw,55px); line-height:1.05; letter-spacing:-.04em; }.talk-detail-layout { display:grid; grid-template-columns:300px 1fr; gap:32px; margin-top:30px; }.talk-speaker-panels { display:grid; align-self:start; gap:18px; }.talk-speaker-panel { overflow:hidden; align-self:start; border-radius:20px; background:white; box-shadow:0 8px 25px rgba(18,47,39,.08); }.talk-speaker-panel > img { width:100%; height:300px; object-fit:cover; }.talk-speaker-panel > p,.talk-speaker-panel > h2,.talk-speaker-panel > h3,.talk-speaker-panel dl { margin-left:22px; margin-right:22px; }.talk-speaker-panel > p { margin-top:22px; margin-bottom:3px; color:#ed684a; font-size:10px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; }.talk-speaker-panel h2 { margin-top:0; margin-bottom:3px; color:#122f27; }.talk-speaker-panel h3 { margin-top:0; color:#64756e; font-size:14px; }.talk-speaker-logo { display:grid; min-height:58px; margin:12px 22px 15px; padding:8px; place-items:center; border:1px solid #e1e8e4; border-radius:10px; color:#185b45; background:#fff; font-size:10px; font-weight:900; text-align:center; }.talk-speaker-logo img { display:block; width:100%; height:48px; object-fit:contain; }.talk-speaker-panel dl { padding:15px 0 20px; border-top:1px solid #edf1ee; }.talk-speaker-panel dl div { display:flex; justify-content:space-between; gap:10px; margin:8px 0; font-size:12px; }.talk-speaker-panel dt { color:#77877f; }.talk-speaker-panel dd { margin:0; color:#24473c; font-weight:800; text-align:right; }.talk-detail-institution-logo { display:grid; place-items:center; min-height:150px; padding:26px; border:1px solid #e2e9e5; border-radius:20px; background:#fff; box-shadow:0 8px 25px rgba(18,47,39,.08); }.talk-detail-institution-logo img { display:block; width:100%; max-height:110px; object-fit:contain; }.talk-detail-content { padding:10px 0; }.talk-detail-content section { margin-bottom:40px; }.talk-detail-content section > p:not(.talk-detail-kicker) { color:#52665e; font-size:17px; line-height:1.75; }.talk-detail-content ul { display:grid; gap:10px; padding:0; list-style:none; }.talk-detail-content li { padding:14px 17px 14px 42px; border-radius:12px; color:#375248; background:white; position:relative; }.talk-detail-content li::before { content:"✓"; position:absolute; left:16px; color:#ed684a; font-weight:900; }.talk-detail-keywords { display:flex; flex-wrap:wrap; gap:9px; }.talk-detail-keywords span { padding:8px 12px; border:1px solid #d7e2dc; border-radius:999px; color:#185b45; background:#fff; font-size:12px; font-weight:850; }.talk-participations { display:grid; gap:16px; }.talk-participations article { padding:20px; border:1px solid #e0e8e3; border-radius:16px; background:rgba(255,255,255,.78); }.talk-participations h2 { margin:0; color:#153f33; font-size:20px; }.talk-participations h3 { margin:4px 0 12px; color:#ed684a; font-size:14px; }.talk-participations p { color:#52665e; font-size:15px; line-height:1.65; }
 .talk-speaker-panel > img.contain { box-sizing:border-box; padding:24px; object-fit:contain; background:#fff; }
+.talk-speaker-panel h3 { display:flex; align-items:center; gap:8px; }
 @media(max-width:900px){.capa-talk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.talk-detail-layout{grid-template-columns:1fr}.talk-speaker-panel{display:grid;grid-template-columns:220px 1fr}.talk-speaker-panel>img,.talk-photo-placeholder.large{grid-row:1/6;height:100%;min-height:280px}.talk-speaker-panel dl{margin-right:22px}}
 @media(max-width:600px){.capa-day-tabs{grid-template-columns:1fr}.capa-day-tabs button{flex-direction:row;align-items:center;gap:8px}.capa-day-tabs small{margin:0}.capa-talk-grid{grid-template-columns:1fr}.capa-talk-card h5{min-height:0}.talk-detail-layout{display:block}.talk-speaker-panel{display:block;margin-bottom:30px}.talk-speaker-panel>img,.talk-photo-placeholder.large{height:290px}.talk-detail-hero{border-radius:20px}}
 .capa-speaker-card p { margin: 0; color: #718078; font-size: 12px; line-height: 1.45; }
@@ -225,6 +230,15 @@ select {
   .capa-agenda-cell { display:grid; min-height:0; gap:10px; padding:0; border-radius:14px; background:transparent; }
   .capa-agenda-cell::before { content:attr(data-room); display:block; width:max-content; padding:7px 12px; border-radius:999px; color:#315c4e; background:#dfeae4; font-size:11px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
   .capa-agenda-cell:not(.mobile-room-active) { display:none; }
+  .capa-duration-room:not(.mobile-room-active) { display:none; }
+  .capa-agenda-duration-group { grid-template-columns:1fr; }
+  .capa-agenda-duration-group:not(.mobile-spanning-active) > time { display:none; }
+  .capa-duration-room.is-spanning > .capa-talk-card { height:1106px; min-height:1106px; }
+  .capa-duration-room.is-spanning > .capa-talk-card .capa-talk-photo { height:540px; min-height:540px; }
+  .capa-duration-room.is-spanning > .capa-talk-card .capa-talk-body { height:566px; }
+  .capa-duration-room::before { content:attr(data-room); display:block; width:max-content; padding:7px 12px; border-radius:999px; color:#315c4e; background:#dfeae4; font-size:11px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+  .capa-duration-room.is-stacked .capa-agenda-cell::before { display:none; }
+  .capa-duration-room.is-stacked .capa-agenda-cell.is-tbd { min-height:110px; }
   .capa-agenda-cell.mobile-room-active.is-tbd { display:grid; min-height:110px; padding:10px; place-items:stretch; align-content:start; }
   .capa-agenda-cell.mobile-room-active.is-tbd > span { display:grid; min-height:66px; place-items:center; }
   .capa-agenda-cell.has-talk { padding:0; }
