@@ -119,6 +119,7 @@ select {
 .capa-agenda-header { padding:14px 18px; border-radius:13px; color:white; background:#185b45; box-shadow:0 8px 20px rgba(24,91,69,.16); font-size:13px; font-weight:900; letter-spacing:.08em; text-align:center; text-transform:uppercase; }
 .capa-agenda-row { display:grid; grid-column:1/-1; grid-template-columns:repeat(2,minmax(410px,1fr)); gap:12px 20px; background:transparent; }
 .capa-agenda-row > time { display:flex; grid-column:1/-1; width:max-content; align-items:center; justify-content:center; padding:8px 14px; border:1px solid #dbe5df; border-radius:999px; color:#185b45; background:rgba(255,255,255,.82); box-shadow:0 5px 14px rgba(18,47,39,.05); font-size:13px; font-weight:900; text-align:center; }
+.capa-agenda-row.has-duration-continuation > time { display:none; }
 .capa-agenda-cell { display:grid; align-content:start; gap:18px; min-height:148px; padding:0; background:transparent; }
 .capa-agenda-cell.is-tbd { place-items:center; min-height:110px; border:1px dashed #d2ded7; border-radius:16px; color:#9aaba2; background:rgba(255,255,255,.38); font-size:13px; font-weight:900; letter-spacing:.16em; }
 .capa-agenda-cell.is-covered { min-height:0; }

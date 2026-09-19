@@ -9,6 +9,8 @@ const COUNTRY_ALIASES = {
   "estados unidos": "US", "united states": "US", usa: "US", us: "US",
   japon: "JP", japan: "JP", jpn: "JP", jp: "JP",
   belgica: "BE", belgium: "BE", bel: "BE", be: "BE",
+  alemania: "DE", germany: "DE", de: "DE",
+  italia: "IT", italy: "IT", it: "IT",
 };
 
 function normalizeCountry(country = "") {
@@ -35,6 +37,8 @@ export default function CountryFlag({ country, className = "" }) {
   if (code === "US") return <svg {...props}><rect width="36" height="24" fill="#fff"/>{[0,4,8,12,16,20].map((y)=><rect key={y} y={y} width="36" height="2" fill="#b22234"/>)}<rect width="15" height="12" fill="#3c3b6e"/><g fill="#fff">{[3,7,11].flatMap((x)=>[3,6,9].map((y)=><circle key={`${x}-${y}`} cx={x} cy={y} r=".7"/>))}</g></svg>;
   if (code === "JP") return <svg {...props}><rect width="36" height="24" fill="#fff"/><circle cx="18" cy="12" r="6" fill="#bc002d"/></svg>;
   if (code === "BE") return <svg {...props}><rect width="12" height="24" fill="#111"/><rect x="12" width="12" height="24" fill="#fdda24"/><rect x="24" width="12" height="24" fill="#ef3340"/></svg>;
+  if (code === "DE") return <svg {...props}><rect width="36" height="8" fill="#000"/><rect y="8" width="36" height="8" fill="#dd0000"/><rect y="16" width="36" height="8" fill="#ffce00"/></svg>;
+  if (code === "IT") return <svg {...props}><rect width="12" height="24" fill="#009246"/><rect x="12" width="12" height="24" fill="#fff"/><rect x="24" width="12" height="24" fill="#ce2b37"/></svg>;
 
   return <span className={`capa-flag-fallback ${className}`} role="img" aria-label={country || "País no informado"}>🌎</span>;
 }
