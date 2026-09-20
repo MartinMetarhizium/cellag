@@ -50,6 +50,7 @@ const capaProgram = [
   { day: "friday", room: "D", time: "09:00–09:30", detailsId: "mark-post-mosa-meat" },
   { day: "friday", room: "D", time: "09:35–10:20", detailsId: "unlp-ciprove-proteinas-alternativas" },
   { day: "friday", room: "D", time: "10:50–11:20", detailsId: "franco-antoniazzi-mita-parma" },
+  { day: "friday", room: "D", time: "11:25–11:55", detailsId: "david-kaplan-tufts" },
   { day: "friday", room: "D", time: "12:00–12:30", detailsId: "prospectiva-tecnologica" },
 
   // Viernes · Salón E

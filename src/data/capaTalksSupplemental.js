@@ -255,6 +255,13 @@ const capaTalksSupplemental = [
     keywords: ["ProspectivaTecnológica", "PolíticasPúblicas", "Tendencias"],
     speakers: [{ name: "Vanesa Lowenstein", company: "Subsecretaría de Ciencia y Tecnología — Programa Nacional de Prospectiva Tecnológica", country: "Argentina", logo: "/capa-assets/subsecretaria de ciencia y tecnologia logo.jpg" }, { name: "Adriana Sánchez Rico", company: "Subsecretaría de Ciencia y Tecnología — Programa Nacional de Prospectiva Tecnológica", country: "Argentina", photo: "/capa-assets/adriana sanchez rico.png", logo: "/capa-assets/subsecretaria de ciencia y tecnologia logo.jpg" }],
   },
+  {
+    id: "david-kaplan-tufts", name: "David Kaplan", company: "Tufts University Center for Cellular Agriculture (TUCCA)", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "D", category: "CM", mode: "remoto", language: "TBD", country: "Estados Unidos",
+    title: "El futuro de la alimentación: oportunidades y desafíos de la agricultura celular",
+    description: ["David Kaplan, Stern Family Professor of Biomedical Engineering y Director del Tufts University Center for Cellular Agriculture (TUCCA), es una de las voces científicas más influyentes en el campo de la agricultura celular, con más de 1.000 publicaciones revisadas por pares en ingeniería de biopolímeros, ingeniería de tejidos, medicina regenerativa y agricultura celular.", "En 2021 lideró la obtención de un subsidio de USD 10 millones del USDA para crear el National Institute for Cellular Agriculture dentro de Tufts, en colaboración con Virginia Tech, Virginia State University, UC Davis, MIT y la Universidad de Massachusetts Boston. Su laboratorio logró además producir grasa cultivada a escala, con una textura y composición similar a la grasa animal natural, uno de los avances clave para lograr sabor y textura reales en la carne cultivada.", "En su charla, Kaplan compartirá una mirada de conjunto sobre el futuro de la alimentación desde la agricultura celular: los avances científicos que ya están resolviendo problemas técnicos clave —como la producción de grasa cultivada—, los desafíos que todavía quedan por delante para escalar la tecnología y el rol de la ciencia básica universitaria en sostener el desarrollo de largo plazo de esta industria."],
+    topics: ["El estado de la ciencia detrás de la carne cultivada: de la investigación básica a la aplicación.", "Grasa cultivada: el avance del laboratorio de Kaplan hacia sabor y textura reales.", "El rol de los centros universitarios y el financiamiento público en sostener la innovación.", "Oportunidades y desafíos pendientes para escalar la agricultura celular."],
+    keywords: ["CarneCultivada", "AgriculturaCelular", "Academia"],
+  },
 ];
 
 export default capaTalksSupplemental;

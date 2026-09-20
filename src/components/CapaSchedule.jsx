@@ -31,8 +31,8 @@ const dayCopy = {
 };
 
 const categoryNames = {
-  es: { PB: "Proteínas vegetales", CA: "Agricultura celular", FE: "Fermentación", PP: "Políticas públicas", IS: "Innovation Spotlight", UN: "Universidades", AD: "Divulgación", GE: "Programa general" },
-  en: { PB: "Plant-based proteins", CA: "Cellular agriculture", FE: "Fermentation", PP: "Public policy", IS: "Innovation Spotlight", UN: "Universities", AD: "Advocacy", GE: "General program" },
+  es: { PB: "Proteínas vegetales", CA: "Agricultura celular", CM: "Carne cultivada", FE: "Fermentación", PP: "Políticas públicas", IS: "Innovation Spotlight", UN: "Universidades", AD: "Divulgación", GE: "Programa general" },
+  en: { PB: "Plant-based proteins", CA: "Cellular agriculture", CM: "Cultivated meat", FE: "Fermentation", PP: "Public policy", IS: "Innovation Spotlight", UN: "Universities", AD: "Advocacy", GE: "General program" },
 };
 
 const languageNames = {
@@ -164,6 +164,7 @@ function TalkCard({ talk, copy, locale, selectedRoom }) {
   return <Card className={`capa-talk-card category-border-${talk.category.toLowerCase()} ${talk.durationSlots > 1 ? `duration-slots-${talk.durationSlots}` : ""}`} {...cardProps}>
     <div className="capa-talk-photo">
       <TalkVisualCarousel visuals={visuals} fallbackName={talk.name} />
+      {talk.fixedMainVisual && additionalOrganizationVisuals.length > 0 && <div className="talk-fixed-logos" aria-label="Organizaciones participantes">{additionalOrganizationVisuals.map((visual) => <span key={visual.name}><img src={visual.src} alt={`Logo de ${visual.name}`} /></span>)}</div>}
     </div>
     <div className="capa-talk-body">
       <AutoFitTitle>{talk.title || talk.name}</AutoFitTitle>
