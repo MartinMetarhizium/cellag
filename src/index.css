@@ -68,6 +68,10 @@ select {
 .capa-countdown strong, .capa-countdown span { display: block; }
 .capa-countdown strong { font-size: clamp(24px,4vw,40px); line-height: 1; font-variant-numeric: tabular-nums; }
 .capa-countdown span { margin-top: 6px; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; opacity: .75; }
+.capa-hero.capa-hero-image { position:relative; padding:0; overflow:hidden; background:#fff; }
+.capa-hero-image > img { display:block; width:100%; height:auto; object-fit:contain; }
+.capa-hero-image .capa-countdown { position:absolute; z-index:2; top:46%; right:4%; width:min(500px,42%); padding:10px; border-radius:18px; background:rgba(8,35,66,.76); box-shadow:0 12px 30px rgba(0,31,61,.22); backdrop-filter:blur(5px); }
+.sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 .capa-description { padding: 45px 7%; color: #122f27; background: #edf3ee; }
 .capa-page .capa-description { padding-left: max(6%, calc((100% - 1152px) / 2)); padding-right: max(6%, calc((100% - 1152px) / 2)); }
 .capa-description-kicker { margin: 0; color: #ed684a; font-size: 11px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
@@ -216,6 +220,11 @@ select {
   .capa-backdrop { padding: 10px; }
   .capa-modal { max-height: calc(100vh - 20px); border-radius: 22px; }
   .capa-hero { padding: 55px 24px 34px; }
+  .capa-hero.capa-hero-image { padding:0; }
+  .capa-hero-image .capa-countdown { top:44%; right:2.5%; width:56%; gap:3px; padding:5px; border-radius:10px; }
+  .capa-hero-image .capa-countdown div { padding:5px 1px; border-radius:7px; }
+  .capa-hero-image .capa-countdown strong { font-size:clamp(14px,5vw,22px); }
+  .capa-hero-image .capa-countdown span { margin-top:3px; font-size:clamp(6px,1.7vw,8px); letter-spacing:.04em; }
   .capa-countdown { grid-template-columns: repeat(4,1fr); gap: 5px; }
   .capa-countdown div { padding: 10px 2px; }
   .capa-speakers { padding: 32px 24px 36px; }
