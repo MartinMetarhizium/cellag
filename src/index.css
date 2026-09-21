@@ -69,7 +69,8 @@ select {
 .capa-countdown strong { font-size: clamp(24px,4vw,40px); line-height: 1; font-variant-numeric: tabular-nums; }
 .capa-countdown span { margin-top: 6px; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; opacity: .75; }
 .capa-hero.capa-hero-image { position:relative; padding:0; overflow:hidden; background:#fff; }
-.capa-hero-image > img { display:block; width:100%; height:auto; object-fit:contain; }
+.capa-hero-image > picture, .capa-hero-image > picture > img { display:block; width:100%; height:auto; }
+.capa-hero-image > picture > img { object-fit:contain; }
 .capa-hero-image .capa-countdown { position:absolute; z-index:2; top:46%; right:4%; width:min(500px,42%); padding:10px; border-radius:18px; background:rgba(8,35,66,.76); box-shadow:0 12px 30px rgba(0,31,61,.22); backdrop-filter:blur(5px); }
 .sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 .capa-description { padding: 45px 7%; color: #122f27; background: #edf3ee; }
@@ -80,6 +81,10 @@ select {
 .capa-description a { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; padding: 13px 20px; border-radius: 999px; color: white; background: #ed684a; font-weight: 850; }
 .capa-ticket-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
 .capa-ticket-row > a { margin-top: 0; }
+.capa-ticket-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.capa-ticket-actions > a { display:inline-flex; align-items:center; gap:10px; margin-top:0; }
+.capa-ticket-actions > a.capa-streaming-ticket { color:#185b45; border:2px solid #185b45; background:#fff; }
+.capa-ticket-actions > a.capa-streaming-ticket:hover { color:#fff; background:#185b45; }
 .capa-discount { display: flex; align-items: center; gap: 14px; padding: 10px 12px 10px 17px; border: 2px dashed #185b45; border-radius: 14px; color: #185b45; background: white; box-shadow: 0 7px 20px rgba(18,47,39,.08); }
 .capa-discount span { font-size: 11px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
 .capa-discount strong { padding: 7px 12px; border-radius: 9px; color: white; background: #185b45; font-size: 20px; letter-spacing: .12em; }
@@ -227,6 +232,9 @@ select {
   .capa-hero-image .capa-countdown span { margin-top:3px; font-size:clamp(6px,1.7vw,8px); letter-spacing:.04em; }
   .capa-countdown { grid-template-columns: repeat(4,1fr); gap: 5px; }
   .capa-countdown div { padding: 10px 2px; }
+  .capa-ticket-row { align-items:stretch; }
+  .capa-ticket-actions { width:100%; flex-direction:column; }
+  .capa-ticket-actions > a { width:100%; box-sizing:border-box; justify-content:center; text-align:center; }
   .capa-speakers { padding: 32px 24px 36px; }
   .capa-speaker-card { flex-basis: calc((100% - 15px) / 2); }
 }
@@ -260,10 +268,12 @@ select {
   .capa-duration-room.is-spanning > .capa-talk-card .capa-talk-body { height:300px; }
   .capa-duration-room.is-spanning { min-height:1106px; }
   .capa-duration-room::before { content:attr(data-room); display:block; width:max-content; padding:7px 12px; border-radius:999px; color:#315c4e; background:#dfeae4; font-size:11px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+  .capa-duration-room.is-stacked .capa-agenda-cell { display:grid; }
   .capa-duration-room.is-stacked .capa-agenda-cell::before { display:none; }
-  .capa-duration-room.is-stacked .capa-agenda-cell.is-tbd { min-height:110px; }
-  .capa-agenda-cell.mobile-room-active.is-tbd { display:grid; min-height:110px; padding:10px; place-items:stretch; align-content:start; }
-  .capa-agenda-cell.mobile-room-active.is-tbd > span { display:grid; min-height:66px; place-items:center; }
+  .capa-duration-room.is-stacked .capa-agenda-cell.is-tbd { min-height:110px; padding:0; border:0; background:transparent; }
+  .capa-duration-room.is-stacked .capa-agenda-cell.is-tbd > span { display:grid; min-height:76px; place-items:center; border:1px dashed #d2ded7; border-radius:14px; color:#9aaba2; background:rgba(255,255,255,.38); }
+  .capa-agenda-cell.mobile-room-active.is-tbd { display:grid; min-height:110px; padding:0; place-items:stretch; align-content:start; border:0; background:transparent; }
+  .capa-agenda-cell.mobile-room-active.is-tbd > span { display:grid; min-height:76px; place-items:center; border:1px dashed #d2ded7; border-radius:14px; color:#9aaba2; background:rgba(255,255,255,.38); }
   .capa-agenda-cell.has-talk { padding:0; }
   .capa-agenda-cell .capa-talk-card { display:grid; grid-template-columns:1fr; width:100%; height:545px; min-height:545px; border-radius:16px; }
   .capa-agenda-cell .capa-talk-photo { width:100%; min-height:0; height:245px; aspect-ratio:auto; }
