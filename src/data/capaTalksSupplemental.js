@@ -90,7 +90,7 @@ const capaTalksSupplemental = [
     keywords: ["Cambio de comportamiento", "Consumidores", "Transición proteica"],
   },
   {
-    id: "cell-ag-cono-sur", name: "Cell Ag America", company: "Cell Ag America", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "D", category: "CA", mode: "presencial", language: ["ES", "EN"], country: ["Argentina", "Brasil", "Chile"], photo: "/capa-assets/cellular agriculture america logo.png", photoFit: "contain", fixedMainVisual: true,
+    id: "cell-ag-cono-sur", name: "Cell Ag America", company: "Cell Ag America", day: "thursday", date: "22 de octubre", time: "16:45–17:15", room: "D", category: "CA", mode: "presencial", language: ["ES", "EN"], country: ["Argentina", "Brasil", "Chile"], photo: "/capa-assets/cellular agriculture america logo.png", photoFit: "contain", fixedMainVisual: true,
     title: "Agricultura celular en el Cono Sur: construyendo el ecosistema desde Argentina, Brasil y Chile",
     description: ["Este panel reúne a los ecosistemas de agricultura celular de Argentina, Brasil y Chile para compartir cómo se construyen comunidades regionales desde la academia pública, la ciencia abierta y la colaboración."],
     topics: ["Estado de la agricultura celular regional", "Universidad pública y ciencia abierta", "Comunidad antes que competencia", "Colaboración latinoamericana"],
@@ -213,7 +213,7 @@ const capaTalksSupplemental = [
     topics: ["Investigación académica e industria", "Escalado de bioprocesos", "Economía de procesos", "Biomasa fúngica", "Transferencia industrial"],
   },
   {
-    id: "pancho-pinero-plant-based-argentina", name: "Pancho Piñero", company: "ABP", day: "thursday", date: "22 de octubre", time: "16:45–17:15", room: "D", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Pancho piñeiro Limpio.png", detailLogo: "/capa-assets/APB logo.png",
+    id: "pancho-pinero-plant-based-argentina", name: "Pancho Piñero", company: "ABP", day: "thursday", date: "22 de octubre", time: "17:20–17:50", room: "E", category: "PB", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Pancho piñeiro Limpio.png", detailLogo: "/capa-assets/APB logo.png",
     title: "Plant-based en Argentina: estado de la industria",
     description: ["El sector plant-based argentino pasó en pocos años de ser un nicho a convertirse en una industria organizada, con reconocimiento oficial y proyección exportadora. Ese recorrido no fue espontáneo: requirió organización gremial, trabajo regulatorio y una readaptación constante del negocio a las demandas reales del mercado masivo.", "Pancho Piñero, fundador de la Asociación de Productores a Base de Plantas (ABP), fue protagonista directo de ese proceso: lideró la consolidación de la ABP como cámara del sector y logró su reconocimiento como actividad estratégica ante el Estado.", "A partir de esa experiencia gremial compartirá el estado actual de la industria plant-based en Argentina, el trabajo colectivo de las empresas asociadas a la ABP y qué necesita el sector para consolidarse como industria exportadora de escala regional. La charla hará especial foco en las tendencias del sector y en cómo viene evolucionando la industria plant-based en Argentina.", "La charla propone una mirada honesta sobre el futuro de la alimentación a base de plantas: no se trata de imponer un modelo único, sino de construir una industria organizada, rentable y capaz de convivir con otras proteínas para ampliar, entre todos, las opciones de una alimentación más sustentable."],
     topics: ["Estado de la industria plant-based argentina", "Organización gremial y regulación", "Consumidor masivo e innovación de producto", "Potencial exportador", "Coexistencia de proteínas"],
@@ -233,7 +233,7 @@ const capaTalksSupplemental = [
     keywords: ["LácteosCultivados", "Bioprocesos", "EscaladoIndustrial"],
   },
   {
-    id: "iff-proteinas-vegetales", name: "Rodrigo Gomes Burakovas · Leandro Anibal Gimenez", company: "IFF", day: "friday", date: "23 de octubre", time: "11:25–12:30", room: "E", category: "PB", mode: "presencial", language: "PT", country: "Brasil", durationSlots: 2,
+    id: "iff-proteinas-vegetales", name: "Rodrigo Gomes Burakovas · Leandro Anibal Gimenez", company: "IFF", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "D", category: "PB", mode: "presencial", language: "PT", country: "Brasil",
     title: "Texturizantes e ingredientes de proteína vegetal: el enfoque de IFF",
     description: ["IFF presentará su trabajo en el desarrollo de ingredientes de proteína vegetal —incluyendo formulaciones de valor agregado de proteína de soja y arveja, texturizantes, emulsionantes y soluciones de conservación natural— utilizados en la formulación de productos plant-based.", "Rodrigo Gomes Burakovas, Culinary Design Manager en IFF (Brasil), es farmacéutico por la Universidad Oswaldo Cruz, con especialización en Ingeniería de Alimentos por la Universidad Mauá y certificación Green Belt en Lean Six Sigma. Cuenta con más de 19 años de experiencia, incluyendo 11 años en I+D de JBS (Coordinador Global de Cuentas de I+D) y 7 años en ADM CD&D como Gerente de Creación, Diseño y Desarrollo para Extensión de Carnes y Alternativas Cárnicas en Latam, antes de sumarse a IFF.", "Leandro Anibal Gimenez, Senior Culinary Flavorist en IFF, aporta 20 años de experiencia en la industria de sabores, formado globalmente entre Argentina, Brasil, Estados Unidos y Países Bajos, y actualmente radicado en Brasil dando soporte a proyectos en toda Latinoamérica. Es miembro del programa Re-Master Meat de IFF, especializado en sabores de proceso con foco en reacciones de Maillard, y contribuyó al desarrollo de tecnologías de modulación de sabor para productos plant-based (sal, grasa, umami y masking)."],
     topics: ["Portfolio de proteínas de soja y arveja de IFF.", "Texturizantes y emulsionantes para productos plant-based.", "Soluciones de conservación natural aplicadas a alimentos a base de plantas.", "Tendencias e innovación en el desarrollo de ingredientes para el sector."],
@@ -254,6 +254,29 @@ const capaTalksSupplemental = [
     topics: ["Qué es la prospectiva tecnológica y cómo se aplica al sector de proteínas alternativas.", "Tendencias y señales emergentes que podrían marcar la evolución del sector en los próximos años.", "Desafíos, oportunidades e incertidumbres identificados desde el Estado.", "Entornos colaborativos para el diseño de futuros: cómo se construye ese ejercicio junto a la industria."],
     keywords: ["ProspectivaTecnológica", "PolíticasPúblicas", "Tendencias"],
     speakers: [{ name: "Vanesa Lowenstein", company: "Subsecretaría de Ciencia y Tecnología — Programa Nacional de Prospectiva Tecnológica", country: "Argentina", logo: "/capa-assets/subsecretaria de ciencia y tecnologia logo.jpg" }, { name: "Adriana Sánchez Rico", company: "Subsecretaría de Ciencia y Tecnología — Programa Nacional de Prospectiva Tecnológica", country: "Argentina", photo: "/capa-assets/adriana sanchez rico.png", logo: "/capa-assets/subsecretaria de ciencia y tecnologia logo.jpg" }],
+  },
+  {
+    id: "cluster-introduccion-proteinas-vegetales", name: "Clúster de Proteínas Vegetales", company: "Clúster de Proteínas Vegetales", day: "wednesday", date: "21 de octubre", time: "16:10–16:40", room: "E", category: "PB", categoryLabel: { es: "Plant based", en: "Plant based" }, mode: "presencial", language: "ES", country: "Argentina", logoOnly: true, logo: "/capa-assets/cluster-proteinas-vegetales-logo.png",
+    title: "Clúster de Proteínas Vegetales: quiénes somos y qué empresas lo integran",
+    description: ["El Clúster de Proteínas Vegetales presentará su organización: qué es el Clúster, cómo nació, qué rol cumple para el sector y qué empresas lo conforman. Una introducción pensada para dar contexto antes de las presentaciones individuales de sus empresas asociadas —Farmesa, Porta Hermanos y Elementa Foods, entre otras— que forman parte de este mismo bloque."],
+    topics: ["Qué es el Clúster de Proteínas Vegetales y cómo se organiza.", "Empresas que lo integran y su rol dentro del sector.", "Beneficios de la asociatividad para las empresas del Clúster.", "Qué van a presentar a continuación las empresas asociadas en este mismo bloque."],
+    keywords: ["ProteínasVegetales", "Asociatividad", "Industria"],
+  },
+  {
+    id: "farmesa-porta-bloque", name: "Maia Senss Freese · María Laura Aparicio", company: "Farmesa · Porta Hermanos", day: "wednesday", date: "21 de octubre", time: "16:45–17:15", room: "E", category: "PB", categoryLabel: { es: "Plant based", en: "Plant based" }, mode: "presencial", language: "ES", country: "Argentina",
+    title: "Farmesa + Porta Hermanos: investigación, tecnología, ingredientes y formulación",
+    description: ["Este bloque reúne dos presentaciones independientes dentro del mismo horario: Farmesa abordará la vinculación entre investigación, tecnología e industria, y Porta Hermanos presentará su experiencia en ingredientes y formulación de análogos cárnicos."],
+    topics: ["Farmesa: investigación, tecnología e industria para impulsar las proteínas vegetales.", "Porta Hermanos: ingredientes y formulación de análogos cárnicos.", "Desarrollo de productos e investigación aplicada.", "Aplicaciones técnicas de ingredientes y formulación."],
+    keywords: ["ProteínasVegetales", "DesarrolloDeProducto", "Formulación"],
+    speakers: [
+      { name: "Maia Senss Freese", company: "Farmesa", country: "Argentina", photo: "/capa-assets/Maia Senss.png", logo: "/capa-assets/logo-farmesa.png" },
+      { name: "María Laura Aparicio", company: "Porta Hermanos", country: "Argentina", photo: "/capa-assets/Lali aparicio.png", logo: "/capa-assets/Porta hermanos.png" },
+    ],
+    organizations: [{ name: "Farmesa", logo: "/capa-assets/logo-farmesa.png" }, { name: "Porta Hermanos", logo: "/capa-assets/Porta hermanos.png" }],
+    participations: [
+      { name: "Maia Senss Freese", company: "Farmesa", description: "Maia Senss Freese presentará el trabajo de Farmesa en la vinculación entre investigación, tecnología e industria para impulsar el ecosistema de proteínas alternativas. Abordará sus productos y líneas de trabajo en proteínas vegetales, el desarrollo de nuevos productos y el rol de la calidad, la innovación y la investigación aplicada en el crecimiento del sector.", keywords: ["Innovación", "DesarrolloDeProducto", "Calidad"] },
+      { name: "María Laura Aparicio", company: "Porta Hermanos", description: "María Laura Aparicio presentará la experiencia de Porta Hermanos en el desarrollo y aplicación de ingredientes para productos cárnicos y sus análogos vegetales. La presentación recorrerá el camino desde el laboratorio hasta la formulación, mostrando aplicaciones técnicas de ingredientes y la articulación entre industria, investigación y tecnología de alimentos.", keywords: ["Ingredientes", "Formulación", "AnálogosCárnicos"] },
+    ],
   },
   {
     id: "david-kaplan-tufts", name: "David Kaplan", company: "Tufts University Center for Cellular Agriculture (TUCCA)", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "D", category: "CM", mode: "remoto", language: "TBD", country: "Estados Unidos", photo: "/capa-assets/david kaplan.png", logo: "/capa-assets/Tufts (TUCCA) logo.png",

@@ -10,7 +10,7 @@ const rawCapaTalks = [
   },
   {
     id: "kris-blanchard-biomanufactura",
-    name: "Kris Blanchard", company: "Luyef Biotechnologies", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "E", category: "CA", mode: "presencial", language: "ES", country: "Chile", photo: "/capa-assets/kris-blanchard-new.png",
+    name: "Kris Blanchard", company: "Luyef Biotechnologies", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "D", category: "CA", mode: "presencial", language: "ES", country: "Chile", photo: "/capa-assets/kris-blanchard-new.png",
     title: "Biomanufactura 2.0: el camino de Luyef hacia el desarrollo industrial de la Agricultura Celular en LATAM",
     description: ["Kris Blanchard, ingeniero en biotecnología de la Universidad de Chile, cofundó Luyef Biotechnologies en 2020 con el objetivo de resolver uno de los cuellos de botella más grandes de la carne cultivada: el costo y la disponibilidad de insumos clave para el cultivo celular.", "A través del desarrollo de la fermentación de precisión, nueva tecnología asociada a cultivos celulares mamíferos, y el aprovechamiento de subproductos agroindustriales, Luyef desarrolla líneas celulares para la producción a escala de grasa cultivada, factores de crecimiento termoestables y suplementos nutritivos para medios de cultivo, además de TAMEE, un ingrediente a base de mioglobina bovina producido por fermentación de precisión que mejora el perfil sensorial de los análogos cárnicos.", "Kris compartirá cómo Luyef diversifica el riesgo de operar en carne cultivada desarrollando tecnología que también sirve a otras industrias —biomedicina y cosmética—, y cómo lograron asegurar 2,5 millones de dólares en subsidios de CORFO/ANID (Chile) y GFI para escalar su tecnología."],
     topics: ["Insumos para carne cultivada", "Fermentación de precisión", "Subproductos agroindustriales", "TAMEE y perfil sensorial", "Financiamiento y escalado deep-biotech"],
@@ -137,6 +137,8 @@ const keywordsByTalk = {
 const toHashtag = (keyword) => `#${keyword.replace(/^#/, "").replace(/[^\p{L}\p{N}_]/gu, "")}`;
 const retiredTalkIds = new Set([
   "cluster-proteinas-vegetales",
+  "maia-senss-freese-farmesa",
+  "maria-laura-aparicio-porta",
 ]);
 
 const capaTalks = rawCapaTalks.filter((talk) => !retiredTalkIds.has(talk.id)).map((talk) => ({

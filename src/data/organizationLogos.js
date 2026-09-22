@@ -19,6 +19,7 @@ const organizationLogos = {
   "bryant research": "/capa-assets/Bryant Research logo-04.png",
   "ciati": "/capa-assets/CIATI.jpg",
   "chunk foods": "/capa-assets/Chunk Foods_Logo_Tagline.png",
+  "cluster de proteinas vegetales": "/capa-assets/cluster-proteinas-vegetales-logo.png",
   "elementa foods": "/capa-assets/elementa logo.png",
   "ergo foods": "/capa-assets/ergo logo.webp",
   "biomit lab": "/capa-assets/Logo BIOMIT Lab (2).png",

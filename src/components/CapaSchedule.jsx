@@ -269,7 +269,7 @@ export default function CapaSchedule() {
               <time>{durationGroup.talk.time}</time>
               {rooms.map((room) => {
                 const isSpanningRoom = room === durationGroup.talk.room;
-                return <div className={`capa-duration-room ${isSpanningRoom ? "is-spanning" : "is-stacked"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
+                return <div className={`capa-duration-room ${isSpanningRoom ? "is-spanning capa-agenda-cell has-talk" : "is-stacked"} ${activeRoom === room ? "mobile-room-active" : ""}`} data-room={`${copy.room} ${room}`} key={room}>
                   {isSpanningRoom
                     ? <TalkCard talk={durationGroup.talk} copy={copy} locale={locale} selectedRoom={activeRoom} />
                     : durationGroup.slots.map((subslot) => {
