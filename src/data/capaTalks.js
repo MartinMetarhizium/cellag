@@ -143,7 +143,7 @@ const retiredTalkIds = new Set([
 
 const capaTalks = rawCapaTalks.filter((talk) => !retiredTalkIds.has(talk.id)).map((talk) => ({
   ...talk,
-  keywords: (keywordsByTalk[talk.id] || talk.keywords || []).slice(0, 3).map(toHashtag),
+  keywords: (keywordsByTalk[talk.id] || talk.keywords || []).slice(0, talk.keywordLimit || 3).map(toHashtag),
   participations: talk.participations?.map((participation) => ({ ...participation, keywords: participation.keywords.slice(0, 3).map(toHashtag) })),
 }));
 
