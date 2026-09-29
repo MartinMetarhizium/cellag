@@ -93,7 +93,6 @@ const rawCapaTalks = [
 const keywordsByTalk = {
   "apertura-capa-2026": ["Apertura", "Institucional", "ProteínasAlternativas"],
   "emiliano-benito-lupino": ["IngredientesVegetales", "Procesamiento", "ValorAgregado"],
-  "pancho-pinero-plant-based-argentina": ["IndustriaPlantBased", "Regulación", "MercadoMasivo"],
   "kris-blanchard-biomanufactura": ["Biomanufactura", "InsumosCelulares", "TAMEE"],
   "maria-laura-matos-bioprocesos": ["Bioprocesos", "FermentaciónDePrecisión", "Escalado"],
   "mariana-sanchez-innovacion-vegetal": ["ProteínasVegetales", "ValorAgregado", "IndustriaArgentina"],
@@ -127,7 +126,7 @@ const keywordsByTalk = {
   "maria-laura-aparicio-porta": ["Ingredientes", "Formulación", "AnálogosCárnicos"],
   "unahur-proteinas-alternativas": ["CienciaInterdisciplinaria", "Yacón", "AlimentosFuncionales"],
   "mariana-brizzio-notco": ["InteligenciaArtificial", "PlantBased", "DesarrolloDeProducto"],
-  "juan-martin-oteiza-ciati": ["Microbiología", "InocuidadAlimentaria", "InvestigaciónAplicada"],
+  "juan-martin-oteiza-ciati": ["InocuidadAlimentaria", "InnovaciónTecnológica", "Academia"],
   "leonardo-vieira-future-cow": ["FermentaciónDePrecisión", "Lácteos", "Fundraising"],
   "unlp-ciprove-proteinas-alternativas": ["InvestigaciónPública", "Laboratorios", "VinculaciónTecnológica"],
   "ajinomoto-carne-cultivada": ["CarneCultivada", "Hinokitiol", "ReducciónDeCostos"],

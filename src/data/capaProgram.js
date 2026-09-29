@@ -32,8 +32,7 @@ const capaProgram = [
   { day: "thursday", room: "D", time: "14:35–15:05", detailsId: "lucia-cragnza-sartorius" },
   { day: "thursday", room: "D", time: "15:10–15:40", detailsId: "maria-laura-matos-bioprocesos" },
   { day: "thursday", room: "D", time: "16:10–16:40", detailsId: "kris-blanchard-biomanufactura" },
-  { day: "thursday", room: "D", time: "16:45–17:15", detailsId: "cell-ag-cono-sur" },
-  { day: "thursday", room: "D", time: "17:20–17:50", detailsId: "martin-blasco-escalado-bioprocesos" },
+  { day: "thursday", room: "D", time: "16:45–17:50", detailsId: "cell-ag-cono-sur" },
 
   // Jueves · Salón E
   { day: "thursday", room: "E", time: "09:00–09:30", detailsId: "juan-martin-oteiza-ciati" },
@@ -45,7 +44,7 @@ const capaProgram = [
   { day: "thursday", room: "E", time: "15:10–15:40", detailsId: "matias-fassolari-merck" },
   { day: "wednesday", room: "D", time: "10:50–11:20", detailsId: "leonardo-vieira-future-cow" },
   { day: "thursday", room: "E", time: "16:45–17:15", detailsId: "hernan-libkind-angel-yeast" },
-  { day: "thursday", room: "E", time: "17:20–17:50", detailsId: "pancho-pinero-plant-based-argentina" },
+  { day: "thursday", room: "E", time: "17:20–17:50", detailsId: "martin-blasco-escalado-bioprocesos" },
 
   // Viernes · Salón D
   { day: "friday", room: "D", time: "09:00–09:30", detailsId: "mark-post-mosa-meat" },
