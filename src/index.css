@@ -194,7 +194,7 @@ select {
 .talk-organization-visual img { display:block; width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; }
 .talk-fixed-logos { position:absolute; z-index:4; right:12px; bottom:12px; display:flex; gap:7px; }
 .talk-fixed-logos span { display:grid; box-sizing:border-box; place-items:center; width:92px; height:54px; padding:8px; overflow:hidden; border:1px solid rgba(24,91,69,.16); border-radius:10px; background:rgba(255,255,255,.96); box-shadow:0 5px 16px rgba(18,47,39,.13); }
-.talk-fixed-logos img { display:block; width:100%; height:100%; object-fit:contain; }
+.talk-fixed-logos span > img { display:block; width:auto; height:auto; max-width:74px; max-height:36px; object-fit:contain; object-position:center; }
 .capa-agenda-cell .capa-talk-card h5 { --talk-title-min-size:17px; max-height:92px; margin:0; color:#153f33; font-size:20px; line-height:1.25; letter-spacing:-.015em; -webkit-line-clamp:4; }
 .capa-agenda-cell .capa-talk-person { min-height:0; margin:9px 0 7px; }
 .capa-agenda-cell .capa-talk-person h4 { color:#173e33; font-size:16px; font-weight:650; }
