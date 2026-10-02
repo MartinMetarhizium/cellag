@@ -27,7 +27,14 @@ export function AuthProvider({ children }) {
   const value = useMemo(() => ({
     session, user: session?.user || null, profile, loading,
     signIn: (email, password) => requireSupabase().auth.signInWithPassword({ email, password }),
-    signUp: (payload) => requireSupabase().auth.signUp({ email: payload.email, password: payload.password, options: { data: { first_name: payload.firstName, last_name: payload.lastName, country: payload.country, terms_accepted: true } } }),
+    signUp: (payload) => requireSupabase().auth.signUp({
+      email: payload.email,
+      password: payload.password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/mi-cuenta`,
+        data: { first_name: payload.firstName, last_name: payload.lastName, country: payload.country, terms_accepted: true },
+      },
+    }),
     resetPassword: (email) => requireSupabase().auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/mi-cuenta?reset=1` }),
     signOut: () => requireSupabase().auth.signOut(),
   }), [session, profile, loading]);
