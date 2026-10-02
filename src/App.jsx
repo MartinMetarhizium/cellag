@@ -7,6 +7,12 @@ import Associate from "./pages/Associate";
 import Capa from "./pages/Capa";
 import Mission from "./pages/Mission";
 import CapaTalkDetails from "./pages/CapaTalkDetails";
+import Account from "./pages/Account";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import AdminOrders from "./pages/AdminOrders";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
   return (
@@ -21,6 +27,11 @@ export default function App() {
         <Route path="news" element={<News />} />
         <Route path="news/:id" element={<NewsDetail />} />
         <Route path="associate" element={<Associate />} />
+        <Route path="mi-cuenta" element={<Account />} />
+        <Route path="productos/:slug" element={<ProductDetails />} />
+        <Route path="carrito" element={<Cart />} />
+        <Route path="checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+        <Route path="admin/ordenes" element={<ProtectedRoute admin><AdminOrders /></ProtectedRoute>} />
       </Route>
     </Routes>
   );

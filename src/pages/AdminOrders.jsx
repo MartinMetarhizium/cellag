@@ -1,0 +1,10 @@
+import { useEffect, useState } from "react";
+import { requireSupabase } from "../lib/supabase";
+const statusNames = { pending: "Pendiente", paid: "Pagado", cancelled: "Cancelado", refunded: "Reembolsado" };
+
+export default function AdminOrders() {
+  const [orders, setOrders] = useState([]); const [query, setQuery] = useState(""); const [status, setStatus] = useState("");
+  useEffect(() => { requireSupabase().from("admin_orders").select("*").order("created_at", { ascending: false }).then(({ data }) => setOrders(data || [])); }, []);
+  const filtered = orders.filter((order) => (!status || order.payment_status === status) && `${order.order_number} ${order.buyer_name} ${order.buyer_email}`.toLowerCase().includes(query.toLowerCase()));
+  return <div className="commerce-page"><section className="commerce-card"><div className="commerce-heading"><p>ADMINISTRACIÓN</p><h1>Ventas</h1></div><div className="admin-filters"><input placeholder="Nombre, email o número de orden" value={query} onChange={(event) => setQuery(event.target.value)} /><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="">Todos los estados</option><option value="paid">Pagado</option><option value="pending">Pendiente</option><option value="cancelled">Cancelado</option><option value="refunded">Reembolsado</option></select></div><div className="admin-table"><div className="admin-row header"><span>Orden</span><span>Comprador</span><span>Producto</span><span>Fecha</span><span>Importe</span><span>Pago</span></div>{filtered.map((order) => <div className="admin-row" key={order.id}><span>{order.order_number}</span><span>{order.buyer_name}<small>{order.buyer_email}</small></span><span>{order.products}</span><span>{new Date(order.created_at).toLocaleDateString("es-AR")}</span><span>{order.currency} {Number(order.total).toLocaleString("es-AR")}</span><span className={`status status-${order.payment_status}`}>{statusNames[order.payment_status] || order.payment_status}</span></div>)}</div></section></div>;
+}
