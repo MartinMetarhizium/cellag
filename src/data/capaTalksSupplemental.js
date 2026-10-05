@@ -7,11 +7,11 @@ const capaTalksSupplemental = [
     keywords: ["Apertura", "Institucional", "ProteínasAlternativas"],
   },
   {
-    id: "unsam-proteinas-alternativas", name: "Mariela Balbo · Diego Comerci · Carolina Bluguermann", company: "UNSAM", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", detailLogo: "/capa-assets/UNSAM Logo.webp",
+    id: "unsam-proteinas-alternativas", name: "Mariela Balbo · Diego Comerci · Carolina Bluguermann · Laura Cerutti", company: "UNSAM", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", detailLogo: "/capa-assets/UNSAM Logo.webp",
     title: "UNSAM y las proteínas alternativas: investigación pública y vinculación con la industria",
     description: ["Panel institucional de UNSAM que presentará el trabajo desarrollado por sus equipos en el campo de las proteínas alternativas, sus capacidades de investigación y formación, y su vinculación con el ecosistema científico, productivo y emprendedor."],
     topics: ["Investigación en proteínas alternativas en UNSAM", "Equipos, proyectos y capacidades científicas", "Formación de talento y participación estudiantil", "Vinculación con el ecosistema de proteínas alternativas"],
-    speakers: [{ name: "Mariela Balbo", company: "UNSAM", country: "Argentina", photo: "/capa-assets/mariela balbo.png" }, { name: "Diego Comerci", company: "UNSAM", country: "Argentina", photo: "/capa-assets/diego comerci.png" }, { name: "Carolina Bluguermann", company: "UNSAM", country: "Argentina", photo: "/capa-assets/carolina blugerman.png" }],
+    speakers: [{ name: "Mariela Balbo", company: "UNSAM", country: "Argentina", photo: "/capa-assets/mariela balbo.png" }, { name: "Diego Comerci", company: "UNSAM", country: "Argentina", photo: "/capa-assets/diego comerci.png" }, { name: "Carolina Bluguermann", company: "UNSAM", country: "Argentina", photo: "/capa-assets/carolina blugerman.png" }, { name: "Laura Cerutti", company: "UNSAM", country: "Argentina", photo: "/capa-assets/Laura Cerutti.png" }],
   },
   {
     id: "didier-toubia-aleph-farms", name: "Didier Toubia", company: "Aleph Farms", day: "wednesday", date: "21 de octubre", time: "11:25–11:55", room: "D", category: "CA", categoryLabel: { es: "Carne Cultivada", en: "Cultivated Meat" }, mode: "remoto", language: "EN", country: "Israel", photo: "/capa-assets/Didier Toubia.png", detailLogo: "/capa-assets/aleph farms logo.png",
@@ -28,7 +28,7 @@ const capaTalksSupplemental = [
     keywords: ["VinculaciónTecnológica", "PropiedadIntelectual", "InfraestructuraIndustrial"],
   },
   {
-    id: "eduardo-bittencourt-typcal", name: "Eduardo Bittencourt", company: "Typcal", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "D", category: "FE", mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/EduardoSydney.jpeg", cleanPhoto: "/capa-assets/Eduardo Bittencourt Limpio.png",
+    id: "eduardo-bittencourt-typcal", name: "Eduardo Bittencourt", company: "Typcal", day: "wednesday", date: "21 de octubre", time: "12:00–12:30", room: "D", category: "FE", mode: "presencial", language: "PT", country: "Brasil", photo: "/capa-assets/EduardoSydney.jpeg", cleanPhoto: "/capa-assets/Eduardo Bittencourt Limpio.png",
     title: "Poniendo a Brasil en el mapa de la micoproteína: escalando la fermentación circular de micelio del laboratorio a la industria",
     description: ["El Dr. Eduardo Bittencourt, emprendedor, científico, cofundador y CTO de Typcal, es Doctor en Ingeniería de Bioprocesos, con 25 artículos publicados y más de 4.000 citas. Compartirá cómo Typcal se convirtió en la primera empresa de América Latina en desarrollar fermentación de micelio mediante un proceso circular, produciendo micoproteína más rápido y utilizando una gama más amplia de materias primas que otras cepas fúngicas competidoras.", "Eduardo recorrerá el camino de Typcal desde una planta piloto en Curitiba con un biorreactor de 200 litros hasta su objetivo de producir alrededor de 60 toneladas de micoproteína por mes para 2027 mediante tres biorreactores de 50.000 litros, y explicará cómo la empresa desarrolló tres formatos de producto diferentes — biomasa fresca, polvo seco rico en proteínas y un concentrado de micelio para nutrición deportiva — a partir de una única plataforma de fermentación."],
     topics: ["Fermentación circular de micelio: el enfoque de Typcal sobre materias primas y diseño de proceso.", "Escalado desde un biorreactor piloto de 200 litros hasta producción a escala industrial.", "Desarrollo de múltiples formatos de producto a partir de una única plataforma de fermentación.", "Posicionamiento de América Latina en el mapa global de la micoproteína."],
@@ -146,7 +146,7 @@ const capaTalksSupplemental = [
     keywords: ["Ingredientes", "Formulación", "AnálogosCárnicos"],
   },
   {
-    id: "unahur-proteinas-alternativas", name: "UNAHUR", company: "Universidad Nacional de Hurlingham", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Mariana Lorenzi.png", detailLogo: "/capa-assets/UNAHUR-04-400x250.png",
+    id: "unahur-proteinas-alternativas", name: "Mariana Lorenzi", company: "Universidad Nacional de Hurlingham", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Mariana Lorenzi.png", detailLogo: "/capa-assets/UNAHUR-04-400x250.png",
     title: "UNAHUR y las proteínas alternativas: ciencia con compromiso social desde una universidad joven",
     description: ["UNAHUR presentará su Alt Protein Project, el trabajo del Laboratorio de Investigación en Nuevos Alimentos y Nutrición y desarrollos con yacón, proteínas vegetales y fermentación orientados al impacto comunitario."],
     topics: ["UNAHUR Alt Protein Project", "Ciencia interdisciplinaria", "Yacón y proteínas vegetales", "Kéfir y alimentos funcionales", "Vinculación con la industria"],
@@ -195,11 +195,25 @@ const capaTalksSupplemental = [
     ],
   },
   {
-    id: "ergo-foods-tbd", name: "TBD", company: "Ergo Foods", day: "thursday", date: "22 de octubre", time: "14:35–15:05", room: "E", category: "TBD", mode: "TBD", language: "TBD", country: "Argentina", logoOnly: true, logo: "/capa-assets/ergo logo.webp",
-    title: "TBD",
-    description: ["TBD"],
-    topics: ["TBD"],
-    keywords: [],
+    id: "tiago-coroa-adm", name: "Tiago Coroa", company: "ADM", day: "thursday", date: "22 de octubre", time: "14:00–14:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "remoto", language: "PT", country: "Brasil", photo: "/capa-assets/Tiago Coroa.png", detailLogo: "/capa-assets/ADM logo.png",
+    title: "Desafíos y aprendizajes en el desarrollo del mercado plant based en LATAM",
+    description: ["ADM combina dos miradas sobre el mercado plant based: la de proveedor de soluciones para la industria y la de productor de productos para el consumidor final. Tiago Coroa, Creation, Design & Development Manager de Human Nutrition para LATAM en ADM Nutrition, compartirá esa experiencia: los desafíos que enfrentó el desarrollo de este mercado en la región, los puntos clave para el consumidor y los aprendizajes de los últimos años."],
+    topics: ["La doble mirada de ADM: proveedor de soluciones y productor para el consumidor final.", "Desafíos en el desarrollo del mercado plant based en LATAM.", "Puntos importantes para el mercado consumidor.", "Aprendizajes de los últimos años en el desarrollo de productos plant based."],
+    keywords: ["PlantBased", "LATAM", "Mercado"],
+  },
+  {
+    id: "augusto-desuque-ergo", name: "Augusto Desuque", company: "ERGO Bioscience", day: "thursday", date: "22 de octubre", time: "14:35–15:05", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", logo: "/capa-assets/ergo logo.webp",
+    title: "EUKARYA: Producir Proteínas Animales Complejas Usando Células Vegetales",
+    description: ["La mayor parte de la fermentación de precisión utiliza levaduras o bacterias para producir proteínas recombinantes. ERGO Bioscience es una startup argentina con laboratorios en Sunchales, provincia de Santa Fe, y en La Plata, provincia de Buenos Aires, además de una subsidiaria en Saskatoon, Canadá. El objetivo de la compañía es producir \"proteínas animales, sin animales\", idénticas a sus contrapartes de origen animal, con el potencial de dar un salto de calidad sensorial a los productos cárnicos y lácteos plant-based.", "A través de su plataforma EUKARYA®, producen proteínas animales recombinantes complejas cuya expresión puede resultar difícil en plataformas tradicionales basadas en levaduras o bacterias. Entre ellas se encuentran la mioglobina bovina, responsable del color y del sabor característico de la carne, y las caseínas de la leche bovina, obtenidas en células vegetales mediante fermentación de precisión con el objetivo de mejorar la funcionalidad y la experiencia sensorial de los alimentos plant-based.", "En su presentación, Augusto Desuque explicará cómo funciona la fermentación de precisión con células vegetales en comparación con las plataformas microbianas tradicionales y qué posibilidades ofrece este enfoque para lograr sabor, color y textura cada vez más equivalentes a los productos de origen animal. También abordará el recorrido de una tecnología desarrollada en Argentina y su proceso de expansión y validación internacional, con presencia en Estados Unidos y Canadá."],
+    topics: ["Fermentación de precisión con células vegetales vs. plataformas microbianas tradicionales.", "La plataforma EUKARYA®: mioglobina bovina y caseínas de la leche bovina.", "Sabor, color y textura equivalentes a los productos de origen animal.", "Una tecnología argentina en expansión y validación internacional."],
+    keywords: ["FermentaciónDePrecisión", "CélulasVegetales", "ProteínasRecombinantes"],
+  },
+  {
+    id: "mauricio-braia-abydos", name: "Mauricio Javier Braia", company: "Abydos", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "E", category: "FE", mode: "presencial", language: "TBD", country: "Argentina", logo: "/capa-assets/Abydos logo.jpg",
+    title: "Abydos: grasas y aceites por fermentación bacteriana",
+    description: ["Abydos es una startup argentina de biotecnología que desarrolla grasas obtenidas por fermentación con bacterias oleaginosas, una alternativa a los insumos agrícolas tradicionales, sujetos a precios volátiles. El Dr. Mauricio Javier Braia, biotecnólogo y emprendedor, cofundador y ex CSO de Michroma y actual CSO de Abydos, presentará la plataforma de lípidos de la compañía y su estrategia científica."],
+    topics: ["La plataforma de lípidos de Abydos.", "Fermentación con bacterias oleaginosas para producir grasas.", "Una alternativa a los insumos agrícolas con precios volátiles.", "La estrategia científica de una startup argentina de biotecnología."],
+    keywords: ["Lípidos", "Fermentación", "Grasas"],
   },
   {
     id: "matias-fassolari-merck", name: "Matías Fassolari", company: "Merck", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "E", category: "IS", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/matias fassolari.png", detailLogo: "/capa-assets/MERCK LOGO.svg",

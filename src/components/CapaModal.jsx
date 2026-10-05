@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/I18nContext";
 import CapaSchedule from "./CapaSchedule";
 
@@ -12,7 +11,7 @@ export function CapaContent({ isPage=false }) {
   const countdown=useMemo(()=>[[timeLeft.days,t("capa.days")],[timeLeft.hours,t("capa.hours")],[timeLeft.minutes,t("capa.minutes")],[timeLeft.seconds,t("capa.seconds")]], [timeLeft,t]);
   return <section className={isPage?"capa-page":"capa-modal"} aria-labelledby="capa-title">
     <div className="capa-hero capa-hero-image"><picture><source media="(max-width: 720px)" srcSet="/capa-assets/capa home mobile.png" /><img src="/capa-assets/capa home.png" alt="CAPA 2026 en Crossing Over Latam BioExpo, 21, 22 y 23 de octubre en Buenos Aires" /></picture><div className="capa-countdown" aria-label={t("capa.countdownLabel")}>{countdown.map(([value,label])=><div key={label}><strong>{String(value).padStart(2,"0")}</strong><span>{label}</span></div>)}</div><h2 id="capa-title" className="sr-only">CAPA 2026</h2></div>
-    <div className="capa-description"><p className="capa-description-kicker">{t("capa.firstCongress")}</p><h3>{t("capa.descriptionTitle")}</h3><p>{t("capa.description")}</p><div className="capa-ticket-row"><div className="capa-presential-ticket"><a href="https://crossingoverlatam.bio/" target="_blank" rel="noopener noreferrer">{t("capa.tickets")} <span aria-hidden="true">↗</span></a><div className="capa-discount" aria-label={t("capa.discountLabel")}><span>{t("capa.discount")}</span><strong>CAPAXO</strong></div></div><Link className="capa-streaming-ticket" to="/productos/streaming-capa-2026" aria-label={t("capa.streamingTicketLabel")}>{t("capa.streamingTicket")} <span aria-hidden="true">→</span></Link></div></div>
+    <div className="capa-description"><p className="capa-description-kicker">{t("capa.firstCongress")}</p><h3>{t("capa.descriptionTitle")}</h3><p>{t("capa.description")}</p><div className="capa-ticket-row"><div className="capa-presential-ticket"><a href="https://crossingoverlatam.bio/" target="_blank" rel="noopener noreferrer">{t("capa.tickets")} <span aria-hidden="true">↗</span></a><div className="capa-discount" aria-label={t("capa.discountLabel")}><span>{t("capa.discount")}</span><strong>CAPAXO</strong></div></div><a className="capa-streaming-ticket" href="https://docs.google.com/forms/d/e/1FAIpQLSevEfjnSMa-MXgky2CypdyfzqKJNZc8xXlC2Z2VhhEwCQzA8Q/viewform?usp=header&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" aria-label={t("capa.streamingTicketLabel")}>{t("capa.streamingTicket")} <span aria-hidden="true">↗</span></a></div></div>
     <CapaSchedule />
   </section>;
 }
