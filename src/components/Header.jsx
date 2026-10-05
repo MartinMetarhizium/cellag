@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useI18n } from "../i18n/I18nContext";
-import { useAuth } from "../contexts/AuthContext";
-import { useCart } from "../contexts/CartContext";
 
 const linkBase = "transition hover:text-green-700";
 const activeClass = "text-green-700 font-semibold";
@@ -16,8 +14,6 @@ function LanguageFlag({ locale }) {
 
 export default function Header() {
   const { locale, t, toggleLocale } = useI18n();
-  const { user } = useAuth();
-  const { count } = useCart();
   const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <header className="bg-white shadow sticky top-0 z-50">
@@ -63,12 +59,6 @@ export default function Header() {
             className={({ isActive }) => `${linkBase} rounded-md px-2 py-2 md:p-0 ${isActive ? activeClass : ""}`}
           >
             {t("nav.join")}
-          </NavLink>
-          <NavLink to="/mi-cuenta" onClick={() => setMobileOpen(false)} className={({ isActive }) => `${linkBase} rounded-md px-2 py-2 md:p-0 ${isActive ? activeClass : ""}`}>
-            {user ? "Mi cuenta" : "Ingresar"}
-          </NavLink>
-          <NavLink to="/carrito" onClick={() => setMobileOpen(false)} className={({ isActive }) => `cart-nav-link ${isActive ? activeClass : ""}`} aria-label={`Carrito, ${count} productos`}>
-            <span aria-hidden="true">🛒</span><small>{count}</small>
           </NavLink>
           <button className="language-switch" onClick={toggleLocale} aria-label={t("languageLabel")}>
             <span><LanguageFlag locale={locale} /></span>

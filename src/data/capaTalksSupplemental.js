@@ -209,7 +209,7 @@ const capaTalksSupplemental = [
     keywords: ["FermentaciónDePrecisión", "CélulasVegetales", "ProteínasRecombinantes"],
   },
   {
-    id: "mauricio-braia-abydos", name: "Mauricio Javier Braia", company: "Abydos", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "E", category: "FE", mode: "presencial", language: "TBD", country: "Argentina", photo: "/capa-assets/Mauricio Braia.png", logo: "/capa-assets/Abydos logo.jpg",
+    id: "mauricio-braia-abydos", name: "Mauricio Javier Braia", company: "Abydos", day: "thursday", date: "22 de octubre", time: "16:10–16:40", room: "E", category: "FE", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Mauricio Braia.png", logo: "/capa-assets/Abydos logo.jpg",
     title: "Abydos: grasas y aceites por fermentación bacteriana",
     description: ["Abydos es una startup argentina de biotecnología que desarrolla grasas obtenidas por fermentación con bacterias oleaginosas, una alternativa a los insumos agrícolas tradicionales, sujetos a precios volátiles. El Dr. Mauricio Javier Braia, biotecnólogo y emprendedor, cofundador y ex CSO de Michroma y actual CSO de Abydos, presentará la plataforma de lípidos de la compañía y su estrategia científica."],
     topics: ["La plataforma de lípidos de Abydos.", "Fermentación con bacterias oleaginosas para producir grasas.", "Una alternativa a los insumos agrícolas con precios volátiles.", "La estrategia científica de una startup argentina de biotecnología."],
