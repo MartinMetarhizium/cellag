@@ -60,7 +60,7 @@ const capaTalksSupplemental = [
   },
   {
     id: "uade-proteinas-alternativas", name: "María Cecilia Melucci", company: "UADE", day: "wednesday", date: "21 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/MARIA CECILIA MELUCCI LIMPIO.png",
-    title: "UADE y las proteínas alternativas: investigación pública y vinculación con la industria",
+    title: "UADE y las proteínas alternativas: investigación y vinculación con la industria",
     description: ["Panel institucional de UADE sobre el trabajo de la universidad en proteínas alternativas, sus proyectos académicos y las oportunidades de colaboración con la industria."],
     topics: ["Investigación universitaria", "Proyectos y laboratorios", "Vinculación tecnológica"],
   },
@@ -214,6 +214,20 @@ const capaTalksSupplemental = [
     description: ["Abydos es una startup argentina de biotecnología que desarrolla grasas obtenidas por fermentación con bacterias oleaginosas, una alternativa a los insumos agrícolas tradicionales, sujetos a precios volátiles. El Dr. Mauricio Javier Braia, biotecnólogo y emprendedor, cofundador y ex CSO de Michroma y actual CSO de Abydos, presentará la plataforma de lípidos de la compañía y su estrategia científica."],
     topics: ["La plataforma de lípidos de Abydos.", "Fermentación con bacterias oleaginosas para producir grasas.", "Una alternativa a los insumos agrícolas con precios volátiles.", "La estrategia científica de una startup argentina de biotecnología."],
     keywords: ["Lípidos", "Fermentación", "Grasas"],
+  },
+  {
+    id: "riley-jackson-every", name: "Riley Jackson", company: "EVERY", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "E", category: "FE", mode: "TBD", language: "TBD", country: "TBD", photo: "/capa-assets/Riley Jackson.png", detailLogo: "/capa-assets/EVERY logo.png",
+    title: "Building the Future of Protein: From Cultivated Meat to Precision Fermentation",
+    description: ["EVERY, compañía pionera en proteínas de huevo libres de animales producidas por fermentación de precisión, presentará su mirada sobre cómo se está construyendo el futuro de la proteína, desde la carne cultivada hasta la fermentación de precisión. Riley Jackson repasará qué aprendizajes dejó esa evolución del sector y cómo la fermentación de precisión permite producir proteínas funcionales para aplicaciones como panificados, bebidas y ligantes en análogos de carne."],
+    topics: ["De la carne cultivada a la fermentación de precisión: cómo evoluciona el sector de las proteínas alternativas.", "Proteínas animales sin animales: la propuesta de EVERY.", "Aplicaciones de las proteínas obtenidas por fermentación de precisión en alimentos.", "Escalar y llevar estas proteínas al mercado."],
+    keywords: ["FermentaciónDePrecisión", "CarneCultivada", "ProteínasAlternativas"],
+  },
+  {
+    id: "jordan-allen-ingredion", name: "Jordan Allen", company: "Ingredion", day: "friday", date: "23 de octubre", time: "12:00–12:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "TBD", language: "TBD", country: "TBD", photo: "/capa-assets/Jordan Allen.png", detailLogo: "/capa-assets/Ingredion logo.png",
+    title: "Ingredion y las proteínas vegetales: resolviendo desafíos de formulación desde la relación estructura-función",
+    description: ["Ingredion presentará su camino en proteínas vegetales y cómo resuelve desafíos de formulación, como la firmeza y la textura, a partir del conocimiento de la relación entre estructura y función de sus ingredientes, con su línea de proteínas de arveja VITESSENCE® como ejemplo. Jordan Allen, Senior Chemist en Analytical Characterization and Texture Science de Ingredion, repasará por qué y cuándo la compañía entró a este mercado y mostrará aplicaciones en barras, bebidas y lácteos alternativos."],
+    topics: ["Introducción a Ingredion.", "Por qué y cuándo Ingredion entró en las proteínas vegetales.", "Resolver desafíos de formulación a partir de la relación estructura-función.", "Aplicaciones: barras, bebidas y lácteos alternativos."],
+    keywords: ["ProteínasVegetales", "Ingredientes", "Formulación"],
   },
   {
     id: "matias-fassolari-merck", name: "Matías Fassolari", company: "Merck", day: "thursday", date: "22 de octubre", time: "15:10–15:40", room: "E", category: "IS", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/matias fassolari.png", detailLogo: "/capa-assets/MERCK LOGO.svg",

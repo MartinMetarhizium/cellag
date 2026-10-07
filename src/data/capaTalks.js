@@ -67,7 +67,7 @@ const rawCapaTalks = [
   },
   {
     id: "rodrigo-ledesma-bioproduccion",
-    name: "Rodrigo Ledesma-Amaro", company: "Bezos Earth Fund", day: "thursday", date: "22 de octubre", time: "10:50–11:55", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Inglaterra", photo: "/capa-assets/rodrigo ledesma.png", detailLogo: "/capa-assets/bezos earth fund.png",
+    name: "Rodrigo Ledesma-Amaro", company: "Bezos Earth Fund", day: "thursday", date: "22 de octubre", time: "10:50–11:20", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Inglaterra", photo: "/capa-assets/rodrigo ledesma.png", detailLogo: "/capa-assets/bezos earth fund.png",
     title: "Bioproducción microbiana y fermentación: escalando proteína sustentable desde el Bezos Centre y el Microbial Food Hub",
     description: ["Dr. Rodrigo Ledesma-Amaro, Profesor en Imperial College London, Director del Bezos Centre for Sustainable Protein y del Microbial Food Hub, experto en bioproducción microbiana y fermentación, compartirá su investigación sobre cómo diseñar microorganismos para producir proteína sustentable a escala.", "Rodrigo abordará la ciencia detrás de la bioproducción microbiana, el rol de centros académicos como el Bezos Centre y el Microbial Food Hub en conectar la investigación de base con la aplicación industrial, y hacia dónde se dirige globalmente la producción de proteína basada en fermentación."],
     topics: ["Bioproducción microbiana", "Fermentación como plataforma", "Proteína sustentable", "Academia y aplicación industrial"],

@@ -26,6 +26,8 @@ const organizationLogos = {
   "adm": "/capa-assets/ADM logo.png",
   "abydos": "/capa-assets/Abydos logo.jpg",
   "sticta biologicals": "/capa-assets/Sticta logo.png",
+  "every": "/capa-assets/EVERY logo.png",
+  "ingredion": "/capa-assets/Ingredion logo.png",
   "biomit lab": "/capa-assets/Logo BIOMIT Lab (2).png",
   "inti": "/capa-assets/logo inti.png",
   "amazonika mundi": "/capa-assets/LOGO-AMAZONIKA-MUNDI-BRAZIL.png",

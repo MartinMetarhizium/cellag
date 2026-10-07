@@ -37,7 +37,7 @@ const capaProgram = [
   // Jueves · Salón E
   { day: "thursday", room: "E", time: "09:00–09:30", detailsId: "juan-martin-oteiza-ciati" },
   { day: "thursday", room: "E", time: "09:35–10:20", detailsId: "unahur-proteinas-alternativas" },
-  { day: "thursday", room: "E", time: "10:50–11:55", detailsId: "rodrigo-ledesma-bioproduccion" },
+  { day: "thursday", room: "E", time: "10:50–11:20", detailsId: "rodrigo-ledesma-bioproduccion" },
   { day: "thursday", room: "E", time: "11:25–11:55", detailsId: "mariana-brizzio-notco" },
   { day: "thursday", room: "E", time: "12:00–12:30", detailsId: "bruno-rosolem-cashew" },
   { day: "thursday", room: "E", time: "14:00–14:30", detailsId: "tiago-coroa-adm" },
@@ -59,6 +59,8 @@ const capaProgram = [
   { day: "friday", room: "E", time: "09:00–09:30", detailsId: "ajinomoto-carne-cultivada" },
   { day: "friday", room: "E", time: "09:35–10:20", detailsId: "gfi-brasil-ciencia-politica" },
   { day: "friday", room: "E", time: "10:50–11:20", detailsId: "svenja-dannewitz-senara" },
+  { day: "friday", room: "E", time: "11:25–11:55", detailsId: "riley-jackson-every" },
+  { day: "friday", room: "E", time: "12:00–12:30", detailsId: "jordan-allen-ingredion" },
 ];
 
 export default capaProgram;
