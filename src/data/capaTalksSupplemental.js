@@ -147,9 +147,9 @@ const capaTalksSupplemental = [
   },
   {
     id: "unahur-proteinas-alternativas", name: "Mariana Lorenzi", company: "Universidad Nacional de Hurlingham", day: "thursday", date: "22 de octubre", time: "09:35–10:20", room: "E", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/Mariana Lorenzi.png", detailLogo: "/capa-assets/UNAHUR-04-400x250.png",
-    title: "UNAHUR y las proteínas alternativas: ciencia con compromiso social desde una universidad joven",
-    description: ["UNAHUR presentará su Alt Protein Project, el trabajo del Laboratorio de Investigación en Nuevos Alimentos y Nutrición y desarrollos con yacón, proteínas vegetales y fermentación orientados al impacto comunitario."],
-    topics: ["UNAHUR Alt Protein Project", "Ciencia interdisciplinaria", "Yacón y proteínas vegetales", "Kéfir y alimentos funcionales", "Vinculación con la industria"],
+    title: "UNAHUR y las proteínas alternativas: formando personas que harán posible la innovación alimentaria del futuro. Aprender haciendo",
+    description: ["UNAHUR presentará su Alt Protein Project, un trabajo interdisciplinario que combina investigación, formación de capital humano y vinculación con la industria. La charla mostrará cómo la universidad forma a las personas que harán posible la innovación alimentaria del futuro bajo la lógica de aprender haciendo, con su planta piloto como espacio de desarrollo y práctica."],
+    topics: ["UNAHUR Alt Protein Project.", "Ciencia interdisciplinaria.", "Formación de capital humano.", "Planta piloto.", "Vinculación con la industria."],
   },
   {
     id: "mariana-brizzio-notco", name: "Mariana Brizzio", company: "NotCo", day: "thursday", date: "22 de octubre", time: "11:25–11:55", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "remoto", language: "ES", country: "Chile", photo: "/capa-assets/mariana brizzio.png",
@@ -173,10 +173,15 @@ const capaTalksSupplemental = [
     keywords: ["Fermentación de precisión", "Lácteos", "Fundraising"],
   },
   {
-    id: "unlp-ciprove-proteinas-alternativas", name: "Gonzalo Cosme Márquez", company: "UNLP · CIProVe", day: "friday", date: "23 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/gonzalo cosme marquez.png",
+    id: "unlp-ciprove-proteinas-alternativas", name: "Gonzalo Cosme Márquez · María Laura García · María Cristina Añón", company: "MINERVA · UNLP · ERGO Bioscience · CONICET", day: "friday", date: "23 de octubre", time: "09:35–10:20", room: "D", category: "UN", mode: "presencial", language: "ES", country: "Argentina", photo: "/capa-assets/gonzalo cosme marquez.png", detailLogo: "/capa-assets/Logo_UNLP.jpg",
     title: "UNLP y las proteínas alternativas: investigación pública y vinculación con la industria",
     description: ["Panel institucional de UNLP y CIProVe sobre investigación en proteínas alternativas, proyectos académicos y oportunidades de colaboración con la industria."],
     topics: ["Investigación universitaria", "Proyectos y laboratorios", "Vinculación tecnológica"],
+    speakers: [
+      { name: "Gonzalo Cosme Márquez", company: "MINERVA · UNLP", country: "Argentina", photo: "/capa-assets/gonzalo cosme marquez.png", logo: "/capa-assets/Logo_UNLP.jpg" },
+      { name: "María Laura García", company: "ERGO Bioscience", country: "Argentina", logo: "/capa-assets/ergo logo.webp" },
+      { name: "María Cristina Añón", company: "CONICET", country: "Argentina" },
+    ],
   },
   {
     id: "ajinomoto-carne-cultivada", name: "Yasufumi Furuhata", company: "Ajinomoto", day: "friday", date: "23 de octubre", time: "09:00–09:30", room: "E", category: "CA", mode: "remoto", language: "EN", country: "Japón", photo: "/capa-assets/yasufumi fuhurata.png",
@@ -216,14 +221,14 @@ const capaTalksSupplemental = [
     keywords: ["Lípidos", "Fermentación", "Grasas"],
   },
   {
-    id: "riley-jackson-every", name: "Riley Jackson", company: "EVERY", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "E", category: "FE", mode: "TBD", language: "TBD", country: "TBD", photo: "/capa-assets/Riley Jackson.png", detailLogo: "/capa-assets/EVERY logo.png",
+    id: "riley-jackson-every", name: "Riley Jackson", company: "EVERY", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "E", category: "FE", mode: "remoto", language: "EN", country: "Estados Unidos", photo: "/capa-assets/Riley Jackson.png", detailLogo: "/capa-assets/EVERY logo.png",
     title: "Building the Future of Protein: From Cultivated Meat to Precision Fermentation",
     description: ["EVERY, compañía pionera en proteínas de huevo libres de animales producidas por fermentación de precisión, presentará su mirada sobre cómo se está construyendo el futuro de la proteína, desde la carne cultivada hasta la fermentación de precisión. Riley Jackson repasará qué aprendizajes dejó esa evolución del sector y cómo la fermentación de precisión permite producir proteínas funcionales para aplicaciones como panificados, bebidas y ligantes en análogos de carne."],
     topics: ["De la carne cultivada a la fermentación de precisión: cómo evoluciona el sector de las proteínas alternativas.", "Proteínas animales sin animales: la propuesta de EVERY.", "Aplicaciones de las proteínas obtenidas por fermentación de precisión en alimentos.", "Escalar y llevar estas proteínas al mercado."],
     keywords: ["FermentaciónDePrecisión", "CarneCultivada", "ProteínasAlternativas"],
   },
   {
-    id: "jordan-allen-ingredion", name: "Jordan Allen", company: "Ingredion", day: "friday", date: "23 de octubre", time: "12:00–12:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "TBD", language: "TBD", country: "TBD", photo: "/capa-assets/Jordan Allen.png", detailLogo: "/capa-assets/Ingredion logo.png",
+    id: "jordan-allen-ingredion", name: "Jordan Allen", company: "Ingredion", day: "friday", date: "23 de octubre", time: "12:00–12:30", room: "E", category: "PB", categoryLabel: { es: "Plant Based", en: "Plant Based" }, mode: "remoto", language: "EN", country: "Estados Unidos", photo: "/capa-assets/Jordan Allen.png", detailLogo: "/capa-assets/Ingredion logo.png",
     title: "Ingredion y las proteínas vegetales: resolviendo desafíos de formulación desde la relación estructura-función",
     description: ["Ingredion presentará su camino en proteínas vegetales y cómo resuelve desafíos de formulación, como la firmeza y la textura, a partir del conocimiento de la relación entre estructura y función de sus ingredientes, con su línea de proteínas de arveja VITESSENCE® como ejemplo. Jordan Allen, Senior Chemist en Analytical Characterization and Texture Science de Ingredion, repasará por qué y cuándo la compañía entró a este mercado y mostrará aplicaciones en barras, bebidas y lácteos alternativos."],
     topics: ["Introducción a Ingredion.", "Por qué y cuándo Ingredion entró en las proteínas vegetales.", "Resolver desafíos de formulación a partir de la relación estructura-función.", "Aplicaciones: barras, bebidas y lácteos alternativos."],
@@ -303,7 +308,7 @@ const capaTalksSupplemental = [
     ],
   },
   {
-    id: "david-kaplan-tufts", name: "David Kaplan", company: "Tufts University Center for Cellular Agriculture (TUCCA)", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "D", category: "CM", mode: "remoto", language: "TBD", country: "Estados Unidos", photo: "/capa-assets/david kaplan.png", logo: "/capa-assets/Tufts (TUCCA) logo.png",
+    id: "david-kaplan-tufts", name: "David Kaplan", company: "Tufts University Center for Cellular Agriculture (TUCCA)", day: "friday", date: "23 de octubre", time: "11:25–11:55", room: "D", category: "CM", mode: "remoto", language: "EN", country: "Estados Unidos", photo: "/capa-assets/david kaplan.png", logo: "/capa-assets/Tufts (TUCCA) logo.png",
     title: "El futuro de la alimentación: oportunidades y desafíos de la agricultura celular",
     description: ["David Kaplan, Stern Family Professor of Biomedical Engineering y Director del Tufts University Center for Cellular Agriculture (TUCCA), es una de las voces científicas más influyentes en el campo de la agricultura celular, con más de 1.000 publicaciones revisadas por pares en ingeniería de biopolímeros, ingeniería de tejidos, medicina regenerativa y agricultura celular.", "En 2021 lideró la obtención de un subsidio de USD 10 millones del USDA para crear el National Institute for Cellular Agriculture dentro de Tufts, en colaboración con Virginia Tech, Virginia State University, UC Davis, MIT y la Universidad de Massachusetts Boston. Su laboratorio logró además producir grasa cultivada a escala, con una textura y composición similar a la grasa animal natural, uno de los avances clave para lograr sabor y textura reales en la carne cultivada.", "En su charla, Kaplan compartirá una mirada de conjunto sobre el futuro de la alimentación desde la agricultura celular: los avances científicos que ya están resolviendo problemas técnicos clave —como la producción de grasa cultivada—, los desafíos que todavía quedan por delante para escalar la tecnología y el rol de la ciencia básica universitaria en sostener el desarrollo de largo plazo de esta industria."],
     topics: ["El estado de la ciencia detrás de la carne cultivada: de la investigación básica a la aplicación.", "Grasa cultivada: el avance del laboratorio de Kaplan hacia sabor y textura reales.", "El rol de los centros universitarios y el financiamiento público en sostener la innovación.", "Oportunidades y desafíos pendientes para escalar la agricultura celular."],
